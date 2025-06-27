@@ -37,4 +37,45 @@ const createUser = asyncHandler(async (req, res) => {
   });
 });
 
-export { createUser };
+const loginUser = asyncHandler(async(req,res) => {
+  const {email,password} = req.body;
+
+  const existingUser = await User.findOne({email});
+
+  if(existingUser) {
+    const isPasswordValid = await bcrypt.compare(password,existingUser.password);
+
+    if(isPasswordValid) {
+      createToken(res,existingUser._id);
+
+      res.status(201).json({
+        _id: existingUser._id,
+        username: existingUser.username,
+        email: existingUser.email,
+        exp: existingUser.exp,
+        level: existingUser.level,
+      });
+
+      return;
+    }else {
+      res.status(400);
+      throw new Error("Incorrect Password!");
+    }
+  }else {
+    res.status(400);
+    throw new Error("User Not Found! Try Registering!");
+  }
+});
+
+const logoutCurrentUser = asyncHandler(async (req, res) => {
+  res.cookie('jwt', '', {
+    httpOnly: true,
+    secure: process.env.NODE_ENV !== 'development',
+    sameSite: 'strict',
+    expires: new Date(0),
+  });
+  res.status(200).json({ message: "Logged out successfully" });
+});
+
+
+export { createUser,loginUser,logoutCurrentUser };
