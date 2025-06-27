@@ -8,6 +8,7 @@ router.route('/').post(createUser).get(authenticate,authorizedAdmin,getAllUsers)
 router.post('/auth',loginUser);
 router.post('/logout',logoutCurrentUser);
 
-router.route('/profile').get(authenticate,getCurrentUserProfile).put(authenticate,updateCurrentUserProfile);
+router.route('/profile').get(authenticate,getCurrentUserProfile).put(authenticate, updateCurrentUserProfile);
+
 
 export default router;  

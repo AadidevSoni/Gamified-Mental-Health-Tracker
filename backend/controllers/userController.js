@@ -83,7 +83,7 @@ const getAllUsers = asyncHandler(async(req,res) => {
 });
 
 const getCurrentUserProfile = asyncHandler(async(req,res) => {
-  const user =  await User.findById(req.user._id);
+  const user = await User.findById(req.user._id);
 
   if(user) {
     res.json({
@@ -99,6 +99,42 @@ const getCurrentUserProfile = asyncHandler(async(req,res) => {
   }
 });
 
+const updateCurrentUserProfile = asyncHandler(async(req,res) => {
+  console.log("Request method:", req.method);
+  console.log("Request body:", req.body);
+  const user = await User.findById(req.user._id);
 
+  if(user){
+    user.username = req.body.username || user.username;
+    
+  if (req.body.email && req.body.email !== user.email) {
+    const emailTaken = await User.findOne({ email: req.body.email });
+    if (emailTaken) {
+      res.status(400);
+      throw new Error("Email already in use by another account");
+    }
+    user.email = req.body.email;
+  }
+
+    if(req.body.password) {
+      const salt = await bcrypt.genSalt(10);
+      const hashedPassword = await bcrypt.hash(req.body.password,salt);
+      user.password = hashedPassword;
+    }
+
+    const updatedUser = await user.save();
+
+    res.json({
+      _id: updatedUser._id,
+      username: updatedUser.username,
+      email: updatedUser.email,
+      exp: updatedUser.exp,
+      level: updatedUser.level,
+    }); 
+  }else {
+    res.status(404);
+    throw new Error("User not found");
+  }
+});
 
 export { createUser,loginUser,logoutCurrentUser,getAllUsers,getCurrentUserProfile,updateCurrentUserProfile};
