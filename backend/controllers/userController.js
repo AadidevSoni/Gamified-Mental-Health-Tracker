@@ -67,7 +67,7 @@ const loginUser = asyncHandler(async(req,res) => {
   }
 });
 
-const logoutCurrentUser = asyncHandler(async (req, res) => {
+const logoutCurrentUser = asyncHandler(async(req, res) => {
   res.cookie('jwt', '', {
     httpOnly: true,
     secure: process.env.NODE_ENV !== 'development',
@@ -77,5 +77,28 @@ const logoutCurrentUser = asyncHandler(async (req, res) => {
   res.status(200).json({ message: "Logged out successfully" });
 });
 
+const getAllUsers = asyncHandler(async(req,res) => {
+  const users = await User.find({});
+  res.json(users);
+});
 
-export { createUser,loginUser,logoutCurrentUser };
+const getCurrentUserProfile = asyncHandler(async(req,res) => {
+  const user =  await User.findById(req.user._id);
+
+  if(user) {
+    res.json({
+      _id: user._id,
+      username: user.username,
+      email: user.email,
+      exp: user.exp,
+      level: user.level,
+    }); 
+  }else {
+    res.status(404);
+    throw new Error("User not found");
+  }
+});
+
+
+
+export { createUser,loginUser,logoutCurrentUser,getAllUsers,getCurrentUserProfile,updateCurrentUserProfile};
