@@ -137,4 +137,33 @@ const updateCurrentUserProfile = asyncHandler(async(req,res) => {
   }
 });
 
-export { createUser,loginUser,logoutCurrentUser,getAllUsers,getCurrentUserProfile,updateCurrentUserProfile};
+const deleteUserById = asyncHandler(async(req,res) => {
+  const user = await User.findById(req.params.id);
+
+  if(user) {
+    if(user.isAdmin) {
+      res.status(400);
+      throw new Error("Cannot delete Admin Account!");
+    }
+    await User.deleteOne({_id:user._id});
+    res.json({message: "User Account deleted"})
+  }else {
+    res.status(400);
+    throw new Error("User not found!");
+  }
+});
+
+const getUserById = asyncHandler(async(req,res) => {
+  const user = await User.findById(req.params.id).select("-password");
+
+  if(user) {
+    res.json(user);
+  }else{
+    res.status(400);
+    throw new Error("User not found!");
+  }
+})
+
+export { createUser,loginUser,logoutCurrentUser,getAllUsers,getCurrentUserProfile,updateCurrentUserProfile,deleteUserById,
+         getUserById
+};
