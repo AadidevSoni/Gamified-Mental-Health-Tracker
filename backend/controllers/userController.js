@@ -90,6 +90,7 @@ const getCurrentUserProfile = asyncHandler(async(req,res) => {
       _id: user._id,
       username: user.username,
       email: user.email,
+      isAdmin: user.isAdmin,
       exp: user.exp,
       level: user.level,
     }); 
@@ -162,8 +163,39 @@ const getUserById = asyncHandler(async(req,res) => {
     res.status(400);
     throw new Error("User not found!");
   }
-})
+});
+
+const updateUserById = asyncHandler(async(req,res) => {
+  const user = await User.findById(req.params.id);
+
+  if(user) {
+    user.username = req.body.username || user.username;
+    if (req.body.email && req.body.email !== user.email) {
+      const emailTaken = await User.findOne({ email: req.body.email });
+      if (emailTaken) {
+        res.status(400);
+        throw new Error("Email already in use by another account");
+      }
+      user.email = req.body.email;
+    }
+    user.isAdmin = Boolean(req.body.isAdmin);
+
+    const updatedUser = await user.save();
+
+    res.json({
+      _id: updatedUser._id,
+      username: updatedUser.username,
+      email: updatedUser.email,
+      isAdmin: updatedUser.isAdmin,
+      exp: updatedUser.exp,
+      level: updatedUser.level,
+    }); 
+  }else {
+    res.status(404);
+    throw new Error("User not found");
+  }
+});
 
 export { createUser,loginUser,logoutCurrentUser,getAllUsers,getCurrentUserProfile,updateCurrentUserProfile,deleteUserById,
-         getUserById
+         getUserById,updateUserById
 };
