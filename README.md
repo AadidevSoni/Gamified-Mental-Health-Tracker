@@ -77,3 +77,45 @@
   <li>Checks if the user is an admin</li>
   <li>Protects admin-only routes</li>
 </ul>
+
+<h1>Day 2</h1> 
+<h1>🎨 Technical Stack (Frontend)</h1> 
+<ul> 
+  <li>React.js with Vite</li> 
+  <li>React Router DOM for client-side routing</li> 
+  <li>Redux Toolkit with RTK Query for state management and API calls</li> 
+  <li>React Toastify for notifications</li> 
+  <li>Custom CSS (no external frameworks)</li> 
+</ul> 
+<h1>🚀 Features Implemented (Frontend)</h1> 
+<h2>🧭 Navigation</h2> 
+<ul> 
+  <li>Sidebar-based Navigation Component</li> 
+  <li>Dynamic highlighting of routes</li> 
+  <li>Responsive hover to expand nav items</li> 
+  <li>Includes links to Home, Profile, Calendar, Tests</li> 
+  <li>Login and Register links shown conditionally</li> 
+</ul> 
+<h2>🔐 Authentication (Frontend)</h2> 
+<ul> 
+  <li>Login Page (Login.jsx)</li> 
+  <li>Uses RTK Query login mutation</li> 
+  <li>Redirects logged-in users using `useLocation` and `navigate`</li> 
+  <li>Stores credentials in Redux store using `setCredentials`</li> 
+  <li>Error handling with React Toastify</li> 
+  <li>Loader shown during login request</li> 
+  <li>Preserves redirect path in login/register flows</li> 
+</ul> 
+<h2>🧱 Structure & Styling</h2> 
+<ul> 
+  <li>Set up shared App layout with Navigation + Outlet</li> 
+  <li>Different background styles for Login screen using scoped CSS</li> 
+  <li>Maintained navigation bar visibility across routes, including Login</li> 
+  <li>Scoped Home and Login background styles to prevent overlap</li> 
+</ul> 
+<h2>⚙️ Configurations & Utilities</h2> 
+<ul> 
+  <li>Configured proxy in Vite to redirect `/api/` to backend</li> 
+  <li>Enabled `credentials: include` in baseQuery for cookie-based JWT auth</li> 
+  <li>Fixed import paths and ensured consistent Redux store setup</li>
+</ul>

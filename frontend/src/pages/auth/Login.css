@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 .loginss {
   background: rgba(6,49,36,1);
   height: 100vh;
@@ -15,21 +19,24 @@
 }
 
 .sign {
-  font-size: 2rem;
-  margin-bottom: 4rem;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .loginFormContainer {
   width: 30rem;
 }
 
-.loginContainers {
-  margin: 2rem 0;
-}
-
 .loginEmail {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
+  font-family: "Bangers", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 4rem;
 }
 
 .loginEmailInput {
@@ -37,6 +44,12 @@
   padding: 10px;
   border-radios: 50px;
   width: 100%;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 1rem;
+  border-radius: 25px;
+  border: none;
 }
 
 .two {
@@ -55,11 +68,15 @@
   border: none;
   border-radius: 25px;
   height: 3rem;
-  width: 10rem;
-  margin-top: 5rem;
+  width: 8rem;
+  margin-top: 4rem;
   color: rgb(119, 233, 187);
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
 }
 
 .loginButton:hover {
@@ -70,12 +87,21 @@
   margin-top: 4rem;
 }
 
-.neUser {
+.newUser {
   color: white;
+  font-family: "Bangers", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
 }
 
 .registerLink {
   color: rgb(119, 233, 187);
   font-size: 1rem;
   font-weight: bold;
+  margin-left: 20px;
+  font-family: "Bangers", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
 }
