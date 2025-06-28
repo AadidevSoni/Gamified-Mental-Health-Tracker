@@ -1,17 +1,51 @@
 import React, { useState } from 'react';
 import { AiOutlineHome} from 'react-icons/ai';
 import { RiMentalHealthFill } from "react-icons/ri";
+import {AiOutlineLogin,AiOutlineUserAdd} from 'react-icons/ai'
 import { FaCalendarAlt } from "react-icons/fa";
 import { GiBrain } from "react-icons/gi";
 import { Link } from 'react-router-dom';
 import './Navigation.css';
+import { useNavigate } from 'react-router-dom'
+import { useSelector,useDispatch } from 'react-redux'
+import { useLoginMutation } from '../redux/api/userApiSlice'
+import {logout} from '../redux/features/authSlice'
 
 const Navigation = () => {
+
+  const {userInfo} = useSelector(state => state.auth);
+
+  const [dropDown,setDropDown] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
+
+  const toggleDropDown = () => {
+    setDropDown(!dropDown);
+  };
+
+  const toggleSideBar = () => {
+    setShowSidebar(!showSidebar);
+  };
 
   const closeSideBar = () => {
     setShowSidebar(false);
   };
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const [logoutApiCall] = useLoginMutation();
+
+  const logoutHandler = async() => {
+    try {
+
+      await logoutApiCall().unwrap();
+      dispatch(logout());
+      navigate('/login')
+      
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return (
     <div id="navigation-container" className={`navigation-container ${showSidebar ? 'hidden' : 'visible'}`} style={{ zIndex: 999 }}>
@@ -36,6 +70,28 @@ const Navigation = () => {
           <span className="nav-item-name">Tests</span>
         </Link>
       </div>
+
+      <div className="relative">
+        <button onClick={toggleDropDown} className='flex items-center text-gray-8000 focus:outline-none'>
+          {userInfo ? <span className='text-white'>{userInfo.username}</span> : (<></>)}
+        </button>
+      </div>
+
+      <ul>
+        <li>
+          <Link to ='/login' className="nav-link">
+            <AiOutlineLogin className='nav-icon loginIcons' size={26}/>
+            <span className="nav-item-name">LOGIN</span> {" "}
+          </Link>
+        </li>
+
+        <li>
+          <Link to ='/register' className="nav-link">
+            <AiOutlineUserAdd className='nav-icon loginIcons' size={26}/>
+            <span className="nav-item-name">REGISTER</span> {" "}
+          </Link>
+        </li>
+      </ul>
     </div>
   );
 };
