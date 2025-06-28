@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+.monthContainer {
+  height: 100vh;
+  background: 
+  linear-gradient(
+    90deg,  
+    rgba(56, 101, 53, 0.69) 100%
+  ),
+  url('/pictures/calendarForest.webp') no-repeat center;
+
+  background-size: cover;
+  background-attachment: scroll;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.monthName {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); 
+  gap: 1rem;
+  justify-content: center;
+}
+
+.dayBox {
+  position: relative;
+  height: 105px;
+  background: transparent;
+  border-radius: 10px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.dayNumber {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  font-size: 0.8rem;
+  color: #c2f7d4;
+}

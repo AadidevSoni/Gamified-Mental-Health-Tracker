@@ -9,12 +9,16 @@ import store from './pages/redux/store.js'
 
 //Auth
 import Login from './pages/auth/Login.jsx';
+import Calendar from './pages/auth/Calendar.jsx';
+import MonthView from './pages/auth/MonthView.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index={true} path="/" element={<Home />} />
       <Route path='/login' element={<Login />} />
+      <Route path='/calendar' element={<Calendar />} />
+      <Route path="/calendar/:month" element={<MonthView />} />
     </Route>
   )
 );

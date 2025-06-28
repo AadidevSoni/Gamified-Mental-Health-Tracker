@@ -1,0 +1,37 @@
+.btn-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  place-items: center;
+  background: 
+  linear-gradient(
+    90deg,  
+    rgba(56, 101, 53, 0.69) 100%
+  ),
+  url('/pictures/calendarForest.webp') no-repeat center;
+
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+.months {
+  padding: 1.5rem;
+  width: 10rem;
+  background-color: #4caf50;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.months:hover {
+  transform: scale(1.05);
+  background-color: #66bb6a;
+  cursor: pointer;
+}

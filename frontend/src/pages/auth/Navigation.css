@@ -71,10 +71,12 @@
 .navigation-container:hover .nav-item-name {
   display: block;
   opacity: 1;
+  cursor: pointer;
 }
 
 .navigation-container:hover .nav-icon {
   transform: translateX(-10px);
+  cursor: pointer;
 }
 
 .search-input {
@@ -86,11 +88,13 @@
 .navigation-container:hover .search-input {
   display: block;
   opacity: 1;
+  cursor: pointer;
 }
 
 .navigation-container:hover .search-icon {
   display: none;
   transition: opacity 0.2s ease-in-out; /* Add opacity transition */
+  cursor: pointer;
 }
 
 .loginIcons {
