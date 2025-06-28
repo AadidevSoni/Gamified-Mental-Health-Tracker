@@ -8,7 +8,7 @@ function App() {
     <div style={{ display: 'flex' }}>
       <ToastContainer />
       <Navigation />
-      <main style={{ marginLeft: '200px', padding: '1rem', width: '100%' }}>
+      <main style={{ marginLeft: '6%', width: '94%' }}>
         <Outlet />
       </main>
     </div>

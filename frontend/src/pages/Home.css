@@ -1,0 +1,67 @@
+.container {
+  min-height: 100vh;
+  color: white;
+  padding: 3rem;
+  box-sizing: border-box;
+
+  background: 
+  linear-gradient(
+    90deg, 
+    rgba(229, 58, 49, 0.66) 10%, 
+    rgba(229, 97, 31, 0.69) 16.667%, 
+    rgba(242, 133, 24, 0.64) 33.333%, 
+    rgba(213, 186, 37, 0.71) 50%, 
+    rgba(155, 226, 42, 0.66) 66.667%, 
+    rgba(110, 244, 92, 0.64) 83.333%, 
+    rgba(15, 208, 83, 0.69) 100%
+  ),
+  url('/pictures/forest3.jpg') no-repeat center bottom;
+
+  background-size: cover;
+  background-attachment: scroll;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 6rem;
+  margin-top: 1rem;
+  line-height: 1;
+  z-index: 1;
+}
+
+.calm {
+  color: rgba(25, 237, 64, 0.9);
+  -webkit-text-stroke: 1px green; 
+  font-weight: bold;
+}
+
+.canopy-word {
+  color: rgba(218, 63, 20, 0.79);
+    -webkit-text-stroke: 1px red; 
+  font-weight: bold;
+}
+.canopy {
+  color: rgba(129, 192, 72, 1);
+  display: block;
+  font-size: 9rem;
+  margin-top: 1rem;
+  z-index: 1;
+}
+
+.subtitle {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  z-index: 1;
+}
+
+.content {
+  z-index: 1;
+  text-align: center;
+  padding-bottom: 10rem;
+}

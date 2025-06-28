@@ -9,10 +9,6 @@ import './Navigation.css';
 const Navigation = () => {
   const [showSidebar, setShowSidebar] = useState(false);
 
-  const toggleSideBar = () => {
-    setShowSidebar(!showSidebar);
-  };
-
   const closeSideBar = () => {
     setShowSidebar(false);
   };
