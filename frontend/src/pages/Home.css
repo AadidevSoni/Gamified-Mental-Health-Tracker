@@ -15,7 +15,7 @@
     rgba(110, 244, 92, 0.64) 83.333%, 
     rgba(15, 208, 83, 0.69) 100%
   ),
-  url('/pictures/forest3.jpg') no-repeat center bottom;
+  url('/pictures/forest3.jpg') no-repeat center;
 
   background-size: cover;
   background-attachment: scroll;
@@ -23,6 +23,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.container img {
+  mix-blend-mode: multiply;
+  mix-blend-mode: darken;
+  mix-blend-mode: overlay;
+  mix-blend-mode: hard-light;
+  background-blend-mode: multiply, screen;
 }
 
 .title {
@@ -41,7 +49,7 @@
 
 .canopy-word {
   color: rgba(218, 63, 20, 0.79);
-    -webkit-text-stroke: 1px red; 
+  -webkit-text-stroke: 1px red; 
   font-weight: bold;
 }
 .canopy {
