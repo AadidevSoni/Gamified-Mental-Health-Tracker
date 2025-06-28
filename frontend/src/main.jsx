@@ -7,10 +7,14 @@ import '../index.css';
 import { Provider } from 'react-redux';
 import store from './pages/redux/store.js'
 
+//Auth
+import Login from './pages/auth/Login.jsx';
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route index element={<Home />} />
+      <Route index={true} path="/" element={<Home />} />
+      <Route path='/login' element={<Login />} />
     </Route>
   )
 );

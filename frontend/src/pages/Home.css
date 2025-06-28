@@ -1,4 +1,4 @@
-.container {
+.homeContainer {
   min-height: 100vh;
   color: white;
   padding: 3rem;
@@ -25,15 +25,7 @@
   justify-content: center;
 }
 
-.container img {
-  mix-blend-mode: multiply;
-  mix-blend-mode: darken;
-  mix-blend-mode: overlay;
-  mix-blend-mode: hard-light;
-  background-blend-mode: multiply, screen;
-}
-
-.title {
+.homeTitle {
   text-align: center;
   font-size: 6rem;
   margin-top: 1rem;
@@ -60,7 +52,7 @@
   z-index: 1;
 }
 
-.subtitle {
+.homeSubtitle {
   text-align: center;
   margin-top: 1rem;
   font-size: 1.5rem;
@@ -68,7 +60,7 @@
   z-index: 1;
 }
 
-.content {
+.homeContent {
   z-index: 1;
   text-align: center;
   padding-bottom: 10rem;

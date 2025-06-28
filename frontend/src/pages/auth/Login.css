@@ -1,0 +1,81 @@
+.loginss {
+  background: rgba(6,49,36,1);
+  height: 100vh;
+  color: white;
+}
+.loginText-container {
+  margin-right: 4rem;
+  margin-top: 5rem;
+}
+
+.loginContainer {
+  padding-left: 10rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sign {
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+
+.loginFormContainer {
+  width: 30rem;
+}
+
+.loginContainers {
+  margin: 2rem 0;
+}
+
+.loginEmail {
+  display: block;
+  font-size: 20px;
+}
+
+.loginEmailInput {
+  margin-top: 1rem;
+  padding: 10px;
+  border-radios: 50px;
+  width: 100%;
+}
+
+.two {
+  padding: 2rem 3rem;
+  text-transform: uppercase;
+  background-color: blueviolet;
+  color: white;
+  font-size: 1.5rem;
+  position: relative;
+  text-decoration: none;
+}
+
+.loginButton {
+  padding: 10px;
+  background: rgb(34, 132, 93);
+  border: none;
+  border-radius: 25px;
+  height: 3rem;
+  width: 10rem;
+  margin-top: 5rem;
+  color: rgb(119, 233, 187);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.loginButton:hover {
+  cursor: pointer;
+}
+
+.newUserContainer {
+  margin-top: 4rem;
+}
+
+.neUser {
+  color: white;
+}
+
+.registerLink {
+  color: rgb(119, 233, 187);
+  font-size: 1rem;
+  font-weight: bold;
+}

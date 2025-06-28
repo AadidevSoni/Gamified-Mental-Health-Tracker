@@ -72,26 +72,26 @@ const Navigation = () => {
       </div>
 
       <div className="relative">
-        <button onClick={toggleDropDown} className='flex items-center text-gray-8000 focus:outline-none'>
-          {userInfo ? <span className='text-white'>{userInfo.username}</span> : (<></>)}
+        <button onClick={toggleDropDown} className='unameButton'>
+          {userInfo ? <span className='uname'>{userInfo.username}</span> : (<></>)}
         </button>
       </div>
 
-      <ul>
-        <li>
-          <Link to ='/login' className="nav-link">
-            <AiOutlineLogin className='nav-icon loginIcons' size={26}/>
-            <span className="nav-item-name">LOGIN</span> {" "}
-          </Link>
-        </li>
+      <div className="auth-links">
+        {!userInfo && (
+          <>
+            <Link to='/login' className="nav-link">
+              <AiOutlineLogin className='nav-icon loginIcons' size={26}/>
+              <span className="nav-item-name">LOGIN</span>
+            </Link>
 
-        <li>
-          <Link to ='/register' className="nav-link">
-            <AiOutlineUserAdd className='nav-icon loginIcons' size={26}/>
-            <span className="nav-item-name">REGISTER</span> {" "}
-          </Link>
-        </li>
-      </ul>
+            <Link to='/register' className="nav-link">
+              <AiOutlineUserAdd className='nav-icon loginIcons' size={26}/>
+              <span className="nav-item-name">REGISTER</span>
+            </Link>
+          </>
+        )}
+      </div>
     </div>
   );
 };
