@@ -119,3 +119,29 @@
   <li>Enabled `credentials: include` in baseQuery for cookie-based JWT auth</li> 
   <li>Fixed import paths and ensured consistent Redux store setup</li>
 </ul>
+
+<h1>🌱 Calendar Module (Frontend)</h1>
+
+<ul>
+  <li>Added a new Calendar page for month-wise mental health tracking.</li>
+  <li>Created a responsive grid of 12 months with clean styling.</li>
+  <li>Implemented navigation to individual month views using dynamic routes.</li>
+  <li>Used <code>react-router-dom</code> dynamic route: <code>/calendar/:month</code> to open a calendar view per month.</li>
+</ul>
+
+<h1>📅 Month View Page</h1>
+<ul>
+  <li>Built a reusable <code>MonthView</code> component using <code>useParams()</code>.</li>
+  <li>Automatically determines the number of days in the selected month (28–31 days).</li>
+  <li>Utilized JavaScript Date API: <code>new Date(year, month + 1, 0).getDate()</code> to calculate accurate days.</li>
+  <li>Displayed each day in a visually distinct grid layout.</li>
+  <li>Styled day boxes to show small day numbers at the top-right corner of each box.</li>
+  <li>Fully responsive layout ready for extension (e.g., mood icons or journal entries per day).</li>
+</ul>
+
+<h1>🎨 Styling Improvements</h1>
+<ul>
+  <li>Used CSS Grid to organize the month buttons into 4 rows and 3 columns.</li>
+  <li>Centered the entire calendar module both vertically and horizontally.</li>
+  <li>Improved UI consistency with custom font, padding, and hover effects for buttons.</li>
+</ul>
