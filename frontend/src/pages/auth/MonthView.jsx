@@ -35,6 +35,7 @@ const MonthView = () => {
         {days.map(day => (
           <div key={day} className='dayBox'>
             <span className='dayNumber'>{day}</span>
+            <img class = "calendarTree" src="/public/pictures/tree-green.png" alt="tree" />
           </div>
         ))}
       </div>
