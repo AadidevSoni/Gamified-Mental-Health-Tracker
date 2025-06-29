@@ -25,12 +25,12 @@ const createUser = asyncHandler(async (req, res) => {
 
   await newUser.save();
 
-  // Set token cookie
   createToken(res, newUser._id);
 
   res.status(201).json({
     _id: newUser._id,
     username: newUser.username,
+    isAdmin: newUser.isAdmin,
     email: newUser.email,
     exp: newUser.exp,
     level: newUser.level,
@@ -51,6 +51,7 @@ const loginUser = asyncHandler(async(req,res) => {
       res.status(201).json({
         _id: existingUser._id,
         username: existingUser.username,
+        isAdmin: newUser.isAdmin,
         email: existingUser.email,
         exp: existingUser.exp,
         level: existingUser.level,
@@ -59,7 +60,7 @@ const loginUser = asyncHandler(async(req,res) => {
       return;
     }else {
       res.status(400);
-      throw new Error("Incorrect Password!");
+      throw new Error("Incorrect Password!"); //toast-notify takes these message and displays when an error occurs
     }
   }else {
     res.status(400);
@@ -101,21 +102,20 @@ const getCurrentUserProfile = asyncHandler(async(req,res) => {
 });
 
 const updateCurrentUserProfile = asyncHandler(async(req,res) => {
-  console.log("Request method:", req.method);
-  console.log("Request body:", req.body);
   const user = await User.findById(req.user._id);
 
   if(user){
     user.username = req.body.username || user.username;
     
-  if (req.body.email && req.body.email !== user.email) {
-    const emailTaken = await User.findOne({ email: req.body.email });
-    if (emailTaken) {
-      res.status(400);
-      throw new Error("Email already in use by another account");
+    if (req.body.email && req.body.email !== user.email) {
+      const emailTaken = await User.findOne({ email: req.body.email });
+
+      if (emailTaken) {
+        res.status(400);
+        throw new Error("Email already in use by another account");
+      }
+      user.email = req.body.email;
     }
-    user.email = req.body.email;
-  }
 
     if(req.body.password) {
       const salt = await bcrypt.genSalt(10);
@@ -170,14 +170,17 @@ const updateUserById = asyncHandler(async(req,res) => {
 
   if(user) {
     user.username = req.body.username || user.username;
+
     if (req.body.email && req.body.email !== user.email) {
       const emailTaken = await User.findOne({ email: req.body.email });
+
       if (emailTaken) {
         res.status(400);
         throw new Error("Email already in use by another account");
       }
       user.email = req.body.email;
     }
+    
     user.isAdmin = Boolean(req.body.isAdmin);
 
     const updatedUser = await user.save();

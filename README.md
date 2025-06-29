@@ -108,7 +108,6 @@
   <li>Protects admin-only routes</li>
 </ul>
 
-<h1>Day 2</h1> 
 <h1>🎨 Technical Stack (Frontend)</h1> 
 <ul> 
   <li>React.js with Vite</li> 
@@ -175,3 +174,34 @@
   <li>Centered the entire calendar module both vertically and horizontally.</li>
   <li>Improved UI consistency with custom font, padding, and hover effects for buttons.</li>
 </ul>
+
+<h1>Development</h1>
+
+<h2>Initial Setup and Backend</h2>
+<ul> 
+  <li>Creation of repository and installation of react vite</li>
+  <li>Importing all frontend and backend packages and folder creations</li>
+  <li>Modifying running scripts in package.json and project clean up</li>
+  <li>Connecting to mongoDB database</li>
+  <li>Running the app (index.js) and see if the backend works on Postman</li>
+  <li>Creating routes (userRoutes) for different pages</li>
+  <li>Creating userSchema and Model</li>
+  <li>Creating an asyncHandler for catching errors of every async functions</li>
+  <li>Creating a createUser user controller and route it to post of '/' path</li>
+  <li>Hashing the password and test it in postman and the user must be created in mongoDB</li>
+  <li>Creation of token and cookies in createToken utils</li>
+  <li>Importing it in userController and create a token when new user created or logged in</li>
+  <li>Testing it in Postman to see the cookie generation</li>
+  <li>Creating login and logout routes</li>
+  <li>Creating userController for login and logout</li>
+  <li>Creating authentication and authorization middleware and importing to userRoutes</li>
+  <li>Creating get all users if authenticated and authorized and get request in '/' route</li>
+  <li>Creating get all users functionality in userController and testing in Postman</li>
+  <li>Creating getUserProfile in userRoutes if get request in '/profile' route</li>
+  <li>Creating getUserProfile functionality in userController and testing in Postman</li>
+  <li>Creating updateUserProfile in userRoutes if put request in '/profile' route</li>
+  <li>Creating updateUserProfile functionality in userController and testing in Postman</li>
+  <li>Creating a '/:id' route with delete request for deleting user from admin side</li>
+  <li>Creating a '/:id' route with get request for getting user from admin side</li>
+  <li>Creating a '/:id' route with put request for updating user from admin side</li>
+</ul> 

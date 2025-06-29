@@ -9,7 +9,7 @@ const userSchema = mongoose.Schema({
   level: { type: Number, default: 1 },
   avatar: { type: String, default: '' },
   settings: {
-    darkMode: { type: Boolean, default: false },
+    darkMode: { type: Boolean, default: true },
     notifications: { type: Boolean, default: true },
   },
 }, { timestamps: true });
