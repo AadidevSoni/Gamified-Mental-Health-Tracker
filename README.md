@@ -48,6 +48,7 @@
   <li>User Registration (POST /api/users)</li>
   <li>Validates username, email, and password</li>
   <li>Hashes password securely using bcryptjs</li>
+  <li>Creates token/cookies upon login</li>
   <li>Stores user in MongoDB</li>
   <li>Sets HTTP-only JWT cookie</li>
   <li>Returns user profile (without password)</li>
@@ -205,3 +206,18 @@
   <li>Creating a '/:id' route with get request for getting user from admin side</li>
   <li>Creating a '/:id' route with put request for updating user from admin side</li>
 </ul> 
+
+<h2>Frontend development</h2>
+<ul>
+  <li>Seting up main.jsx with browserRouter and routerProvider</li>
+  <li>Creating App.jsx with all components</li>
+  <li>Creating Navigation.jsx to include all 6 icons and transitions</li>
+  <li>Using Redux Toolkit and RTK Query to manage authentication and API interactions</li>
+  <li>Creating constants.js with API endpoints</li>
+  <li>Defining API endpoints for user related operations in userApiSlice.js</li>
+  <li>Creating authSice redux slice which initializes state from local storage</li>
+  <li>Creating redux store and setting up RTK Query middleware.</li>
+  <li>Provide this redux store to entire app in main.jsx</li>
+  <li>Implementing useSelector,useDispacth and useLoginMutation in Navigation.jsx to display username</li>
+  <li>Creating Home Page, Calendar page and MonthView Page</li>
+</ul>

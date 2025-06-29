@@ -13,7 +13,7 @@ import {logout} from '../redux/features/authSlice'
 
 const Navigation = () => {
 
-  const {userInfo} = useSelector(state => state.auth);
+  const {userInfo} = useSelector(state => state.auth); //This callback tells useSelector to return the auth slice of your Redux state.
 
   const [dropDown,setDropDown] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
