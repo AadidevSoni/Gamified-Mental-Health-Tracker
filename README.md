@@ -1,13 +1,43 @@
 # Gamified-Mental-Health-Tracker
-<h1>Day1</h1>
-<h1>⚙️ Technical Stack (Backend)</h1>
+
+<h1>⚙️ Technical Stack [MERN Stack]</h1>
 <ul>
-  <li>Node.js + Express.js</li>
-  <li>MongoDB + Mongoose</li>
-  <li>JWT for authentication (stored in cookies)</li>
-  <li>bcryptjs for password hashing</li>
-  <li>cookie-parser for secure token handling</li>
-  <li>Structured MVC architecture with separation of concerns</li>
+  <li>HTML + CSS + React.js (frontend)</li>
+  <li>Node.js + Express.js (backend)</li>
+  <li>MongoDB + Mongoose (database)</li>
+</ul>
+
+<h1>📦 Packages Used📦</h1>
+
+<h2>Backend Packages</h2>
+<ul>
+  <li>🔁 Nodemon for auto restarting server on changes</li>
+  <li>📦 Multer for handling form-data, used for uploading files</li>
+  <li>🍃 Mongoose for ODM (Object Data Modeling) library for MongoDB</li>
+  <li>🔐 Jsonwebtoken for creating and verifying jwt for authentication and authorization</li>
+  <li>📝 Express-formidable for parsing form data and file uploads like Multer</li>
+  <li>⚙️ Express-async-handler for simplifying error handling in async/await route handlers</li>
+  <li>🌍 Express for framework for building web servers and APIs in Node.js.</li>
+  <li>🔐 Dotenv for loading environment variables from .env files</li>
+  <li>🔄 Cors for enabling Cross-Origin Resource Sharing for communication between frontend and backend</li>
+  <li>🍪 Cookie-parser for parsing Cookie header and populates req.cookies with an object</li>
+  <li>🚀 Concurently for running multiple commands/scripts in parallel like frontend and backend</li>
+  <li>🔐 Bcryptjs for password hashing</li>
+</ul>
+
+<h2>Frontend Packages</h2>
+<ul>
+  <li>🎠 Slick-carousel for responsive image sliders or product carousels</li>
+  <li>🚗 react-slick for building carousels/sliders</li>
+  <li>🔔 React-toastify for displaying toast notifications  </li>
+  <li>🧭 React-router and react-router-dom for routing/navigation in React apps</li>
+  <li>🧠 React-redux for connecting React with Redux for global state management</li>
+  <li>🎨 React-icons for using popular icons</li>
+  <li>📊 Apexcharts for visualizing charts</li>
+  <li>📊 react-apexcharts for React wrapper for apexcharts</li>
+  <li>🕒 moment for date and time manipulation</li>
+  <li>🔗 axios for making API requests like fetching datas from backend</li>
+  <li>🧰 @reduxjs/toolkit for modern way to write Redux logic with less boilerplate</li>
 </ul>
 
 <h1>🚀 Features Implemented (Backend)</h1>
