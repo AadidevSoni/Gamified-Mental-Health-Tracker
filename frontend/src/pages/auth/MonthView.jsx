@@ -29,13 +29,25 @@ const MonthView = () => {
 
   return (
     <div className='monthContainer'>
+      <div className="video-wrapper">
+        <video
+          autoPlay
+          muted
+          loop
+          className="video-background"
+          playsInline
+        >
+          <source src="/videos/frog4.mp4" type="video/mp4" />
+        </video>
+        <div className="video-overlay"></div>
+      </div>
       <h1 className='monthName'>{month} Calendar</h1>
 
       <div className='calendarGrid'>
         {days.map(day => (
           <div key={day} className='dayBox'>
             <span className='dayNumber'>{day}</span>
-            <img class = "calendarTree" src="/public/pictures/tree-green.png" alt="tree" />
+            <img class = "calendarTree" src="/public/pictures/lilyGreen.png" alt="tree" />
           </div>
         ))}
       </div>

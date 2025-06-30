@@ -29,6 +29,7 @@
   object-fit: cover;
   z-index: -2;
   pointer-events: none;
+  filter: brightness(1.1);  
 }
 
 .video-overlay {

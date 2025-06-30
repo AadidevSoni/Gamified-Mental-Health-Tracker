@@ -12,13 +12,14 @@
   margin-top: 10px;
   padding: 1.5rem;
   width: 10rem;
-  background-color: #4caf50;
+  background-color:rgba(142, 255, 94, 0.62);
   color: white;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-family: "Oswald", sans-serif;
   font-weight: bold;
   border: none;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(151, 244, 63, 0.46);
   transition: transform 0.2s ease, background-color 0.3s ease;
 }
 

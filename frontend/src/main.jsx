@@ -7,15 +7,25 @@ import '../index.css';
 import { Provider } from 'react-redux';
 import store from './pages/redux/store.js'
 
+//Private Route
+import PrivateRoute from './components/PrivateRoute.jsx';
+
 //Auth
 import Login from './pages/auth/Login.jsx';
 import Calendar from './pages/auth/Calendar.jsx';
 import MonthView from './pages/auth/MonthView.jsx';
 import Register from './pages/auth/Register.jsx';
 
+import Profile from './pages/user/Profile.jsx';
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
+
+      <Route path ='' element = {<PrivateRoute />}>
+        <Route path='/profile' element={<Profile />}/>
+      </Route>
+      
       <Route index={true} path="/" element={<Home />} />
       <Route path='/login' element={<Login />} />
       <Route path='/calendar' element={<Calendar />} />

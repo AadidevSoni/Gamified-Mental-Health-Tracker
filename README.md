@@ -224,4 +224,9 @@
   <li>Creating dropdown button in user for logout and profile</li>
   <li>Creating logoutMutation endpoint and using it in Navigation logoutHandler to logout the user</li>
   <li>Creating Register page and registerMutation endpoint</li>
+  <li>Massive redesign of website</li>
+  <li>Creating a PrivateRoute component for Profile</li>
+  <li>Creating PrivateRoute component in main.jsx and adding Profile component in it</li>
+  <li>Creating a useProfileMutation in userApiSlice</li>
+  <li>Creating the Profile page</li>
 </ul>

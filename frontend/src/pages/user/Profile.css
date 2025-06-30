@@ -1,0 +1,60 @@
+.profileContainer {
+  padding: 4px;
+  margin-top: 10rem;
+}
+
+.profileSubContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileHeading {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+}
+
+.formItemContainer {
+  margin-bottom: 2rem;
+}
+
+.profileFormLabel {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.profileFormInput {
+  padding: 10px;
+  border-radius: 7px;
+  width: 100%;
+}
+
+.profileSubsContainer {
+
+}
+
+.profileButtonContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profileButton {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #22845d;
+  color: #77e9bb;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "Oswald", sans-serif;
+}
+
+..profileButton:hover {
+  background-color: #56b991;
+  color: #051711;
+}
