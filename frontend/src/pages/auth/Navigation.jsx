@@ -8,18 +8,18 @@ import { Link } from 'react-router-dom';
 import './Navigation.css';
 import { useNavigate } from 'react-router-dom'
 import { useSelector,useDispatch } from 'react-redux'
-import { useLoginMutation } from '../redux/api/userApiSlice'
+import { useLogoutMutation } from '../redux/api/userApiSlice'
 import {logout} from '../redux/features/authSlice'
 
 const Navigation = () => {
 
   const {userInfo} = useSelector(state => state.auth); //This callback tells useSelector to return the auth slice of your Redux state.
 
-  const [dropDown,setDropDown] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
 
   const toggleDropDown = () => {
-    setDropDown(!dropDown);
+    setDropdownOpen(!dropdownOpen);
   };
 
   const toggleSideBar = () => {
@@ -33,7 +33,7 @@ const Navigation = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const [logoutApiCall] = useLoginMutation();
+  const [logoutApiCall] = useLogoutMutation();
 
   const logoutHandler = async() => {
     try {
@@ -74,7 +74,58 @@ const Navigation = () => {
       <div className="relative">
         <button onClick={toggleDropDown} className='unameButton'>
           {userInfo ? <span className='uname'>{userInfo.username}</span> : (<></>)}
+
+          {userInfo && (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className={`dropdown-arrow ${dropdownOpen ? "rotate" : ""}`}
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="white"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d={dropdownOpen ? "M5 15l7-7 7 7" : "M19 9l-7 7-7-7"}
+              />
+            </svg>
+          )}
         </button>
+
+          {dropdownOpen && userInfo && (
+            <ul className='dropdownList'>
+
+              {userInfo.isAdmin && (
+                <>
+                  <li>  
+                    <Link to='/admin/dashboard' className="nav-list-item">
+                      Dashboard
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to='/admin/userList' className="nav-list-item">
+                      Users
+                    </Link>
+                  </li>
+                </>
+              )}
+
+          <li>
+            <Link to='/admin/profile' className="nav-list-item">
+              Profile
+            </Link>
+          </li>
+           <li>
+              <button
+                onClick={logoutHandler}
+                className="nav-list-item listButton" 
+              >
+                Logout
+            </button>
+          </li>
+        </ul>
+          )}
       </div>
 
       <div className="auth-links">

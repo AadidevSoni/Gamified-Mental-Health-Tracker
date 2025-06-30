@@ -72,7 +72,7 @@ const Login = () => {
           </form>
 
           <div className='newUserContainer'>
-            <p className="newUser">
+            <p className="newUsers">
                 New User ? {" "}
                 <Link to={redirect ? `/register?redirect=${redirect}` : '/register'} className='registerLink'>Register</Link>
             </p>

@@ -136,3 +136,51 @@
 .unameButton:hover {
   cursor: pointer;
 }
+
+.dropdown-arrow {
+  height: 1rem;        
+  width: 1rem;     
+  margin-left: 0.25rem; 
+  transition: transform 0.3s ease;
+  stroke: white;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.dropdownList {
+  position: absolute;
+  top: 100%;               /* Right below the button */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgb(11, 54, 28);
+  color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  border-radius: 4px;
+  z-index: 1000;
+  padding: 0.5rem 0;
+}
+
+.nav-list-item {
+  display: block;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+  background: rgb(11, 54, 28);
+}
+
+.nav-list-item:hover {
+  background: rgba(84, 224, 132, 0.5);
+}
+
+.relative {
+  position: relative;
+}
+
+.listButton {
+  border: none; 
+}

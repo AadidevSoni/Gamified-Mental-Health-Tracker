@@ -51,7 +51,7 @@ const loginUser = asyncHandler(async(req,res) => {
       res.status(201).json({
         _id: existingUser._id,
         username: existingUser.username,
-        isAdmin: newUser.isAdmin,
+        isAdmin: existingUser.isAdmin,
         email: existingUser.email,
         exp: existingUser.exp,
         level: existingUser.level,
