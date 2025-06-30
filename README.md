@@ -176,6 +176,48 @@
   <li>Improved UI consistency with custom font, padding, and hover effects for buttons.</li>
 </ul>
 
+<h1>🌟 UI/UX Enhancements</h1>
+<ul>
+  <li>Introduced video background sections for Login, Register, and Profile screens using MP4 assets.</li>
+  <li>Scoped overlay and brightness filters to enhance visual appeal without affecting form readability.</li>
+  <li>Implemented custom full-screen loading animation with spinner and message for transitions.</li>
+  <li>Improved responsiveness and contrast of form inputs/buttons across different resolutions.</li>
+</ul>
+
+<h1>👤 Profile Management (Frontend)</h1>
+<ul>
+  <li>Created Profile Page (<code>Profile.jsx</code>) to allow users to update:</li>
+  <ul>
+    <li>Username</li>
+    <li>Email</li>
+    <li>Password</li>
+  </ul>
+  <li>Preserves existing values using <code>useEffect</code> from Redux store (<code>auth</code> slice).</li>
+  <li>Uses RTK Query’s <code>useProfileMutation</code> to submit updates to the backend.</li>
+  <li>Displays success and error messages via toast notifications.</li>
+  <li>Form validation includes password match check before submission.</li>
+</ul>
+
+<h1>🔁 Reusable Loader Integration</h1>
+<ul>
+  <li><code>Loader</code> component reused across Login, Register, and Profile pages.</li>
+  <li>Conditional rendering of loader during API calls.</li>
+  <li>Loading screen on page mount (e.g., Profile) to create smooth transitions.</li>
+</ul>
+
+<h1>📁 Media Management</h1>
+<ul>
+  <li>Handled large video file hosting concerns by storing them in the <code>public/videos</code> folder (not pushed to GitHub).</li>
+  <li>Git ignored heavy media files via <code>.gitignore</code> while ensuring local Netlify builds work using public assets.</li>
+</ul>
+
+<h1>📽️ Background Video Styling</h1>
+<ul>
+  <li>Full-screen background video layout using <code>&lt;video&gt;</code> and CSS <code>object-fit: cover</code>.</li>
+  <li>Overlay implemented with semi-transparent div for better contrast.</li>
+  <li>Brightness filters and layering handled via <code>z-index</code> and <code>pointer-events</code> to keep forms interactive.</li>
+</ul>
+
 <h1>Development</h1>
 
 <h2>Initial Setup and Backend</h2>
@@ -229,4 +271,8 @@
   <li>Creating PrivateRoute component in main.jsx and adding Profile component in it</li>
   <li>Creating a useProfileMutation in userApiSlice</li>
   <li>Creating the Profile page</li>
+  <li>Create Admin Routes and import it in main.jsx and create userList route</li>
+  <li>Create Message controller</li>
+  <li>Creating all userApiSlice for admin functiionalities and exporting the mutation hooks</li>
+  <li>Creating userlist page to view all users from admin side</li>
 </ul>

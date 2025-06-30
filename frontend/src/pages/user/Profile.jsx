@@ -60,7 +60,7 @@ const Profile = () => {
 
       <div className="video-wrapper">
         <video autoPlay muted loop className="video-background" playsInline>
-          <source src="/videos/frog3.mp4" type="video/mp4" />
+          <source src="/videos/frog6.mp4" type="video/mp4" />
         </video>
         <div className="video-overlay"></div>
       </div>

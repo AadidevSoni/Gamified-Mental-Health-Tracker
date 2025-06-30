@@ -3,9 +3,9 @@ import './Loader.css';
 
 const Loader = () => {
   return (
-    <div className="spinner-container">
-      <div className="loading-spinner"></div>
-    </div>
+    <div className="initial-loading-screen">
+          <div className="loader-circle"></div>
+        </div>
   );
 };
 

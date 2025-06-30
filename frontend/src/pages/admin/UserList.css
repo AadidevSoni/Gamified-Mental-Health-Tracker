@@ -1,0 +1,39 @@
+.userlistContainer {
+    padding: 1rem;
+}
+
+.userlistTable {
+    width: 100%;
+
+}
+
+.userTableContainer {
+    display: flex;
+    flex-direction :column;
+}
+
+.thStyle {
+    padding: 0.5rem;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.tdStyle {
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.userlistEditableId {
+    display: flex;
+    align-items: center;
+}
+
+.inputEditUsername {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.userlistButton {
+    
+}

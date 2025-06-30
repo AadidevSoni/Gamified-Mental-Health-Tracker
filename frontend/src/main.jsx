@@ -18,6 +18,9 @@ import Register from './pages/auth/Register.jsx';
 
 import Profile from './pages/user/Profile.jsx';
 
+import AdminRoute from './pages/admin/AdminRoute.jsx';
+import UserList from './pages/admin/UserList.jsx';
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
@@ -31,6 +34,12 @@ const router = createBrowserRouter(
       <Route path='/calendar' element={<Calendar />} />
       <Route path="/calendar/:month" element={<MonthView />} />
       <Route path='/register' element={<Register />} />
+
+      {/*Adminn Routes*/}
+      <Route path='/admin' element={<AdminRoute />}>
+        <Route path='userlist' element={<UserList/>}/>
+      </Route>
+
     </Route>
   )
 );
