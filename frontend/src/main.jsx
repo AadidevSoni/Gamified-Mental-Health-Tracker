@@ -11,6 +11,7 @@ import store from './pages/redux/store.js'
 import Login from './pages/auth/Login.jsx';
 import Calendar from './pages/auth/Calendar.jsx';
 import MonthView from './pages/auth/MonthView.jsx';
+import Register from './pages/auth/Register.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
       <Route path='/login' element={<Login />} />
       <Route path='/calendar' element={<Calendar />} />
       <Route path="/calendar/:month" element={<MonthView />} />
+      <Route path='/register' element={<Register />} />
     </Route>
   )
 );

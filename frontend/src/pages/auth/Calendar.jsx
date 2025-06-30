@@ -17,6 +17,18 @@ const Calendar = () => {
 
   return (
     <div className='btn-container'>
+      <div className="video-wrapper">
+        <video
+          autoPlay
+          muted
+          loop
+          className="video-background"
+          playsInline
+        >
+          <source src="/videos/frog2.mp4" type="video/mp4" />
+        </video>
+        <div className="video-overlay"></div>
+      </div>
       {months.map((month) => (
         <button key={month} className='months' onClick={() => handleClick(month)}>
           {month}

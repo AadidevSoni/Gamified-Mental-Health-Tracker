@@ -1,23 +1,15 @@
 .btn-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 3rem;
   justify-content: center;
   align-items: center;
   height: 100vh;
   place-items: center;
-  background: 
-  linear-gradient(
-    90deg,  
-    rgba(56, 101, 53, 0.69) 100%
-  ),
-  url('/pictures/calendarForest.webp') no-repeat center;
-
-  background-size: cover;
-  background-attachment: scroll;
 }
 
 .months {
+  margin-top: 10px;
   padding: 1.5rem;
   width: 10rem;
   background-color: #4caf50;
@@ -34,4 +26,34 @@
   transform: scale(1.05);
   background-color: #66bb6a;
   cursor: pointer;
+}
+
+.video-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
 }

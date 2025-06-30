@@ -118,7 +118,12 @@
   color: rgb(119, 233, 187);
   font-size: 1rem;
   font-weight: bold;
-}
+  word-wrap: break-word;     
+  white-space: normal;      
+  width: 50%;               
+  text-align: center;        
+  line-height: 1.2rem;   
+}    
 
 .unameButton {
   padding: 5px;
@@ -126,11 +131,12 @@
   border: none;
   border-radius: 25px;
   height: 3rem;
-  width: 20rem;
   margin-top: 5rem;
   color: rgb(119, 233, 187);
   font-size: 1rem;
   font-weight: bold;
+  min-height: 3rem;
+  width: 100%;
 }
 
 .unameButton:hover {
@@ -183,4 +189,6 @@
 
 .listButton {
   border: none; 
+  width: 120px;
+  text-align: left;
 }

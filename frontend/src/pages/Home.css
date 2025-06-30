@@ -3,20 +3,6 @@
   color: white;
   padding: 3rem;
   box-sizing: border-box;
-
-  background: 
-  linear-gradient(
-    90deg, 
-    rgba(229, 58, 49, 0.66) 10%, 
-    rgba(229, 97, 31, 0.69) 16.667%, 
-    rgba(242, 133, 24, 0.64) 33.333%, 
-    rgba(213, 186, 37, 0.71) 50%, 
-    rgba(155, 226, 42, 0.66) 66.667%, 
-    rgba(110, 244, 92, 0.64) 83.333%, 
-    rgba(15, 208, 83, 0.69) 100%
-  ),
-  url('/pictures/forest3.jpg') no-repeat center;
-
   background-size: cover;
   background-attachment: scroll;
   position: relative;
@@ -31,24 +17,13 @@
   margin-top: 1rem;
   line-height: 1;
   z-index: 1;
+  transform: translateY(100px);
 }
 
-.calm {
-  color: rgba(25, 237, 64, 0.9);
-  -webkit-text-stroke: 1px green; 
-  font-weight: bold;
-}
-
-.canopy-word {
-  color: rgba(218, 63, 20, 0.79);
-  -webkit-text-stroke: 1px red; 
-  font-weight: bold;
-}
 .canopy {
-  color: rgba(129, 192, 72, 1);
   display: block;
   font-size: 9rem;
-  margin-top: 1rem;
+  transform: translateY(170px);
   z-index: 1;
 }
 
@@ -58,10 +33,42 @@
   font-size: 1.5rem;
   font-weight: 300;
   z-index: 1;
+  transform: translateY(290px);
 }
 
 .homeContent {
   z-index: 1;
   text-align: center;
   padding-bottom: 10rem;
+}
+
+.video-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.4); 
+  z-index: -1;
 }

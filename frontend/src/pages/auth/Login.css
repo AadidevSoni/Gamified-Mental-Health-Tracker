@@ -1,107 +1,114 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-
-.loginss {
-  background: rgba(6,49,36,1);
+.loginBlock {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
+  padding: 2rem;
+  overflow: hidden;
   color: white;
 }
-.loginText-container {
-  margin-right: 4rem;
-  margin-top: 5rem;
+
+
+.video-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
 }
 
 .loginContainer {
-  padding-left: 10rem;
-  display: flex;
-  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.loginText-container {
+  margin: 0 auto;
 }
 
 .sign {
-  font-size: 4rem;
-  margin-bottom: 3rem;
-  font-family: "Permanent Marker", cursive;
-  font-weight: 400;
-  font-style: normal;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
 }
 
 .loginFormContainer {
-  width: 30rem;
+  width: 100%;
+}
+
+.loginContainers {
+  margin-bottom: 1.5rem;
 }
 
 .loginEmail {
+  font-size: 1.2rem;
   display: block;
-  font-size: 2rem;
-  font-family: "Bangers", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  margin-top: 4rem;
 }
 
 .loginEmailInput {
-  margin-top: 1rem;
-  padding: 10px;
-  border-radios: 50px;
   width: 100%;
-  font-family: "Oswald", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+  padding: 10px;
+  margin-top: 0.5rem;
+  border-radius: 8px;
   font-size: 1rem;
-  border-radius: 25px;
   border: none;
-}
-
-.two {
-  padding: 2rem 3rem;
-  text-transform: uppercase;
-  background-color: blueviolet;
-  color: white;
-  font-size: 1.5rem;
-  position: relative;
-  text-decoration: none;
 }
 
 .loginButton {
-  padding: 10px;
-  background: rgb(34, 132, 93);
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #22845d;
+  color: #77e9bb;
+  font-size: 1.2rem;
   border: none;
   border-radius: 25px;
-  height: 3rem;
-  width: 8rem;
-  margin-top: 4rem;
-  color: rgb(119, 233, 187);
-  font-size: 1.2rem;
   font-weight: bold;
-  font-family: "Permanent Marker", cursive;
-  font-weight: 400;
-  font-style: normal;
-  text-align: center;
+  cursor: pointer;
+  font-family: "Oswald", sans-serif;
 }
 
 .loginButton:hover {
-  cursor: pointer;
-}
-
-.newUserContainer {
-  margin-top: 4rem;
-}
-
-.newUsers {
-  color: white;
-  font-family: "Bangers", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.5rem;
+  background-color: #56b991;
+  color: #051711;
 }
 
 .registerLink {
-  color: rgb(119, 233, 187);
-  font-size: 1rem;
+  color: #77e9bb;
   font-weight: bold;
-  margin-left: 20px;
-  font-family: "Bangers", system-ui;
-  font-weight: 400;
-  font-style: normal;
   font-size: 1.5rem;
+}
+
+.newUserContainer {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
 }

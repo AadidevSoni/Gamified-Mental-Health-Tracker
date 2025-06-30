@@ -1,0 +1,105 @@
+.registerBlock {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 2rem;
+  overflow: hidden;
+  color: white;
+}
+
+.video-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+.registerContainer {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.registerText {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 2rem;
+}
+
+.formContainer {
+  width: 100%;
+}
+
+.registerNameLabel {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  display: block;
+}
+
+.registerNameInput {
+  width: 100%;
+  padding: 10px;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  border: none;
+}
+
+.submitButton {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #22845d;
+  color: #77e9bb;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "Oswald", sans-serif;
+}
+
+.submitButton:hover {
+  background-color: #56b991;
+}
+
+.redirectUserRegister {
+  color: #77e9bb;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+.alreadyUser {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+}

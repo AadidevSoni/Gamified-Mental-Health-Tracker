@@ -222,5 +222,6 @@
   <li>Creating Home Page, Calendar page and MonthView Page</li>
   <li>Creating the Login Screen and logging in the user</li>
   <li>Creating dropdown button in user for logout and profile</li>
-  <li>Creating logouMutation endpoint</li>
+  <li>Creating logoutMutation endpoint and using it in Navigation logoutHandler to logout the user</li>
+  <li>Creating Register page and registerMutation endpoint</li>
 </ul>
