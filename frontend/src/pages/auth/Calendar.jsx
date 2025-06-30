@@ -1,6 +1,7 @@
 import React from 'react';
 import './Calendar.css';
 import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 const months = [
   'January', 'February', 'March', 'April',
@@ -10,13 +11,28 @@ const months = [
 
 const Calendar = () => {
   const navigate = useNavigate();
+  const [loadingScreen, setLoadingScreen] = useState(true);
 
   const handleClick = (month) => {
     navigate(`/calendar/${month}`);
   };
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoadingScreen(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className='btn-container'>
+      {loadingScreen && (
+        <div className="initial-loading-screen">
+          <div className="loader-circle"></div>
+          <p className="loading-text">Loading your Calendar...</p>
+        </div>
+      )}
       <div className="video-wrapper">
         <video
           autoPlay

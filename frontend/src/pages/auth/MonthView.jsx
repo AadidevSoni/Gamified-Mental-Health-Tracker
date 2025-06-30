@@ -1,9 +1,11 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import {useState,useEffect} from 'react'
 import './MonthView.css';
 
 const MonthView = () => {
   const { month } = useParams();
+  const [loadingScreen, setLoadingScreen] = useState(true);
 
   const monthMap = {
     january: 0,
@@ -20,6 +22,14 @@ const MonthView = () => {
     december: 11,
   };
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoadingScreen(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const year = new Date().getFullYear(); 
   const monthIndex = monthMap[month.toLowerCase()];
 
@@ -29,6 +39,12 @@ const MonthView = () => {
 
   return (
     <div className='monthContainer'>
+      {loadingScreen && (
+        <div className="initial-loading-screen">
+          <div className="loader-circle"></div>
+          <p className="loading-text">Loading Month Data...</p>
+        </div>
+      )}
       <div className="video-wrapper">
         <video
           autoPlay

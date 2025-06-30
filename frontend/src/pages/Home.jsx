@@ -1,8 +1,25 @@
 import './Home.css';
+import React, { useEffect, useState } from 'react';
 
 const Home = () => {
+
+  const [loadingScreen, setLoadingScreen] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoadingScreen(false);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className='homeContainer'>
+      {loadingScreen && (
+        <div className="initial-loading-screen">
+          <div className="loader-circle"></div>
+          <p className="loading-text">Loading Home Page...</p>
+        </div>
+      )}
       <div className="video-wrapper">
         <video
           autoPlay

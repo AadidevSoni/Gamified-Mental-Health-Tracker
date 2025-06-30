@@ -23,10 +23,9 @@ const Login = () => {
   const redirect = sp.get('redirect') ?? '/';
 
   useEffect(() => {
-    // Show loading screen for 5 seconds
     const timer = setTimeout(() => {
       setLoadingScreen(false);
-    }, 5000);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -51,6 +50,12 @@ const Login = () => {
 
   return (
     <section className="loginBlock">
+      {loadingScreen && (
+        <div className="initial-loading-screen">
+          <div className="loader-circle"></div>
+          <p className="loading-text">Loading your Login Screen...</p>
+        </div>
+      )}
       <div className="video-wrapper">
         <video
           autoPlay

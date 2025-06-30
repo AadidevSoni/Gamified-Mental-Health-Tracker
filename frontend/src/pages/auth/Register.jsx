@@ -12,6 +12,7 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [loadingScreen, setLoadingScreen] = useState(true);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -21,6 +22,14 @@ const Register = () => {
   const { search } = useLocation();
   const sp = new URLSearchParams(search);
   const redirect = sp.get('redirect') || '/';
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoadingScreen(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     if (userInfo) {
@@ -46,6 +55,12 @@ const Register = () => {
 
   return (
     <section className="registerBlock">
+      {loadingScreen && (
+        <div className="initial-loading-screen">
+          <div className="loader-circle"></div>
+          <p className="loading-text">Loading your Register Screen...</p>
+        </div>
+      )}
       <div className="video-wrapper">
         <video
           autoPlay
