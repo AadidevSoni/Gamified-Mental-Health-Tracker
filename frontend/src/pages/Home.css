@@ -17,7 +17,7 @@
   margin-top: 1rem;
   line-height: 1;
   z-index: 1;
-  transform: translateY(100px);
+  transform: translateY(70px);
 }
 
 .canopy {
@@ -113,4 +113,92 @@
 .loading-text {
   font-size: 1.2rem;
   margin-top: 1rem;
+}
+
+.homeBtnContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  gap: 20px;
+  z-index: 2;
+  position: relative;
+  transform: translateY(-100px);
+}
+
+.homeButton {
+  padding: 12px 28px;
+  margin: 8px;
+  font-size: 1.1rem;
+  border: 2px solid #ffffffcc;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.homeButton:hover {
+  background-color: #ffffff33;
+  border-color: #ffffff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
+
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.popupBox {
+  background-color: #0d2b25;
+  color: #ffffff;
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(0, 255, 162, 0.3);
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+}
+
+.popupBox h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #77e9bb;
+}
+
+.popupBox pre {
+  white-space: pre-wrap;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.closePopupBtn {
+  margin-top: 1.5rem;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 25px;
+  background-color: #77e9bb;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.closePopupBtn:hover {
+  background-color: #51c8a2;
 }

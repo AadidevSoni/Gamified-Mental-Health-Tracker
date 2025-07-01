@@ -282,4 +282,5 @@
   <li>Using it in Leaderbaoard.jsx and rendering the leaderbaord</li>
   <li>Creating questionSchema and questionModel for tests</li>
   <li>Creating test page with score calculation</li>
+  <li>Creating Activity Navigation with router for each categories</li>
 </ul>

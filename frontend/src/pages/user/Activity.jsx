@@ -39,7 +39,7 @@ const Activity = () => {
         <div className="video-overlay"></div>
       </div>
 
-      <h1 className='activityHeading'>🌿 Explore Activities</h1>
+      <h1 className='activityHeading'>Explore Activities</h1>
 
       <div className="activityGrid">
         {activities.map((act, index) => (
