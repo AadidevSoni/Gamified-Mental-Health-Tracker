@@ -1,0 +1,45 @@
+.yogaPage {
+  padding: 2rem;
+  color: white;
+}
+
+.yogaHeading {
+  text-align: center;
+  font-size: 3rem;
+  margin: 2rem 0;
+  margin-top: 2rem;
+}
+
+.videoCardGrid {
+  margin-top: 7rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.videoCard {
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.2s;
+  overflow: hidden;
+}
+
+.videoCard:hover {
+  transform: scale(1.05);
+}
+
+.videoThumbnail {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+.videoTitle {
+  padding: 1rem;
+  font-size: 1rem;
+  text-align: center;
+}

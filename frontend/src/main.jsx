@@ -22,6 +22,11 @@ import AdminRoute from './pages/admin/AdminRoute.jsx';
 import UserList from './pages/admin/UserList.jsx';
 import Leaderboard from './pages/user/Leaderboard.jsx';
 import Test from './pages/user/Test.jsx';
+import Activity from './pages/user/Activity.jsx';
+import Yoga from './pages/videos/Yoga.jsx';
+import Read from './pages/videos/Read.jsx';
+import Exercise from './pages/videos/Exercise.jsx'
+import Art from './pages/videos/Art.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -31,7 +36,13 @@ const router = createBrowserRouter(
         <Route path='/profile' element={<Profile />}/>
         <Route path='/leaderboard' element={<Leaderboard />}/>
         <Route path='/tests' element={<Test />} />
+        <Route path='/activity' element={<Activity />} />
       </Route>
+
+      <Route path='/activity/yoga' element={<Yoga />} />
+      <Route path='/activity/reading' element={<Read />} />
+      <Route path='/activity/exercise' element={<Exercise />} />
+      <Route path='/activity/art' element={<Art />}/>
       
       <Route index={true} path="/" element={<Home />} />
       <Route path='/login' element={<Login />} />
