@@ -27,6 +27,8 @@ import Yoga from './pages/videos/Yoga.jsx';
 import Read from './pages/videos/Read.jsx';
 import Exercise from './pages/videos/Exercise.jsx'
 import Art from './pages/videos/Art.jsx'
+import Meditation from './pages/videos/Meditation.jsx';
+import Socializing from './pages/videos/Socializing.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -43,6 +45,8 @@ const router = createBrowserRouter(
       <Route path='/activity/reading' element={<Read />} />
       <Route path='/activity/exercise' element={<Exercise />} />
       <Route path='/activity/art' element={<Art />}/>
+      <Route path='/activity/meditation' element={<Meditation />}/>
+      <Route path='/activity/socializing' element={<Socializing />} />
       
       <Route index={true} path="/" element={<Home />} />
       <Route path='/login' element={<Login />} />

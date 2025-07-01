@@ -9,12 +9,10 @@ const Activity = () => {
     { title: 'Yoga', image: '/pictures/yoga.png', path: '/activity/yoga' },
     { title: 'Reading', image: '/pictures/reading.png', path: '/activity/reading' },
     { title: 'Meditation', image: '/pictures/meditation.png', path: '/activity/meditation' },
-    { title: 'Cycling', image: '/pictures/cycling.png', path: '/activity/cycling' },
-    { title: 'Journaling', image: '/pictures/journaling.png', path: '/activity/journaling' },
     { title: 'Exercise', image: '/pictures/exercise.png', path: '/activity/exercise' },
     { title: 'Art', image: '/pictures/art.png', path: '/activity/art' },
-    { title: 'Music', image: '/pictures/music.png', path: '/activity/music' },
-    { title: 'Visual Entertainment', image: '/pictures/visualEntertainment.png', path: '/activity/visualEntertainment' },
+    { title: 'Music', image: '/pictures/music.png', path: 'https://open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0' },
+    { title: 'Visual Entertainment', image: '/pictures/visualEntertainment.png', path: 'https://www.youtube.com' },
     { title: 'Soacializing', image: '/pictures/socializing.png', path: '/activity/socializing' }
   ];
 
