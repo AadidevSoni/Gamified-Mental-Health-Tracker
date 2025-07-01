@@ -275,4 +275,9 @@
   <li>Create Message controller</li>
   <li>Creating all userApiSlice for admin functiionalities and exporting the mutation hooks</li>
   <li>Creating userlist page to view all users from admin side</li>
+  <li>Creating delete and update user functionality for users</li>
+  <li>Creating getLeaderBoard router in userRoutes</li>
+  <li>Creating getLeaderBoard userController with the logic to rank the users</li>
+  <li>Creating a userApiSlice getLeaderboard query</li>
+  <li>Using it in Leaderbaoard.jsx and rendering the leaderbaord</li>
 </ul>

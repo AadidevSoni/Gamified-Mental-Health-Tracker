@@ -4,12 +4,14 @@ import { RiMentalHealthFill } from "react-icons/ri";
 import {AiOutlineLogin,AiOutlineUserAdd} from 'react-icons/ai'
 import { FaCalendarAlt } from "react-icons/fa";
 import { GiBrain } from "react-icons/gi";
+import { MdLeaderboard } from "react-icons/md";
 import { Link } from 'react-router-dom';
 import './Navigation.css';
 import { useNavigate } from 'react-router-dom'
 import { useSelector,useDispatch } from 'react-redux'
 import { useLogoutMutation } from '../redux/api/userApiSlice'
 import {logout} from '../redux/features/authSlice'
+
 
 const Navigation = () => {
 
@@ -68,6 +70,11 @@ const Navigation = () => {
         <Link to='/tests' className="nav-link" onClick={closeSideBar}>
           <GiBrain className='nav-icon' size={26} />
           <span className="nav-item-name">Tests</span>
+        </Link>
+
+        <Link to='/leaderboard' className="nav-link" onClick={closeSideBar}>
+          <MdLeaderboard className='nav-icon' size={26} />
+          <span className="nav-item-name">Leaderboard</span>
         </Link>
       </div>
 

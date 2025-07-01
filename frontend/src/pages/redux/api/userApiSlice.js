@@ -64,6 +64,13 @@ export const userApiSlice = apiSlice.injectEndpoints({
       }),
       invalidatesTags: ['User'],
     }),
+
+    getLeaderboard: builder.query({
+      query: () => ({
+        url: `${USERS_URL}/leaderboard`,
+      }),
+      keepUnusedDataFor: 5,
+    }),
   }),
 });
 
@@ -78,4 +85,4 @@ Content-Type: application/json
   */
 
 export const { useLoginMutation,useLogoutMutation,useRegisterMutation,useProfileMutation,useGetUsersQuery,
-  useDeleteUserMutation,useGetUserDetailsQuery,useUpdateUserMutation} = userApiSlice;
+  useDeleteUserMutation,useGetUserDetailsQuery,useUpdateUserMutation,useGetLeaderboardQuery} = userApiSlice;

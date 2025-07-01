@@ -35,6 +35,7 @@
   justify-content: center;
   gap: 4rem;
   margin-top: 5rem;
+  transform: translateY(-30px);
 }
 
 .nav-link {
@@ -75,7 +76,6 @@
 }
 
 .navigation-container:hover .nav-icon {
-  transform: translateX(-10px);
   cursor: pointer;
 }
 
@@ -137,6 +137,7 @@
   font-weight: bold;
   min-height: 3rem;
   width: 100%;
+  transform: translateY(-100px);
 }
 
 .unameButton:hover {
@@ -157,7 +158,7 @@
 
 .dropdownList {
   position: absolute;
-  top: 100%;               /* Right below the button */
+  top: 30%;               /* Right below the button */
   left: 50%;
   transform: translateX(-50%);
   background: rgb(11, 54, 28);

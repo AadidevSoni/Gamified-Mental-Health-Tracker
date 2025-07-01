@@ -199,6 +199,14 @@ const updateUserById = asyncHandler(async(req,res) => {
   }
 });
 
+const getLeaderBoard = asyncHandler(async(req,res) => {
+  const users = await User.find({})
+    .sort({level:-1,exp:-1})
+    .select('username level exp avatar');
+  
+  res.json(users);
+})
+
 export { createUser,loginUser,logoutCurrentUser,getAllUsers,getCurrentUserProfile,updateCurrentUserProfile,deleteUserById,
-         getUserById,updateUserById
+         getUserById,updateUserById,getLeaderBoard
 };
