@@ -36,6 +36,7 @@ const Leaderboard = () => {
       </video>
       <div className="video-overlay"></div>
     </div>
+    
     <div className='leaderboardContainer'>
       <h1 className='leaderboardHeading'>🏆 Leaderboard</h1>
     <div className='leaderboardContainer'></div>

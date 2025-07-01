@@ -8,6 +8,7 @@ const userSchema = mongoose.Schema({
   exp: { type: Number, default: 0 },
   level: { type: Number, default: 1 },
   avatar: { type: String, default: '' },
+  todaysScore: { type: Number, default: 0 },
   settings: {
     darkMode: { type: Boolean, default: true },
     notifications: { type: Boolean, default: true },

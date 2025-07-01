@@ -21,6 +21,7 @@ import Profile from './pages/user/Profile.jsx';
 import AdminRoute from './pages/admin/AdminRoute.jsx';
 import UserList from './pages/admin/UserList.jsx';
 import Leaderboard from './pages/user/Leaderboard.jsx';
+import Test from './pages/user/Test.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -29,6 +30,7 @@ const router = createBrowserRouter(
       <Route path ='' element = {<PrivateRoute />}>
         <Route path='/profile' element={<Profile />}/>
         <Route path='/leaderboard' element={<Leaderboard />}/>
+        <Route path='/tests' element={<Test />} />
       </Route>
       
       <Route index={true} path="/" element={<Home />} />

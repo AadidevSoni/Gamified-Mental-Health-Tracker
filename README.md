@@ -280,4 +280,6 @@
   <li>Creating getLeaderBoard userController with the logic to rank the users</li>
   <li>Creating a userApiSlice getLeaderboard query</li>
   <li>Using it in Leaderbaoard.jsx and rendering the leaderbaord</li>
+  <li>Creating questionSchema and questionModel for tests</li>
+  <li>Creating test page with score calculation</li>
 </ul>
