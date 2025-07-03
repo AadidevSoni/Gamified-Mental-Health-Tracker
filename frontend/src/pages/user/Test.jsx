@@ -22,7 +22,7 @@ const Test = () => {
     'Visual entertainment', 'Socializing',
   ];
 
-  const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+  const today = new Date().toLocaleDateString('en-CA'); // YYYY-MM-DD
 
   // ✅ Fetch user score history to check if already submitted today
   useEffect(() => {

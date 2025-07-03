@@ -317,6 +317,84 @@
   </li>
 </ul>
 
+<h1>🧪 Daily Mental Health Test System</h1> 
+<ul> 
+  <li>Page: <code>/test</code></li> 
+  <li>Allows one submission per day, refreshed at <strong>12:00 AM</strong> daily</li> 
+  <li>Inputs: 
+    <ul> 
+      <li>Sleep hours</li> 
+      <li>Selected mental wellness activities</li> 
+      <li>10 randomized introspective questions with scored options</li> 
+    </ul> 
+  </li> 
+  <li>Scoring: 
+    <ul> 
+      <li>Sleep score: Based on hours range (2–10 hrs)</li> 
+      <li>Activity score: Based on chosen activity weights</li> 
+      <li>Introspective score: Based on question options and scores</li> 
+    </ul> 
+  </li> 
+  <li><strong>Data Persistence:</strong> Score is stored in MongoDB under <code>user.scoreHistory</code> with date</li> 
+  <li><strong>UX Enhancements:</strong> 
+    <ul> 
+      <li>Animated loading screen on mount</li> 
+      <li>Full-screen frog-themed video background</li> 
+    </ul> 
+  </li> 
+</ul>
+
+<h1>📊 Persistent Score Tracking</h1> 
+<ul> 
+  <li>Each user's score is stored in <code>user.scoreHistory</code> array in MongoDB</li> 
+  <li>Each entry is an object: <code>{ date: 'YYYY-MM-DD', score: Number }</code></li> 
+  <li>Backend route: <code>POST /api/users/score</code></li> 
+  <li>Frontend uses <code>axios</code> with JWT-based credentials for secure updates</li> 
+  <li>GET route: <code>/api/users/score/history</code> to fetch past scores for calendar</li> 
+</ul>
+
+<h1>📆 Month View Calendar with Score Visualization</h1> 
+<ul> 
+  <li>Dynamic path: <code>/calendar/:month</code></li> 
+  <li>Automatically calculates number of days in month</li> 
+  <li>Fetches per-user score history from backend (on login)</li> 
+  <li><strong>Color-coded lilypad images:</strong> 
+    <ul>
+      <li>Red (less than 50)</li> 
+      <li>Orange (50–79)</li> 
+      <li>Yellow (80–109)</li> 
+      <li>Green (110+)</li> 
+    </ul> 
+  </li> 
+  <li>Displays daily score number over lilypad image</li> 
+  <li>Only shows data for logged-in user</li> 
+</ul>
+
+<h1>🧠 Questions System</h1> 
+<ul> 
+  <li>Stored in <code>public/questions.json</code></li> 
+  <li>Each question includes: 
+    <ul> 
+      <li><code>id</code></li> 
+      <li><code>question</code></li> 
+      <li><code>options</code> (array of strings)</li> 
+      <li><code>option_scores</code> (parallel array of integers)</li> 
+    </ul> 
+  </li> 
+  <li>Test page randomly selects 10 questions per day</li> 
+  <li>Each option contributes to total introspective score</li> 
+</ul>
+
+<h1>💡 Upcoming Features (Planned or In Progress)</h1> 
+<ul> 
+  <li>🎯 Achievement & Reward System (EXP → Levels → Unlocks)</li> 
+  <li>🎨 Avatar Customization (based on XP, score streaks)</li> 
+  <li>👥 Challenge Rooms (compete with friends on green days)</li> 
+  <li>🏆 Leaderboard (already available with green day counts)</li> 
+  <li>📈 Mood Trend Chart (plotting past week's scores)</li> 
+  <li>🛍️ Reward Store for redeemable virtual items</li> 
+  </ul>
+
 
 <h1>Development</h1>
 
@@ -325,19 +403,19 @@
   <li>Creation of repository and installation of react vite</li>
   <li>Importing all frontend and backend packages and folder creations</li>
   <li>Modifying running scripts in package.json and project clean up</li>
-  <li>Connecting to mongoDB database</li>
-  <li>Running the app (index.js) and see if the backend works on Postman</li>
-  <li>Creating routes (userRoutes) for different pages</li>
+  <li>Connecting to mongoDB database using mongoose connect method to connect to mentalHealth database in MondoDB compass</li>
+  <li>Running the app (index.js) and see if the backend works on Postman by listening to the port</li>
   <li>Creating userSchema and Model</li>
   <li>Creating an asyncHandler for catching errors of every async functions</li>
-  <li>Creating a createUser user controller and route it to post of '/' path</li>
+  <li>Creating routes (userRoutes) for different pages</li>
+  <li>Creating a createUser user controller and route it to POST request of '/' path</li>
   <li>Hashing the password and test it in postman and the user must be created in mongoDB</li>
   <li>Creation of token and cookies in createToken utils</li>
   <li>Importing it in userController and create a token when new user created or logged in</li>
   <li>Testing it in Postman to see the cookie generation</li>
   <li>Creating login and logout routes</li>
   <li>Creating userController for login and logout</li>
-  <li>Creating authentication and authorization middleware and importing to userRoutes</li>
+  <li>Creating authentication and authorization middleware and importing to userRoutes where we check if token or cookie exists if so, we check if the user is an admin</li>
   <li>Creating get all users if authenticated and authorized and get request in '/' route</li>
   <li>Creating get all users functionality in userController and testing in Postman</li>
   <li>Creating getUserProfile in userRoutes if get request in '/profile' route</li>
@@ -347,6 +425,9 @@
   <li>Creating a '/:id' route with delete request for deleting user from admin side</li>
   <li>Creating a '/:id' route with get request for getting user from admin side</li>
   <li>Creating a '/:id' route with put request for updating user from admin side</li>
+  <li>Creating a '/leaderboard' route to get all the users sorted according to level and exp</li>
+  <li>Creating a '/score' route to save today's score in the scoreHistory parameter in user model</li>
+  <li>Creating a '/score/history' route to get the score history of the user</li>
 </ul> 
 
 <h2>Frontend development</h2>
@@ -386,4 +467,6 @@
   <li>Making a dataset for 120 questions to beasked in a questions.josn file</li>
   <li>Askign 10 random questions to the user everyday and getting a score</li>
   <li>Updating userModel to store the scores on eachday</li>
+  <li>Creating routes to store today's and history of scores</li>
+  <li>Using axios to fetch and store dtaa from the routes</li>
 </ul>

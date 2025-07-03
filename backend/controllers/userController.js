@@ -202,11 +202,44 @@ const updateUserById = asyncHandler(async(req,res) => {
 const getLeaderBoard = asyncHandler(async(req,res) => {
   const users = await User.find({})
     .sort({level:-1,exp:-1})
-    .select('username level exp avatar');
+    .select('username level exp');
   
   res.json(users);
-})
+});
+
+const saveTodayScore = asyncHandler(async (req, res) => {
+  try {
+    const { score } = req.body;
+    const user = req.user;
+    const today = new Date().toLocaleDateString('en-CA');
+
+    // Check if today's score already exists
+    const existingIndex = user.scoreHistory.findIndex(entry => entry.date === today);
+
+    if (existingIndex !== -1) {
+      user.scoreHistory[existingIndex].score = score; // update
+    } else {
+      user.scoreHistory.push({ date: today, score }); // insert
+    }
+
+    user.todaysScore = score;
+    await user.save();
+
+    res.status(200).json({ message: 'Score saved successfully', score });
+  } catch (error) {
+    res.status(500).json({ message: 'Error saving score', error: error.message });
+  }
+});
+
+const getScoreHistory = asyncHandler(async (req, res) => {
+  try {
+    const user = req.user;
+    res.status(200).json(user.scoreHistory || []);
+  } catch (error) {
+    res.status(500).json({ message: 'Error fetching score history', error: error.message });
+  }
+});
 
 export { createUser,loginUser,logoutCurrentUser,getAllUsers,getCurrentUserProfile,updateCurrentUserProfile,deleteUserById,
-         getUserById,updateUserById,getLeaderBoard
+         getUserById,updateUserById,getLeaderBoard,saveTodayScore,getScoreHistory
 };

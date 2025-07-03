@@ -15,9 +15,9 @@ connectDB();
 
 const app = express();
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser());
+app.use(express.json()); //Handles API requests from frontend that sends or fetches JSON files to be used as JS objects
+app.use(express.urlencoded({ extended: true })); //Allows nested objects
+app.use(cookieParser()); //Read cookies from HTTP Requests
 
 app.use('/api/users',userRoutes);
 
