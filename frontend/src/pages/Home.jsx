@@ -15,7 +15,7 @@ const Home = () => {
   const popups = {
     about: {
       title: 'About Us',
-      content: 'MindLeap is your companion in building mental wellness through mood tracking, habit building, and mindfulness content. We believe in small steps toward a happier life.\n\n Improve your mental well being while at the same time gamifying the whole experience!',
+      content: 'MindLeap is your companion in building mental wellness through mood tracking, habit building, and mindfulness content\n\n Improve your mental well being while at the same time gamifying the whole experience!\n\nThe aim of MindLeap is to track the user\'s mental health everyday and give the user a visual representation and a strong idea on how to improve their mental well being.\n\nMindLeap also provides a variety of activity related videos and platforms that can have a positive effect in your mental well being',
     },
     contact: {
       title: 'Contact Us',

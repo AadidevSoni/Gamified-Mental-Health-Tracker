@@ -1,0 +1,1444 @@
+[
+    {
+  "id": 1,
+  "question": "When your plans shift unexpectedly, you tend to:",
+  "options": [
+    "Feel unease until adjusted",
+    "Look for new opportunities in the change",
+    "Pause to recalibrate",
+    "Embrace the unknown with curiosity"
+  ],
+  "option_scores": [1, 3, 2, 4],
+  "tags": ["growth_mindset", "coping_style"]
+},
+    {
+    "id": 2,
+    "question": "If a routine falls apart, you:",
+    "options": [
+      "Feel lost",
+      "Try to rebuild it your way",
+      "Take time to reflect before proceeding",
+      "See it as a chance for something new"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["adaptability", "coping_mechanism"]
+  },
+  {
+    "id": 3,
+    "question": "In unpredictable moments, your focus is on:",
+    "options": [
+      "Minimizing damage",
+      "Finding alternatives",
+      "Understanding what happened",
+      "Going with the flow"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["resilience", "coping_mechanism"]
+  },
+  {
+    "id": 4,
+    "question": "When adversity strikes, you:",
+    "options": [
+      "Retreat",
+      "Consult someone you trust",
+      "Reassess your approach",
+      "Dive in to problem-solve"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["resilience", "coping_mechanism"]
+  },
+  {
+    "id": 5,
+    "question": "You hear “you need to change”—you feel:",
+    "options": [
+      "Defensive",
+      "Curious",
+      "Apprehensive",
+      "Motivated"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["emotional_awareness", "growth_mindset"]
+  },
+  {
+    "id": 6,
+    "question": "On tough days, you:",
+    "options": [
+      "Feel stuck",
+      "Seek support",
+      "Reflect on what’s meaningful",
+      "Push through with determination"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["resilience", "coping_mechanism"]
+  },
+  {
+    "id": 7,
+    "question": "When outcomes differ from expectations, you:",
+    "options": [
+      "Roll with resignation",
+      "Learn from it",
+      "Analyze possible missteps",
+      "Feel ready to try again"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["growth_mindset", "emotional_awareness"]
+  },
+  {
+    "id": 8,
+    "question": "When told “It’s not working,” you:",
+    "options": [
+      "Feel discouraged",
+      "Seek alternative methods",
+      "Ask “why not?”",
+      "Take it as a breakthrough step"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["adaptability", "growth_mindset"]
+  },
+  {
+    "id": 9,
+    "question": "You’re asked to leave your comfort zone. You:",
+    "options": [
+      "Hesitate",
+      "Weigh pros and cons",
+      "Plan every detail",
+      "Dive in"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["growth_mindset", "adaptability"]
+  },
+  {
+    "id": 10,
+    "question": "When others doubt you, you:",
+    "options": [
+      "Internalize it",
+      "Prove them wrong",
+      "Use it as feedback",
+      "Ignore and focus onward"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_perception", "emotional_awareness"]
+  },
+{
+    "id": 11,
+    "question": "When you catch yourself overthinking, you:",
+    "options": [
+      "Dive deeper",
+      "Pause to observe",
+      "Distract yourself",
+      "Challenge the thought"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_perception", "emotional_awareness"]
+  },
+  {
+    "id": 12,
+    "question": "Your inner voice often says:",
+    "options": [
+      "“Not enough.”",
+      "“Let me improve.”",
+      "“Is this true?”",
+      "“You’ve got this.”"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_perception", "growth_mindset"]
+  },
+  {
+    "id": 13,
+    "question": "After a mistake, you:",
+    "options": [
+      "Beat yourself up",
+      "Shrug it off",
+      "Extract lessons",
+      "Move on silently"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["resilience", "growth_mindset"]
+  },
+  {
+    "id": 14,
+    "question": "When alone with thoughts, you feel:",
+    "options": [
+      "Restless",
+      "Reflective",
+      "Quiet",
+      "Unsettled"
+    ],
+    "option_scores": [1, 3, 4, 2],
+    "tags": ["emotional_awareness", "coping_mechanism"]
+  },
+  {
+    "id": 15,
+    "question": "You measure progress by:",
+    "options": [
+      "Results",
+      "Small shifts",
+      "Awareness",
+      "Confidence"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["growth_mindset", "self_perception"]
+  },
+  {
+    "id": 16,
+    "question": "Your relationship with failure is:",
+    "options": [
+      "Frustrating",
+      "Informative",
+      "Neutral",
+      "Growth-driving"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["resilience", "growth_mindset"]
+  },
+  {
+    "id": 17,
+    "question": "Which statement resonates most?",
+    "options": [
+      "“I’m just surviving.”",
+      "“I’m learning.”",
+      "“I’m evolving.”",
+      "“I’m thriving.”"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_perception", "growth_mindset"]
+  },
+  {
+    "id": 18,
+    "question": "When isolating, you:",
+    "options": [
+      "Feel overwhelmed",
+      "Seek balance",
+      "Embrace reflection",
+      "Resurface quickly"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["coping_mechanism", "emotional_awareness"]
+  },
+  {
+    "id": 19,
+    "question": "When someone praises you, you:",
+    "options": [
+      "Feel suspicious",
+      "Appreciate it",
+      "Analyze it",
+      "Accept it gratefully"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_perception", "emotional_awareness"]
+  },
+  {
+    "id": 20,
+    "question": "You define authenticity as:",
+    "options": [
+      "Keeping secrets",
+      "Being honest",
+      "Aligning values and actions",
+      "Being unapologetically you"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["growth_mindset", "self_perception"]
+  },
+  {
+    "id": 21,
+    "question": "What matters more today?",
+    "options": [
+      "Comfort",
+      "Purpose",
+      "Truth",
+      "Growth"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_perception", "growth_mindset"]
+  },
+  {
+    "id": 22,
+    "question": "You align your day with:",
+    "options": [
+      "Expectations",
+      "Intentional choices",
+      "Reflection",
+      "Intuition"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_perception", "coping_mechanism"]
+  },
+  {
+    "id": 23,
+    "question": "If time is short, you focus on:",
+    "options": [
+      "Maintenance",
+      "Progress",
+      "Meaning",
+      "Connection"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["emotional_awareness", "growth_mindset"]
+  },
+  {
+    "id": 24,
+    "question": "Which you fear most?",
+    "options": [
+      "Failure",
+      "Regret",
+      "Stagnation",
+      "Dishonesty"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_perception", "emotional_awareness"]
+  },
+  {
+    "id": 25,
+    "question": "Which brings more clarity?",
+    "options": [
+      "Routine",
+      "Experimenting",
+      "Journaling",
+      "Honest talks"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["coping_mechanism", "emotional_awareness"]
+  },
+  {
+    "id": 26,
+    "question": "You weigh decisions by:",
+    "options": [
+      "Convenience",
+      "Integrity",
+      "Long-term impact",
+      "Personal values"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["growth_mindset", "self_perception"]
+  },
+  {
+    "id": 27,
+    "question": "When offers conflict with principles, you:",
+    "options": [
+      "Back out",
+      "Negotiate",
+      "Reflect deeply",
+      "Stay true"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["resilience", "self_perception"]
+  },
+  {
+    "id": 28,
+    "question": "You define purpose as:",
+    "options": [
+      "What you do",
+      "How you feel",
+      "What you stand for",
+      "What you contribute"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_perception", "growth_mindset"]
+  },
+  {
+    "id": 29,
+    "question": "When considering progress, you look at:",
+    "options": [
+      "External feedback",
+      "Personal satisfaction",
+      "Inner alignment",
+      "Ripple effects"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["growth_mindset", "emotional_awareness"]
+  },
+  {
+    "id": 30,
+    "question": "You choose long-term fulfillment over:",
+    "options": [
+      "Short-term comfort",
+      "External approval",
+      "Immediate clarity",
+      "Fading trends"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["growth_mindset", "coping_mechanism"]
+  },
+{
+  "id": 31,
+  "question": "What kind of silence do you sit in most often?",
+  "options": [
+    "Numbness",
+    "Rest",
+    "Reflection",
+    "Avoidance"
+  ],
+  "option_scores": [1, 2, 3, 1],
+  "tags": ["emotional_awareness", "self_perception"]
+},
+{
+  "id": 32,
+  "question": "Which of these internal states feels most familiar lately?",
+  "options": [
+    "Uncertainty",
+    "Discomfort",
+    "Curiosity",
+    "Clarity"
+  ],
+  "option_scores": [1, 2, 3, 4],
+  "tags": ["self_perception", "emotional_awareness"]
+},
+{
+  "id": 33,
+  "question": "When facing a decision, your biggest challenge is:",
+  "options": [
+    "Fear of regret",
+    "Fear of judgment",
+    "Confusion about what you want",
+    "Overthinking the outcome"
+  ],
+  "option_scores": [2, 2, 3, 4],
+  "tags": ["coping_mechanism", "self_perception"]
+},
+{
+  "id": 34,
+  "question": "You often find peace in:",
+  "options": [
+    "Solitude",
+    "Nature",
+    "Art or expression",
+    "Deep conversations"
+  ],
+  "option_scores": [2, 3, 3, 4],
+  "tags": ["coping_mechanism", "emotional_awareness"]
+},
+{
+  "id": 35,
+  "question": "How do you respond to your own emotional pain?",
+  "options": [
+    "I suppress it",
+    "I sit with it",
+    "I try to understand it",
+    "I transform it"
+  ],
+  "option_scores": [1, 2, 3, 4],
+  "tags": ["coping_mechanism", "growth_mindset"]
+},
+{
+  "id": 36,
+  "question": "Which truth is hardest to accept?",
+  "options": [
+    "Not everyone will stay",
+    "Not everything is in your control",
+    "Growth is uncomfortable",
+    "You can’t save everyone"
+  ],
+  "option_scores": [2, 3, 4, 3],
+  "tags": ["resilience", "growth_mindset"]
+},
+{
+  "id": 37,
+  "question": "When you're misunderstood, you usually:",
+  "options": [
+    "Withdraw",
+    "Try to clarify",
+    "Accept it silently",
+    "Feel deeply frustrated"
+  ],
+  "option_scores": [1, 3, 2, 1],
+  "tags": ["emotional_awareness", "coping_mechanism"]
+},
+  {
+  "id": 38,
+  "question": "What phase do you feel you're currently in?",
+  "options": [
+    "Survival",
+    "Healing",
+    "Rebuild",
+    "A quiet becoming"
+  ],
+  "option_scores": [1, 2, 3, 4],
+  "tags": ["self_perception", "growth_mindset"]
+},
+{
+  "id": 39,
+  "question": "What do you crave most right now?",
+  "options": [
+    "Stability",
+    "Depth",
+    "Inspiration",
+    "Belonging"
+  ],
+  "option_scores": [1, 2, 3, 4],
+  "tags": ["coping_mechanism", "emotional_awareness"]
+},
+{
+  "id": 40,
+  "question": "When someone sets a boundary, you:",
+  "options": [
+    "Feel rejected",
+    "Respect it",
+    "Feel unsure how to respond",
+    "Appreciate the honesty"
+  ],
+  "option_scores": [1, 2, 3, 4],
+  "tags": ["emotional_awareness", "self_perception"]
+},
+{
+  "id": 41,
+  "question": "What tends to drain your energy most?",
+  "options": [
+    "Pretending to be okay",
+    "Unfinished tasks",
+    "Unclear goals",
+    "People-pleasing"
+  ],
+  "option_scores": [2, 3, 2, 1],
+  "tags": ["coping_mechanism", "emotional_awareness"]
+},
+{
+  "id": 42,
+  "question": "When someone is emotionally distant, you usually:",
+  "options": [
+    "Blame yourself",
+    "Get frustrated",
+    "Respect their space",
+    "Overanalyze it"
+  ],
+  "option_scores": [1, 2, 4, 3],
+  "tags": ["emotional_awareness", "coping_mechanism"]
+},
+{
+  "id": 43,
+  "question": "You find clarity when you:",
+  "options": [
+    "Step back",
+    "Speak aloud",
+    "Write it down",
+    "Sit with silence"
+  ],
+  "option_scores": [2, 3, 3, 4],
+  "tags": ["self_perception", "coping_mechanism"]
+},
+{
+  "id": 44,
+  "question": "When you think about your past self, you mostly feel:",
+  "options": [
+    "Shame",
+    "Compassion",
+    "Pride",
+    "Detachment"
+  ],
+  "option_scores": [1, 3, 4, 2],
+  "tags": ["self_perception", "growth_mindset"]
+},
+{
+  "id": 45,
+  "question": "The hardest part of healing is:",
+  "options": [
+    "Accepting what happened",
+    "Forgiving yourself",
+    "Facing the truth",
+    "Being patient"
+  ],
+  "option_scores": [2, 4, 3, 3],
+  "tags": ["resilience", "coping_mechanism"]
+},
+{
+  "id": 46,
+  "question": "You trust people who:",
+  "options": [
+    "Are consistent",
+    "Speak kindly",
+    "Show vulnerability",
+    "Respect boundaries"
+  ],
+  "option_scores": [3, 2, 4, 4],
+  "tags": ["emotional_awareness", "self_perception"]
+},
+{
+  "id": 47,
+  "question": "When you're mentally overloaded, your response is:",
+  "options": [
+    "Shutting down",
+    "Scrolling or numbing",
+    "Talking it out",
+    "Journaling or walking"
+  ],
+  "option_scores": [1, 2, 3, 4],
+  "tags": ["coping_mechanism", "resilience"]
+},
+{
+  "id": 48,
+  "question": "The thought that scares you the most is:",
+  "options": [
+    "“I’m falling behind”",
+    "“No one really sees me”",
+    "“What if this is it?”",
+    "“I’m not enough”"
+  ],
+  "option_scores": [2, 3, 2, 1],
+  "tags": ["self_perception", "emotional_awareness"]
+},
+{
+  "id": 49,
+  "question": "What would your younger self need to hear right now?",
+  "options": [
+    "You’re safe now",
+    "You’re doing your best",
+    "You are loved as you are",
+    "You’re going to be okay"
+  ],
+  "option_scores": [3, 3, 4, 2],
+  "tags": ["growth_mindset", "coping_mechanism"]
+},
+{
+  "id": 50,
+  "question": "What do you hide the most?",
+  "options": [
+    "Your fears",
+    "Your softness",
+    "Your dreams",
+    "Your anger"
+  ],
+  "option_scores": [2, 3, 4, 2],
+  "tags": ["emotional_awareness", "self_perception"]
+},
+{
+  "id": 51,
+  "question": "Which of these patterns do you often fall into?",
+  "options": [
+    "Overcommitting",
+    "Avoiding decisions",
+    "Negative self-talk",
+    "Comparing constantly"
+  ],
+  "option_scores": [2, 2, 1, 1],
+  "tags": ["coping_mechanism", "self_perception"]
+},
+{
+  "id": 52,
+  "question": "You feel most yourself when you are:",
+  "options": [
+    "Alone and reflecting",
+    "Laughing with someone safe",
+    "Lost in something creative",
+    "Helping others"
+  ],
+  "option_scores": [3, 3, 4, 2],
+  "tags": ["self_perception", "emotional_awareness"]
+},
+{
+  "id": 53,
+  "question": "What do you tend to postpone?",
+  "options": [
+    "Difficult conversations",
+    "Rest",
+    "Self-reflection",
+    "Asking for help"
+  ],
+  "option_scores": [2, 3, 4, 2],
+  "tags": ["coping_mechanism", "emotional_awareness"]
+},
+{
+  "id": 54,
+  "question": "When you cry, it’s usually because:",
+  "options": [
+    "You’ve been holding too much",
+    "You feel unseen",
+    "You’re overwhelmed",
+    "You feel deeply moved"
+  ],
+  "option_scores": [2, 2, 3, 4],
+  "tags": ["emotional_awareness", "coping_mechanism"]
+},
+{
+  "id": 55,
+  "question": "What kind of growth are you avoiding?",
+  "options": [
+    "Emotional vulnerability",
+    "Letting go of control",
+    "Accepting uncertainty",
+    "Taking a leap"
+  ],
+  "option_scores": [2, 2, 3, 4],
+  "tags": ["growth_mindset", "adaptability"]
+},
+{
+  "id": 56,
+  "question": "Which statement feels truest for you right now?",
+  "options": [
+    "I’m in survival mode",
+    "I’m holding on",
+    "I’m searching",
+    "I’m growing quietly"
+  ],
+  "option_scores": [1, 2, 3, 4],
+  "tags": ["resilience", "self_perception"]
+},
+{
+  "id": 57,
+  "question": "When you think of rest, you think of:",
+  "options": [
+    "Guilt",
+    "Permission",
+    "A necessity",
+    "A form of self-respect"
+  ],
+  "option_scores": [1, 2, 3, 4],
+  "tags": ["coping_mechanism", "self_perception"]
+},
+{
+  "id": 58,
+  "question": "When you're not okay, you:",
+  "options": [
+    "Keep going anyway",
+    "Retreat in silence",
+    "Ask for space",
+    "Try to hide it with a smile"
+  ],
+  "option_scores": [2, 2, 4, 1],
+  "tags": ["coping_mechanism", "emotional_awareness"]
+},
+{
+  "id": 59,
+  "question": "When something excites you, you:",
+  "options": [
+    "Doubt if you deserve it",
+    "Try not to get too hopeful",
+    "Allow yourself to enjoy it",
+    "Embrace it fully"
+  ],
+  "option_scores": [1, 2, 3, 4],
+  "tags": ["growth_mindset", "emotional_awareness"]
+},
+{
+  "id": 60,
+  "question": "When asked how you are, you usually say:",
+  "options": [
+    "“I’m fine” (even if not)",
+    "“Tired, but okay”",
+    "“Not sure, actually”",
+    "“Trying my best”"
+  ],
+  "option_scores": [1, 2, 3, 4],
+  "tags": ["emotional_awareness", "self_perception"]
+},
+{
+  "id": 61,
+  "question": "What’s the first thing you notice when you enter a room full of people?",
+  "options": [
+    "Who might judge me",
+    "Where I can feel safe",
+    "Who looks approachable",
+    "How I’m feeling internally"
+  ],
+  "option_scores": [1, 2, 3, 4],
+  "tags": ["self_perception", "emotional_awareness"]
+},
+{
+  "id": 62,
+  "question": "What do you often seek, even without realizing it?",
+  "options": [
+    "Validation",
+    "Understanding",
+    "Peace",
+    "Purpose"
+  ],
+  "option_scores": [1, 2, 3, 4],
+  "tags": ["emotional_awareness", "coping_mechanism"]
+},
+{
+  "id": 63,
+  "question": "When a relationship starts to feel distant, you:",
+  "options": [
+    "Overthink what you did",
+    "Try to reconnect",
+    "Pull back protectively",
+    "Accept the space"
+  ],
+  "option_scores": [1, 3, 2, 4],
+  "tags": ["coping_mechanism", "emotional_awareness"]
+},
+{
+  "id": 64,
+  "question": "You define connection as:",
+  "options": [
+    "Feeling seen",
+    "Vulnerable moments",
+    "Emotional safety",
+    "Mutual presence"
+  ],
+  "option_scores": [2, 3, 3, 4],
+  "tags": ["emotional_awareness", "self_perception"]
+},
+{
+  "id": 65,
+  "question": "You feel most disconnected from yourself when:",
+  "options": [
+    "You’re busy nonstop",
+    "You’re constantly online",
+    "You avoid hard questions",
+    "You ignore your needs"
+  ],
+  "option_scores": [2, 1, 3, 2],
+  "tags": ["coping_mechanism", "self_perception"]
+},
+{
+  "id": 66,
+  "question": "What do you wish others would ask you more often?",
+  "options": [
+    "“How are you, really?”",
+    "“What are you passionate about?”",
+    "“What do you need?”",
+    "“What’s on your mind today?”"
+  ],
+  "option_scores": [2, 3, 4, 3],
+  "tags": ["emotional_awareness", "self_perception"]
+},
+{
+  "id": 67,
+  "question": "What kind of validation do you seek most?",
+  "options": [
+    "Emotional support",
+    "Recognition of effort",
+    "Affirmation of worth",
+    "Proof that I’m not alone"
+  ],
+  "option_scores": [2, 3, 4, 3],
+  "tags": ["coping_mechanism", "self_perception"]
+},
+{
+  "id": 68,
+  "question": "What’s your usual response to burnout?",
+  "options": [
+    "Ignore it and keep working",
+    "Feel guilty for needing rest",
+    "Collapse before addressing it",
+    "Step back and reevaluate"
+  ],
+  "option_scores": [1, 2, 3, 4],
+  "tags": ["resilience", "coping_mechanism"]
+},
+{
+  "id": 69,
+  "question": "How do you typically handle disappointment?",
+  "options": [
+    "Blame myself",
+    "Shrug it off",
+    "Hide how I feel",
+    "Use it to grow"
+  ],
+  "option_scores": [1, 2, 2, 4],
+  "tags": ["resilience", "growth_mindset"]
+},
+{
+  "id": 70,
+  "question": "What part of you are you still learning to accept?",
+  "options": [
+    "My sensitivity",
+    "My uncertainty",
+    "My imperfections",
+    "My ambition"
+  ],
+  "option_scores": [2, 3, 4, 3],
+  "tags": ["self_perception", "growth_mindset"]
+},
+{
+  "id": 71,
+  "question": "What brings you quiet joy?",
+  "options": [
+    "Noticing little things",
+    "Deep conversations",
+    "Creating something",
+    "Feeling understood"
+  ],
+  "option_scores": [2, 3, 3, 4],
+  "tags": ["emotional_awareness", "self_perception"]
+},
+{
+  "id": 72,
+  "question": "When you journal (or if you did), what would likely appear?",
+  "options": [
+    "Worries and confusion",
+    "Honest thoughts",
+    "Hopeful ideas",
+    "Emotional truths"
+  ],
+  "option_scores": [1, 2, 3, 4],
+  "tags": ["coping_mechanism", "emotional_awareness"]
+},
+{
+  "id": 73,
+  "question": "What do you fear revealing about yourself?",
+  "options": [
+    "My needs",
+    "My past",
+    "My emotions",
+    "My struggles"
+  ],
+  "option_scores": [2, 2, 3, 4],
+  "tags": ["self_perception", "coping_mechanism"]
+},
+{
+  "id": 74,
+  "question": "You know you’re healing when:",
+  "options": [
+    "You react differently to old triggers",
+    "You set clearer boundaries",
+    "You forgive yourself more easily",
+    "You choose peace over proving"
+  ],
+  "option_scores": [2, 3, 3, 4],
+  "tags": ["growth_mindset", "resilience"]
+},
+{
+  "id": 75,
+  "question": "What part of your past still influences your present?",
+  "options": [
+    "A moment of loss",
+    "A time I felt rejected",
+    "A lesson in resilience",
+    "A silence I never broke"
+  ],
+  "option_scores": [2, 2, 4, 3],
+  "tags": ["resilience", "self_perception"]
+},
+{
+  "id": 76,
+  "question": "How do you usually feel after being vulnerable?",
+  "options": [
+    "Exposed",
+    "Empowered",
+    "Unsure",
+    "Relieved"
+  ],
+  "option_scores": [1, 4, 2, 3],
+  "tags": ["emotional_awareness", "coping_mechanism"]
+},
+{
+  "id": 77,
+  "question": "What do you often forget to give yourself credit for?",
+  "options": [
+    "Showing up every day",
+    "How far I’ve come",
+    "Handling the hard things",
+    "Still believing in myself"
+  ],
+  "option_scores": [2, 3, 4, 4],
+  "tags": ["growth_mindset", "resilience"]
+},
+{
+  "id": 78,
+  "question": "What kind of emotional space do you often hold for others?",
+  "options": [
+    "Listening without judgment",
+    "Offering solutions",
+    "Absorbing their emotions",
+    "Keeping it light and positive"
+  ],
+  "option_scores": [4, 2, 2, 3],
+  "tags": ["emotional_awareness", "coping_mechanism"]
+},
+{
+  "id": 79,
+  "question": "You most often resist change when it involves:",
+  "options": [
+    "Loss of familiarity",
+    "Uncertainty in identity",
+    "Letting go of people",
+    "Questioning your path"
+  ],
+  "option_scores": [2, 2, 3, 4],
+  "tags": ["adaptability", "growth_mindset"]
+},
+{
+  "id": 80,
+  "question": "What is a question you ask yourself often—but rarely answer?",
+  "options": [
+    "“What do I really want?”",
+    "“What if I fail?”",
+    "“Is this worth it?”",
+    "“Who am I becoming?”"
+  ],
+  "option_scores": [2, 1, 3, 4],
+  "tags": ["self_perception", "growth_mindset"]
+},
+{
+  "id": 81,
+  "question": "What does “being seen” mean to you?",
+  "options": [
+    "Being understood beyond words",
+    "Being accepted without changing",
+    "Being appreciated without effort",
+    "Being heard when I speak"
+  ],
+  "option_scores": [4, 3, 2, 3],
+  "tags": ["emotional_awareness", "self_perception"]
+},
+{
+  "id": 82,
+  "question": "In conflict, you tend to:",
+  "options": [
+    "Avoid it at all costs",
+    "Keep peace, even if it hurts",
+    "Over-explain yourself",
+    "Face it directly and calmly"
+  ],
+  "option_scores": [1, 2, 2, 4],
+  "tags": ["coping_mechanism", "emotional_awareness"]
+},
+{
+  "id": 83,
+  "question": "When you reflect on your dreams or goals, you feel:",
+  "options": [
+    "Unsure where to start",
+    "Motivated but anxious",
+    "Excited and aligned",
+    "Distracted by self-doubt"
+  ],
+  "option_scores": [2, 3, 4, 1],
+  "tags": ["growth_mindset", "self_perception"]
+},
+{
+  "id": 84,
+  "question": "You tend to compare yourself most when:",
+  "options": [
+    "You feel stuck",
+    "Others are achieving more",
+    "You’re scrolling online",
+    "You feel lost in purpose"
+  ],
+  "option_scores": [2, 2, 1, 3],
+  "tags": ["self_perception", "coping_mechanism"]
+},
+{
+  "id": 85,
+  "question": "What message do you hope someone would write to you right now?",
+  "options": [
+    "“You’re not alone.”",
+    "“You’re doing enough.”",
+    "“You matter, even on hard days.”",
+    "“You’re allowed to rest.”"
+  ],
+  "option_scores": [3, 3, 4, 3],
+  "tags": ["coping_mechanism", "emotional_awareness"]
+},
+{
+  "id": 86,
+  "question": "You feel most emotionally safe when:",
+  "options": [
+    "I’m not judged",
+    "I’m not rushed",
+    "I’m allowed to feel",
+    "I’m fully accepted"
+  ],
+  "option_scores": [3, 2, 3, 4],
+  "tags": ["emotional_awareness", "self_perception"]
+},
+{
+  "id": 87,
+  "question": "What belief about yourself are you currently challenging?",
+  "options": [
+    "That I must earn love",
+    "That rest means laziness",
+    "That I’m not good enough",
+    "That change must be painful"
+  ],
+  "option_scores": [2, 3, 2, 4],
+  "tags": ["growth_mindset", "self_perception"]
+},
+{
+  "id": 88,
+  "question": "What does being “strong” mean to you now?",
+  "options": [
+    "Carrying on when it’s hard",
+    "Asking for help",
+    "Being gentle with myself",
+    "Letting go gracefully"
+  ],
+  "option_scores": [2, 3, 3, 4],
+  "tags": ["resilience", "growth_mindset"]
+},
+{
+  "id": 89,
+  "question": "Which fear still holds you back the most?",
+  "options": [
+    "Fear of failing",
+    "Fear of disappointing others",
+    "Fear of change",
+    "Fear of being misunderstood"
+  ],
+  "option_scores": [2, 3, 2, 3],
+  "tags": ["self_perception", "coping_mechanism"]
+},
+{
+  "id": 90,
+  "question": "What brings you back to yourself when you feel lost?",
+  "options": [
+    "A quiet walk or nature",
+    "Music that resonates",
+    "A conversation with someone safe",
+    "Writing my thoughts out"
+  ],
+  "option_scores": [4, 3, 3, 4],
+  "tags": ["coping_mechanism", "self_perception"]
+}
+,
+{
+  "id": 91,
+  "question": "What’s your typical response when you're praised?",
+  "options": [
+    "I downplay it",
+    "I feel awkward",
+    "I try to change the topic",
+    "I let it sink in, even if it feels weird"
+  ],
+  "option_scores": [1, 2, 2, 4],
+  "tags": ["self_perception", "emotional_awareness"]
+},
+{
+  "id": 92,
+  "question": "When you look at your current habits, you feel:",
+  "options": [
+    "Disconnected from my intentions",
+    "Stuck in cycles I don’t question",
+    "Curious about my patterns",
+    "Proud of the shifts I’ve made"
+  ],
+  "option_scores": [1, 2, 3, 4],
+  "tags": ["growth_mindset", "self_perception"]
+},
+{
+  "id": 93,
+  "question": "Which of these do you find hardest to say?",
+  "options": [
+    "“I need help”",
+    "“I’m not okay”",
+    "“I was wrong”",
+    "“I love myself”"
+  ],
+  "option_scores": [2, 2, 3, 4],
+  "tags": ["emotional_awareness", "coping_mechanism"]
+},
+{
+  "id": 94,
+  "question": "What emotion do you often judge yourself for feeling?",
+  "options": [
+    "Anger",
+    "Sadness",
+    "Jealousy",
+    "Fear"
+  ],
+  "option_scores": [2, 2, 1, 2],
+  "tags": ["emotional_awareness", "self_perception"]
+},
+{
+  "id": 95,
+  "question": "You feel most overwhelmed when:",
+  "options": [
+    "Everything piles up silently",
+    "I don’t know where to start",
+    "I can’t meet others’ expectations",
+    "I’m disconnected from meaning"
+  ],
+  "option_scores": [2, 2, 2, 3],
+  "tags": ["coping_mechanism", "resilience"]
+},
+{
+  "id": 96,
+  "question": "When someone truly listens to you, you feel:",
+  "options": [
+    "Lighter",
+    "Validated",
+    "Emotional",
+    "Unsure how to respond"
+  ],
+  "option_scores": [3, 4, 2, 1],
+  "tags": ["emotional_awareness", "coping_mechanism"]
+},
+{
+  "id": 97,
+  "question": "What kind of growth do you find yourself avoiding?",
+  "options": [
+    "Setting boundaries",
+    "Speaking my truth",
+    "Facing difficult memories",
+    "Slowing down and resting"
+  ],
+  "option_scores": [2, 2, 3, 4],
+  "tags": ["growth_mindset", "coping_mechanism"]
+},
+{
+  "id": 98,
+  "question": "When you feel lost, what do you instinctively seek?",
+  "options": [
+    "A familiar routine",
+    "External advice",
+    "Silence and solitude",
+    "Something to distract me"
+  ],
+  "option_scores": [3, 2, 4, 1],
+  "tags": ["coping_mechanism", "self_perception"]
+},
+{
+  "id": 99,
+  "question": "How do you define “home”?",
+  "options": [
+    "Where I’m fully accepted",
+    "Where I can be quiet",
+    "Where I feel emotionally safe",
+    "Where I don't have to explain myself"
+  ],
+  "option_scores": [4, 3, 4, 3],
+  "tags": ["emotional_awareness", "self_perception"]
+},
+{
+  "id": 100,
+  "question": "The most honest thing you can tell yourself today is:",
+  "options": [
+    "I’m not okay, and that’s okay",
+    "I want more than I admit",
+    "I’ve been avoiding something important",
+    "I’m doing the best I can"
+  ],
+  "option_scores": [3, 2, 2, 4],
+  "tags": ["self_perception", "coping_mechanism"]
+},
+{
+  "id": 101,
+  "question": "When you feel stuck, what is your default reaction?",
+  "options": [
+    "Try harder",
+    "Shut down",
+    "Distract myself",
+    "Ask for help"
+  ],
+  "option_scores": [2, 1, 2, 4],
+  "tags": ["coping_mechanism", "resilience"]
+},
+{
+  "id": 102,
+  "question": "Which small act of self-respect do you need more of?",
+  "options": [
+    "Saying no",
+    "Taking breaks",
+    "Celebrating small wins",
+    "Letting go of perfection"
+  ],
+  "option_scores": [3, 3, 4, 4],
+  "tags": ["growth_mindset", "coping_mechanism"]
+},
+{
+  "id": 103,
+  "question": "What emotion are you most uncomfortable sitting with?",
+  "options": [
+    "Shame",
+    "Loneliness",
+    "Guilt",
+    "Envy"
+  ],
+  "option_scores": [1, 2, 2, 1],
+  "tags": ["emotional_awareness", "self_perception"]
+},
+{
+  "id": 104,
+  "question": "When something deeply moves you, your reaction is usually:",
+  "options": [
+    "I don’t know how to express it",
+    "I reflect inward quietly",
+    "I feel the urge to share it",
+    "I cry or feel chills"
+  ],
+  "option_scores": [1, 3, 3, 4],
+  "tags": ["emotional_awareness", "self_perception"]
+},
+{
+  "id": 105,
+  "question": "What keeps you from opening up to others?",
+  "options": [
+    "Fear of burdening them",
+    "Fear of rejection",
+    "Fear of being misunderstood",
+    "Fear of losing control"
+  ],
+  "option_scores": [2, 2, 2, 1],
+  "tags": ["coping_mechanism", "emotional_awareness"]
+},
+{
+  "id": 106,
+  "question": "What does emotional maturity mean to you?",
+  "options": [
+    "Responding, not reacting",
+    "Owning your patterns",
+    "Listening to understand",
+    "Choosing peace over proving"
+  ],
+  "option_scores": [3, 4, 3, 4],
+  "tags": ["emotional_awareness", "growth_mindset"]
+},
+{
+  "id": 107,
+  "question": "When do you feel most disconnected from your purpose?",
+  "options": [
+    "When I’m overwhelmed by tasks",
+    "When I’m comparing myself",
+    "When I’m out of alignment",
+    "When I ignore my intuition"
+  ],
+  "option_scores": [2, 2, 3, 4],
+  "tags": ["self_perception", "growth_mindset"]
+},
+{
+  "id": 108,
+  "question": "What kind of love do you think you’re still learning to receive?",
+  "options": [
+    "Patient love",
+    "Unconditional love",
+    "Affirming love",
+    "Gentle love"
+  ],
+  "option_scores": [2, 3, 3, 4],
+  "tags": ["self_perception", "emotional_awareness"]
+},
+{
+  "id": 109,
+  "question": "When faced with a life decision, what question do you ask first?",
+  "options": [
+    "Will others approve?",
+    "What feels aligned?",
+    "What if I fail?",
+    "Will this grow me?"
+  ],
+  "option_scores": [1, 3, 2, 4],
+  "tags": ["growth_mindset", "self_perception"]
+},
+{
+  "id": 110,
+  "question": "What lesson do you keep relearning in different forms?",
+  "options": [
+    "Letting go isn’t weakness",
+    "My feelings are valid",
+    "Rest is productive",
+    "I can’t fix everything"
+  ],
+  "option_scores": [3, 3, 4, 4],
+  "tags": ["resilience", "growth_mindset"]
+},
+{
+  "id": 111,
+  "question": "Which of these feels truest about your inner world?",
+  "options": [
+    "It’s louder than I show",
+    "It’s more compassionate than it sounds",
+    "It’s seeking stillness",
+    "It’s full of quiet questions"
+  ],
+  "option_scores": [2, 3, 4, 4],
+  "tags": ["self_perception", "emotional_awareness"]
+},
+{
+  "id": 112,
+  "question": "What personal truth are you still hiding from others?",
+  "options": [
+    "How tired I am",
+    "How much I care",
+    "How afraid I feel",
+    "How deeply I think"
+  ],
+  "option_scores": [2, 2, 3, 4],
+  "tags": ["coping_mechanism", "self_perception"]
+},
+{
+  "id": 113,
+  "question": "Which part of your identity do you protect the most?",
+  "options": [
+    "My vulnerability",
+    "My softness",
+    "My ambition",
+    "My creativity"
+  ],
+  "option_scores": [2, 3, 3, 4],
+  "tags": ["self_perception", "resilience"]
+},
+{
+  "id": 114,
+  "question": "In your healing, what needs more attention?",
+  "options": [
+    "My inner child",
+    "My body",
+    "My boundaries",
+    "My narrative"
+  ],
+  "option_scores": [2, 3, 3, 4],
+  "tags": ["growth_mindset", "coping_mechanism"]
+},
+{
+  "id": 115,
+  "question": "When do you feel the most alive?",
+  "options": [
+    "When I create",
+    "When I’m truly heard",
+    "When I’m connected to nature",
+    "When I surprise myself"
+  ],
+  "option_scores": [3, 3, 4, 4],
+  "tags": ["self_perception", "emotional_awareness"]
+},
+{
+  "id": 116,
+  "question": "What do you avoid saying out loud—but know is true?",
+  "options": [
+    "I need more than I’m asking for",
+    "I miss something I can’t name",
+    "I’m afraid to slow down",
+    "I’m changing in ways others may not see"
+  ],
+  "option_scores": [2, 3, 2, 4],
+  "tags": ["self_perception", "growth_mindset"]
+},
+{
+  "id": 117,
+  "question": "Which voice in your head needs softening?",
+  "options": [
+    "The one that says “not enough”",
+    "The one that compares",
+    "The one that never rests",
+    "The one that doubts love"
+  ],
+  "option_scores": [2, 2, 3, 3],
+  "tags": ["coping_mechanism", "emotional_awareness"]
+},
+{
+  "id": 118,
+  "question": "What’s a truth you’ve grown into?",
+  "options": [
+    "Peace is more important than perfection",
+    "I don’t need to prove my worth",
+    "Healing isn’t linear",
+    "Boundaries are a gift"
+  ],
+  "option_scores": [3, 4, 4, 4],
+  "tags": ["growth_mindset", "resilience"]
+},
+{
+  "id": 119,
+  "question": "What are you unlearning lately?",
+  "options": [
+    "That success defines worth",
+    "That being busy means I matter",
+    "That I must be strong always",
+    "That asking is weakness"
+  ],
+  "option_scores": [3, 3, 2, 4],
+  "tags": ["growth_mindset", "self_perception"]
+},
+{
+  "id": 120,
+  "question": "Which of these affirmations do you need most today?",
+  "options": [
+    "“I am enough as I am.”",
+    "“I’m allowed to grow slowly.”",
+    "“I release the need to be perfect.”",
+    "“I honor how I feel.”"
+  ],
+  "option_scores": [3, 4, 3, 4],
+  "tags": ["coping_mechanism", "emotional_awareness"]
+}
+
+]

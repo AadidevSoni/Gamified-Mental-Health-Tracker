@@ -58,7 +58,6 @@
   <li>Sends back user profile (without password)</li>
   <li>User Logout (POST /api/users/logout)</li>
   <li>Clears the JWT cookie</li>
-  <li>Sends success message</li>
 </ul>
 
 <h1>🧑‍💻 User Profile Management</h1>
@@ -218,6 +217,107 @@
   <li>Brightness filters and layering handled via <code>z-index</code> and <code>pointer-events</code> to keep forms interactive.</li>
 </ul>
 
+<h1>✅ New Functional Pages Added</h1>
+
+<!-- Mental Health Test Page -->
+<h2>1. 🧠 Mental Health Test Page</h2>
+<p><strong>Path:</strong> <code>/test</code></p>
+<ul>
+  <li>Users enter:
+    <ul>
+      <li>Daily sleep hours</li>
+      <li>Mental wellness activities (e.g., Reading, Meditation, Art)</li>
+    </ul>
+  </li>
+  <li>A <strong>wellness score</strong> is calculated based on:
+    <ul>
+      <li>Sleep quality scale (0–10 points)</li>
+      <li>Activity-based values (e.g., Meditation = 10 pts, TV = 5 pts)</li>
+    </ul>
+  </li>
+  <li><strong>Daily submission lock:</strong> Score is calculated once per day only</li>
+  <li><strong>UX Enhancements:</strong>
+    <ul>
+      <li>Full-screen background video</li>
+      <li>Overlay for readability</li>
+      <li>Loading animation on mount</li>
+    </ul>
+  </li>
+</ul>
+
+<!-- Activity Overview Page -->
+<h2>2. 🌿 Activity Overview Page</h2>
+<p><strong>Path:</strong> <code>/activities</code></p>
+<ul>
+  <li>Displays a <strong>grid</strong> of mental health activities:
+    <ul>
+      <li>Yoga, Journaling, Art, Cycling, etc.</li>
+    </ul>
+  </li>
+  <li>Each activity includes:
+    <ul>
+      <li>Image</li>
+      <li>Title</li>
+      <li>Clickable link to dedicated content page (e.g., Yoga → <code>/yoga</code>)</li>
+    </ul>
+  </li>
+  <li><strong>UX Enhancements:</strong>
+    <ul>
+      <li>Loader animation</li>
+      <li>Background video with overlay</li>
+    </ul>
+  </li>
+</ul>
+
+<!-- Yoga Page -->
+<h2>3. 🧘 Yoga Videos Page</h2>
+<p><strong>Path:</strong> <code>/yoga</code></p>
+<ul>
+  <li>Responsive card grid of <strong>YouTube yoga videos</strong></li>
+  <li>Each card includes:
+    <ul>
+      <li>Thumbnail (auto-generated via <code>img.youtube.com</code>)</li>
+      <li>Video title</li>
+      <li>External link (opens in YouTube)</li>
+    </ul>
+  </li>
+  <li><strong>UX Enhancements:</strong>
+    <ul>
+      <li>Relaxing video background</li>
+      <li>Loader animation on page load</li>
+    </ul>
+  </li>
+</ul>
+
+<!-- Books Page -->
+<h2>4. 📚 Books Library Page</h2>
+<p><strong>Path:</strong> <code>/read</code></p>
+<ul>
+  <li>Curated list of <strong>must-read books</strong> for mental wellness</li>
+  <li>Each card includes:
+    <ul>
+      <li>Book cover</li>
+      <li>Title and author</li>
+      <li>Link to read online (e.g., <code>archive.org</code>, <code>gutenberg.org</code>)</li>
+    </ul>
+  </li>
+  <li>Sample books:
+    <ul>
+      <li><em>The Art of Happiness</em> – Dalai Lama</li>
+      <li><em>Meditations</em> – Marcus Aurelius</li>
+      <li><em>Atomic Habits</em> – James Clear</li>
+      <li><em>Radical Acceptance</em> – Tara Brach</li>
+    </ul>
+  </li>
+  <li><strong>UX Enhancements:</strong>
+    <ul>
+      <li>Themed video background</li>
+      <li>Loading screen on mount</li>
+    </ul>
+  </li>
+</ul>
+
+
 <h1>Development</h1>
 
 <h2>Initial Setup and Backend</h2>
@@ -283,4 +383,7 @@
   <li>Creating questionSchema and questionModel for tests</li>
   <li>Creating test page with score calculation</li>
   <li>Creating Activity Navigation with router for each categories</li>
+  <li>Making a dataset for 120 questions to beasked in a questions.josn file</li>
+  <li>Askign 10 random questions to the user everyday and getting a score</li>
+  <li>Updating userModel to store the scores on eachday</li>
 </ul>

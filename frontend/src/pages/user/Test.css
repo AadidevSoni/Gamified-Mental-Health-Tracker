@@ -1,99 +1,200 @@
 .testContainer {
-  font-family: 'Oswald', sans-serif;
-  color: white;
-  padding: 2rem;
-  z-index: 1;
   position: relative;
-  text-align: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.testHeading {
-  padding-bottom: 4rem;
-  text-align: center;
+.video-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
 }
 
-.testSleepHourInput {
-  margin-left: 2rem;
-  width: 40px;
-  text-align: center;
-  font-family: 'Oswald', sans-serif;
-  font-weight: bold;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 5px;
+.testQuestion1 {
+  font-size: 1.3rem;
 }
 
-.testContent {
-  max-width: 1000px;
-  margin: 0 auto;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 2rem;
-  border-radius: 10px;
-}
 
 .testQuestion {
-  margin-bottom: 3rem;
-  font-family: 'Oswald', sans-serif;
-  color: white;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin-top: 3rem;
 }
 
-.testQuestion label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+.activityButtonGroup {
+  margin-top: 20px;
 }
 
-.activityOptions {
+.video-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testQuestions {
+  font-size: 1.5rem;
+  margin-left: 16rem;
+
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.initial-loading-screen {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background:rgb(12, 33, 22);
+  color: #fff;
 }
 
-.activityCheckbox {
-  font-size: 1rem;
+.loader-circle {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #94a3b8;
+  border-top-color:rgb(49, 234, 104);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
 }
 
-.submitTestButton {
-  background-color: #77e9bb;
-  padding: 0.75rem 2rem;
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.testContent {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 10px rgba(26, 255, 0, 0.55);
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.testHeading {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color:rgb(74, 237, 123);
+}
+
+.loginFormContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.loginContainers {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.testSleepHourInput {
+  padding: 12px;
+  border-radius: 8px;
   border: none;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
+  width: 8%;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  backdrop-filter: blur(4px);
+  margin-left: 2rem;
 }
 
 .activityButtonGroup {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
-  gap: 0.5rem;
-  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .activityButton {
-  padding: 0.6rem 1.2rem;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 2px solid #77e9bb;
-  border-radius: 8px;
+  padding: 10px 14px;
+  margin-right: 1px;
+  border-radius: 20px;
+  background-color:rgb(100, 139, 102);
   color: white;
-  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
+  border: none;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-
-.activityButton.active {
-  background-color: #77e9bb;
-  color: black;
-  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
 .activityButton:hover {
-  background-color: #b4f4da;
-  color: black;
+  background-color:rgb(79, 191, 122);
+}
+
+.testQues {
+  margin-bottom: 2rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.activityButton.active {
+  background-color:rgb(105, 216, 134);
+}
+
+.introspective-question {
+  background: rgba(255, 255, 255, 0.07);
+  padding: 16px;
+  border-radius: 12px;
+  color: #f1f5f9;
+  font-size: 1.3rem;
+  margin: 4rem;
+}
+
+.radio-option {
+  display: block;
+  margin-top: 6px;
+  padding-left: 12px;
+  font-size: 1.3rem;
+  background-color: rgb(7, 93, 44);
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+  color: rgb(158, 255, 197);
+  margin: 15px;
+}
+
+.radio-option input {
+  margin-right: 8px;
+}
+
+.submitTestButton {
+  background-color: #22c55e;
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submitTestButton:hover {
+  background-color: #16a34a;
 }
 
 .testScore {
-  margin-top: 6rem;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #facc15;
+  margin-top: 30px;
 }

@@ -12,8 +12,8 @@ import PrivateRoute from './components/PrivateRoute.jsx';
 
 //Auth
 import Login from './pages/auth/Login.jsx';
-import Calendar from './pages/auth/Calendar.jsx';
-import MonthView from './pages/auth/MonthView.jsx';
+import Calendar from './pages/user/Calendar.jsx';
+import MonthView from './pages/user/MonthView.jsx';
 import Register from './pages/auth/Register.jsx';
 
 import Profile from './pages/user/Profile.jsx';
@@ -39,6 +39,8 @@ const router = createBrowserRouter(
         <Route path='/leaderboard' element={<Leaderboard />}/>
         <Route path='/tests' element={<Test />} />
         <Route path='/activity' element={<Activity />} />
+        <Route path='/calendar' element={<Calendar />} />
+        <Route path="/calendar/:month" element={<MonthView />} />
       </Route>
 
       <Route path='/activity/yoga' element={<Yoga />} />
@@ -50,8 +52,6 @@ const router = createBrowserRouter(
       
       <Route index={true} path="/" element={<Home />} />
       <Route path='/login' element={<Login />} />
-      <Route path='/calendar' element={<Calendar />} />
-      <Route path="/calendar/:month" element={<MonthView />} />
       <Route path='/register' element={<Register />} />
 
       {/*Adminn Routes*/}
