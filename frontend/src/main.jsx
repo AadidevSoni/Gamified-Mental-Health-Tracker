@@ -58,13 +58,14 @@ const router = createBrowserRouter(
       <Route path='/admin' element={<AdminRoute />}>
         <Route path='userlist' element={<UserList/>}/>
       </Route>
-
+      
     </Route>
   )
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <Provider store = {store}>
+  //Makes your Redux store available to all nested components using useSelector, useDispatch, etc.
+  <Provider store = {store}> 
     <RouterProvider router={router} />
   </Provider>
 );

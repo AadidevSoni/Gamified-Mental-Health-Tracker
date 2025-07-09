@@ -74,15 +74,6 @@ export const userApiSlice = apiSlice.injectEndpoints({
   }),
 });
 
-/*
-POST /api/users/auth
-Content-Type: application/json
-
-{
-  "email": "example@example.com",
-  "password": "yourpassword"
-}
-  */
 
 export const { useLoginMutation,useLogoutMutation,useRegisterMutation,useProfileMutation,useGetUsersQuery,
   useDeleteUserMutation,useGetUserDetailsQuery,useUpdateUserMutation,useGetLeaderboardQuery} = userApiSlice;

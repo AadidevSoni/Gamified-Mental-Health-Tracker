@@ -1,5 +1,7 @@
 import {createSlice} from "@reduxjs/toolkit";
 
+//To store and persist logged-in user information (userInfo) across your React app, and control login/logout behavior.
+
 const initialState = {
   userInfo: localStorage.getItem('userInfo')?JSON.parse(localStorage.getItem('userInfo')):null,
 };
