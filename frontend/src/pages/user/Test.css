@@ -90,7 +90,7 @@
 
 .testHeading {
   font-size: 2.2rem;
-  margin-bottom: 30px;
+  margin-bottom: 4rem;
   text-align: center;
   color:rgb(74, 237, 123);
 }
@@ -126,10 +126,11 @@
 }
 
 .activityButton {
-  padding: 10px 14px;
-  margin-right: 1px;
-  border-radius: 20px;
-  background-color:rgb(100, 139, 102);
+  padding: 15px 20px;
+  margin-right: 2px;
+  margin-top: 3px;
+  border-radius: 8px;
+  background-color:rgb(12, 179, 79);
   color: white;
   font-size: 1.2rem;
   border: none;
@@ -138,13 +139,14 @@
 }
 
 .activityButton:hover {
-  background-color:rgb(79, 191, 122);
+  background-color:rgb(45, 230, 116);
 }
 
 .testQues {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   margin-top: 1.5rem;
   text-align: center;
+  font-size: 1.7rem;
 }
 
 .activityButton.active {
@@ -165,17 +167,34 @@
   margin-top: 6px;
   padding-left: 12px;
   font-size: 1.3rem;
+  text-align: center;
   background-color: rgb(7, 93, 44);
   padding: 10px;
   border: none;
   border-radius: 7px;
   color: rgb(158, 255, 197);
   margin: 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.radio-option input[type="radio"] {
+  display: none; /* hides the dot */
+}
+
+.radio-option:hover {
+  background-color: rgb(12, 144, 69);
 }
 
 .radio-option input {
   margin-right: 8px;
 }
+
+.radio-option.selected {
+  background-color: rgb(36, 173, 94); /* Selected background */
+  color: #fff; /* Make text white */
+}
+
 
 .submitTestButton {
   background-color: #22c55e;
@@ -197,4 +216,173 @@
   font-size: 1.8rem;
   color: #facc15;
   margin-top: 30px;
+}
+
+.testContainerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.scadsHeader {
+  width: 590px;
+  text-align: center;
+}
+
+.takeTestButton {
+  margin-top: 3rem;
+  padding: 15px 20px;
+  font-size: 1.3rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(61, 191, 111);
+  border: none;
+  color: white;
+  border-radius: 7px;
+}
+
+.takeTestButton:hover {
+  background-color: rgb(90, 226, 142);
+  cursor: pointer;
+}
+
+.testIntroContainer {
+  background-color: rgba(25, 218, 93, 0.59);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: left;
+  backdrop-filter: blur(6px);
+}
+
+.scadsHeader {
+  font-size: 2rem;
+  text-align: center;
+  color:rgb(32, 96, 55);
+  margin-bottom: 2rem;
+  margin-left: 5rem;
+}
+
+.scadsSubText {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.scadsList {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.scadsList li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.scadsNote {
+  font-style: italic;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.takeTestButton {
+  display: block;
+  margin: 2rem auto 0;
+  background-color:rgb(36, 150, 89);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.takeTestButton:hover {
+  background-color:rgb(23, 133, 72);
+}
+
+.navButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.navButtons button {
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: rgb(15, 171, 83);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.navButtons button:hover {
+  background-color:rgb(49, 191, 110);
+}
+
+.step {
+  margin-bottom: 2rem;
+}
+
+.alreadySubmitted {
+  text-align: center;
+  margin-top: 5rem;
+  font-size: 1.5rem;
+  color: lightgreen;
+}
+
+.result-summary {
+  background-color: rgba(255, 255, 255, 0.07);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 2rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.scoreBreakdown {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.scoreSlider {
+  margin-bottom: 1rem;
+}
+
+.scoreSlider label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.slider {
+  width: 50%;
+  height: 10px;
+  appearance: none;
+  background: #4ade80;
+  border-radius: 6px;
+  outline: none;
+}
+
+.submitButtonTest {
+  margin-left: 23rem;
+  font-size: 2rem;
+  padding: 15px 20px;
+}
+
+.scoreContainerAns {
+  background-color: rgba(118, 255, 191, 0.18);
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem;
+  text-align: center;
 }

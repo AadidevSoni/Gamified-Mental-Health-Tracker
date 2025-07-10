@@ -1,10 +1,11 @@
 # 🧠 Mindleap
 
-*Mindleap* is a calming mental health tracker that helps users reflect on mood, sleep, and emotional wellness.  
+*Mindleap* is a calming gamified mental health tracker that helps users reflect on mood, sleep, and emotional wellness.  
 Your daily progress is visualized through a *lily pad that changes color*:
 
 •⁠  ⁠🟥 *Red* – High distress  
 •⁠  ⁠🟧 *Orange* – Moderate imbalance  
+•⁠  🟨 *Yellow* – Moderate balance
 •⁠  ⁠🟩 *Green* – Balanced and healthy  
 
 ---
@@ -21,16 +22,6 @@ Your daily progress is visualized through a *lily pad that changes color*:
 •⁠  ⁠Grid of wellness activities (Yoga, Journaling, Art, etc.)
 •⁠  ⁠Each links to a detailed content page
 •⁠  ⁠Soothing background video + loader
-
-### 🧘 Yoga Page (⁠ /yoga ⁠)
-•⁠  ⁠Embedded YouTube yoga videos in a responsive grid
-•⁠  ⁠Opens directly on YouTube
-•⁠  ⁠Relaxing animated background
-
-### 📚 Books Library (⁠ /read ⁠)
-•⁠  ⁠Curated mental wellness books (e.g., Atomic Habits, Meditations)
-•⁠  ⁠Linked to free online versions (archive.org, etc.)
-•⁠  ⁠Themed visuals for immersive reading
 
 ### 📆 Score Calendar (⁠ /calendar/:month ⁠)
 •⁠  ⁠Visualizes daily scores using colored lily pads:

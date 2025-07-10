@@ -1,1444 +1,1082 @@
 [
-    {
-  "id": 1,
-  "question": "When your plans shift unexpectedly, you tend to:",
-  "options": [
-    "Feel unease until adjusted",
-    "Look for new opportunities in the change",
-    "Pause to recalibrate",
-    "Embrace the unknown with curiosity"
-  ],
-  "option_scores": [1, 3, 2, 4],
-  "tags": ["growth_mindset", "coping_style"]
-},
-    {
-    "id": 2,
-    "question": "If a routine falls apart, you:",
+  {
+    "id": 1,
+    "question": "In the past week, how often did you feel down, depressed, or hopeless?",
     "options": [
-      "Feel lost",
-      "Try to rebuild it your way",
-      "Take time to reflect before proceeding",
-      "See it as a chance for something new"
+      "Not at all",
+      "Several days",
+      "More than half the days",
+      "Nearly every day"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["adaptability", "coping_mechanism"]
+    "tags": ["depression"]
+  },
+  {
+    "id": 2,
+    "question": "How often did you have little interest or pleasure in doing things?",
+    "options": [
+      "Not at all",
+      "Several days",
+      "More than half the days",
+      "Nearly every day"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["depression"]
   },
   {
     "id": 3,
-    "question": "In unpredictable moments, your focus is on:",
+    "question": "How frequently did you feel tired or had little energy?",
     "options": [
-      "Minimizing damage",
-      "Finding alternatives",
-      "Understanding what happened",
-      "Going with the flow"
+      "Not at all",
+      "Several days",
+      "More than half the days",
+      "Nearly every day"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["resilience", "coping_mechanism"]
+    "tags": ["depression"]
   },
   {
     "id": 4,
-    "question": "When adversity strikes, you:",
+    "question": "How often did you feel bad about yourself—or that you are a failure?",
     "options": [
-      "Retreat",
-      "Consult someone you trust",
-      "Reassess your approach",
-      "Dive in to problem-solve"
+      "Not at all",
+      "Several days",
+      "More than half the days",
+      "Nearly every day"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["resilience", "coping_mechanism"]
+    "tags": ["depression"]
   },
   {
     "id": 5,
-    "question": "You hear “you need to change”—you feel:",
+    "question": "Have you had trouble falling or staying asleep, or sleeping too much?",
     "options": [
-      "Defensive",
-      "Curious",
-      "Apprehensive",
-      "Motivated"
+      "Not at all",
+      "Several days",
+      "More than half the days",
+      "Nearly every day"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["emotional_awareness", "growth_mindset"]
+    "tags": ["depression"]
   },
   {
     "id": 6,
-    "question": "On tough days, you:",
+    "question": "How often did you feel tired or restless?",
     "options": [
-      "Feel stuck",
-      "Seek support",
-      "Reflect on what’s meaningful",
-      "Push through with determination"
+      "Not at all",
+      "Several days",
+      "More than half the days",
+      "Nearly every day"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["resilience", "coping_mechanism"]
+    "tags": ["depression"]
   },
   {
     "id": 7,
-    "question": "When outcomes differ from expectations, you:",
+    "question": "Did you struggle with concentrating on reading or watching something?",
     "options": [
-      "Roll with resignation",
-      "Learn from it",
-      "Analyze possible missteps",
-      "Feel ready to try again"
+      "Not at all",
+      "Several days",
+      "More than half the days",
+      "Nearly every day"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["growth_mindset", "emotional_awareness"]
+    "tags": ["depression"]
   },
   {
     "id": 8,
-    "question": "When told “It’s not working,” you:",
+    "question": "How often did you feel slowed down or restless to others?",
     "options": [
-      "Feel discouraged",
-      "Seek alternative methods",
-      "Ask “why not?”",
-      "Take it as a breakthrough step"
+      "Not at all",
+      "Several days",
+      "More than half the days",
+      "Nearly every day"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["adaptability", "growth_mindset"]
+    "tags": ["depression"]
   },
   {
     "id": 9,
-    "question": "You’re asked to leave your comfort zone. You:",
+    "question": "How often did you feel hopeless about the future?",
     "options": [
-      "Hesitate",
-      "Weigh pros and cons",
-      "Plan every detail",
-      "Dive in"
+      "Not at all",
+      "Several days",
+      "More than half the days",
+      "Nearly every day"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["growth_mindset", "adaptability"]
+    "tags": ["depression"]
   },
   {
     "id": 10,
-    "question": "When others doubt you, you:",
+    "question": "Have you lost interest in your usual hobbies or pastimes?",
     "options": [
-      "Internalize it",
-      "Prove them wrong",
-      "Use it as feedback",
-      "Ignore and focus onward"
+      "Not at all",
+      "Several days",
+      "More than half the days",
+      "Nearly every day"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["self_perception", "emotional_awareness"]
+    "tags": ["depression"]
   },
-{
+  {
     "id": 11,
-    "question": "When you catch yourself overthinking, you:",
+    "question": "How frequently did you experience feelings of worthlessness?",
     "options": [
-      "Dive deeper",
-      "Pause to observe",
-      "Distract yourself",
-      "Challenge the thought"
+      "Not at all",
+      "Several days",
+      "More than half the days",
+      "Nearly every day"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["self_perception", "emotional_awareness"]
+    "tags": ["depression"]
   },
   {
     "id": 12,
-    "question": "Your inner voice often says:",
+    "question": "How often did you find yourself crying or close to tears?",
     "options": [
-      "“Not enough.”",
-      "“Let me improve.”",
-      "“Is this true?”",
-      "“You’ve got this.”"
+      "Not at all",
+      "Several days",
+      "More than half the days",
+      "Nearly every day"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["self_perception", "growth_mindset"]
+    "tags": ["depression"]
   },
   {
     "id": 13,
-    "question": "After a mistake, you:",
+    "question": "Rate how often you felt slowed in your thoughts or movements.",
     "options": [
-      "Beat yourself up",
-      "Shrug it off",
-      "Extract lessons",
-      "Move on silently"
+      "Not at all",
+      "Several days",
+      "More than half the days",
+      "Nearly every day"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["resilience", "growth_mindset"]
+    "tags": ["depression"]
   },
   {
     "id": 14,
-    "question": "When alone with thoughts, you feel:",
+    "question": "How often did you have difficulty making decisions?",
     "options": [
-      "Restless",
-      "Reflective",
-      "Quiet",
-      "Unsettled"
+      "Not at all",
+      "Several days",
+      "More than half the days",
+      "Nearly every day"
     ],
-    "option_scores": [1, 3, 4, 2],
-    "tags": ["emotional_awareness", "coping_mechanism"]
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["depression"]
   },
   {
     "id": 15,
-    "question": "You measure progress by:",
+    "question": "Did you lose appetite or overeat?",
     "options": [
-      "Results",
-      "Small shifts",
-      "Awareness",
-      "Confidence"
+      "Not at all",
+      "Several days",
+      "More than half the days",
+      "Nearly every day"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["growth_mindset", "self_perception"]
+    "tags": ["depression"]
   },
   {
     "id": 16,
-    "question": "Your relationship with failure is:",
+    "question": "How often did you feel that life wasn't worth living?",
     "options": [
-      "Frustrating",
-      "Informative",
-      "Neutral",
-      "Growth-driving"
+      "Not at all",
+      "Several days",
+      "More than half the days",
+      "Nearly every day"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["resilience", "growth_mindset"]
+    "tags": ["depression"]
   },
   {
     "id": 17,
-    "question": "Which statement resonates most?",
+    "question": "Have you felt guilty more often than usual?",
     "options": [
-      "“I’m just surviving.”",
-      "“I’m learning.”",
-      "“I’m evolving.”",
-      "“I’m thriving.”"
+      "Not at all",
+      "Several days",
+      "More than half the days",
+      "Nearly every day"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["self_perception", "growth_mindset"]
+    "tags": ["depression"]
   },
   {
     "id": 18,
-    "question": "When isolating, you:",
+    "question": "Did you feel isolated or lonely?",
     "options": [
-      "Feel overwhelmed",
-      "Seek balance",
-      "Embrace reflection",
-      "Resurface quickly"
+      "Not at all",
+      "Several days",
+      "More than half the days",
+      "Nearly every day"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["coping_mechanism", "emotional_awareness"]
+    "tags": ["depression"]
   },
   {
     "id": 19,
-    "question": "When someone praises you, you:",
+    "question": "How often did you feel irritable or frustrated?",
     "options": [
-      "Feel suspicious",
-      "Appreciate it",
-      "Analyze it",
-      "Accept it gratefully"
+      "Not at all",
+      "Several days",
+      "More than half the days",
+      "Nearly every day"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["self_perception", "emotional_awareness"]
+    "tags": ["depression"]
   },
   {
     "id": 20,
-    "question": "You define authenticity as:",
+    "question": "Have you had difficulty getting up in the morning due to low mood?",
     "options": [
-      "Keeping secrets",
-      "Being honest",
-      "Aligning values and actions",
-      "Being unapologetically you"
+      "Not at all",
+      "Several days",
+      "More than half the days",
+      "Nearly every day"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["growth_mindset", "self_perception"]
+    "tags": ["depression"]
   },
   {
     "id": 21,
-    "question": "What matters more today?",
+    "question": "How often did you feel that nothing could cheer you up?",
     "options": [
-      "Comfort",
-      "Purpose",
-      "Truth",
-      "Growth"
+      "Not at all",
+      "Several days",
+      "More than half the days",
+      "Nearly every day"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["self_perception", "growth_mindset"]
+    "tags": ["depression"]
   },
   {
     "id": 22,
-    "question": "You align your day with:",
+    "question": "How frequently did you lose patience with yourself?",
     "options": [
-      "Expectations",
-      "Intentional choices",
-      "Reflection",
-      "Intuition"
+      "Not at all",
+      "Several days",
+      "More than half the days",
+      "Nearly every day"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["self_perception", "coping_mechanism"]
+    "tags": ["depression"]
   },
   {
     "id": 23,
-    "question": "If time is short, you focus on:",
+    "question": "Did you feel uninterested in personal hygiene or self-care?",
     "options": [
-      "Maintenance",
-      "Progress",
-      "Meaning",
-      "Connection"
+      "Not at all",
+      "Several days",
+      "More than half the days",
+      "Nearly every day"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["emotional_awareness", "growth_mindset"]
+    "tags": ["depression"]
   },
   {
     "id": 24,
-    "question": "Which you fear most?",
+    "question": "How often have you felt numb or emotionally flat?",
     "options": [
-      "Failure",
-      "Regret",
-      "Stagnation",
-      "Dishonesty"
+      "Not at all",
+      "Several days",
+      "More than half the days",
+      "Nearly every day"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["self_perception", "emotional_awareness"]
+    "tags": ["depression"]
   },
   {
     "id": 25,
-    "question": "Which brings more clarity?",
+    "question": "How often did you feel nervous, anxious, or on edge?",
     "options": [
-      "Routine",
-      "Experimenting",
-      "Journaling",
-      "Honest talks"
+      "Not at all",
+      "Several days",
+      "More than half the days",
+      "Nearly every day"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["coping_mechanism", "emotional_awareness"]
+    "tags": ["anxiety"]
   },
   {
     "id": 26,
-    "question": "You weigh decisions by:",
+    "question": "How often were you unable to stop or control worrying?",
     "options": [
-      "Convenience",
-      "Integrity",
-      "Long-term impact",
-      "Personal values"
+      "Not at all",
+      "Several days",
+      "More than half the days",
+      "Nearly every day"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["growth_mindset", "self_perception"]
+    "tags": ["anxiety"]
   },
   {
     "id": 27,
-    "question": "When offers conflict with principles, you:",
+    "question": "Did you find it difficult to relax?",
     "options": [
-      "Back out",
-      "Negotiate",
-      "Reflect deeply",
-      "Stay true"
+      "Not at all",
+      "Sometimes",
+      "Often",
+      "Always"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["resilience", "self_perception"]
+    "tags": ["anxiety"]
   },
   {
     "id": 28,
-    "question": "You define purpose as:",
+    "question": "How frequently did you feel something awful might happen?",
     "options": [
-      "What you do",
-      "How you feel",
-      "What you stand for",
-      "What you contribute"
+      "Rarely",
+      "Occasionally",
+      "Often",
+      "Almost constantly"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["self_perception", "growth_mindset"]
+    "tags": ["anxiety"]
   },
   {
     "id": 29,
-    "question": "When considering progress, you look at:",
+    "question": "Did you experience a sudden feeling of panic or dread?",
     "options": [
-      "External feedback",
-      "Personal satisfaction",
-      "Inner alignment",
-      "Ripple effects"
+      "Never",
+      "Once or twice",
+      "A few times",
+      "Frequently"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["growth_mindset", "emotional_awareness"]
+    "tags": ["anxiety"]
   },
   {
     "id": 30,
-    "question": "You choose long-term fulfillment over:",
+    "question": "How often did your mind race with worrying thoughts?",
     "options": [
-      "Short-term comfort",
-      "External approval",
-      "Immediate clarity",
-      "Fading trends"
+      "Not at all",
+      "Sometimes",
+      "Often",
+      "Constantly"
     ],
     "option_scores": [1, 2, 3, 4],
-    "tags": ["growth_mindset", "coping_mechanism"]
+    "tags": ["anxiety"]
   },
-{
-  "id": 31,
-  "question": "What kind of silence do you sit in most often?",
-  "options": [
-    "Numbness",
-    "Rest",
-    "Reflection",
-    "Avoidance"
-  ],
-  "option_scores": [1, 2, 3, 1],
-  "tags": ["emotional_awareness", "self_perception"]
-},
-{
-  "id": 32,
-  "question": "Which of these internal states feels most familiar lately?",
-  "options": [
-    "Uncertainty",
-    "Discomfort",
-    "Curiosity",
-    "Clarity"
-  ],
-  "option_scores": [1, 2, 3, 4],
-  "tags": ["self_perception", "emotional_awareness"]
-},
-{
-  "id": 33,
-  "question": "When facing a decision, your biggest challenge is:",
-  "options": [
-    "Fear of regret",
-    "Fear of judgment",
-    "Confusion about what you want",
-    "Overthinking the outcome"
-  ],
-  "option_scores": [2, 2, 3, 4],
-  "tags": ["coping_mechanism", "self_perception"]
-},
-{
-  "id": 34,
-  "question": "You often find peace in:",
-  "options": [
-    "Solitude",
-    "Nature",
-    "Art or expression",
-    "Deep conversations"
-  ],
-  "option_scores": [2, 3, 3, 4],
-  "tags": ["coping_mechanism", "emotional_awareness"]
-},
-{
-  "id": 35,
-  "question": "How do you respond to your own emotional pain?",
-  "options": [
-    "I suppress it",
-    "I sit with it",
-    "I try to understand it",
-    "I transform it"
-  ],
-  "option_scores": [1, 2, 3, 4],
-  "tags": ["coping_mechanism", "growth_mindset"]
-},
-{
-  "id": 36,
-  "question": "Which truth is hardest to accept?",
-  "options": [
-    "Not everyone will stay",
-    "Not everything is in your control",
-    "Growth is uncomfortable",
-    "You can’t save everyone"
-  ],
-  "option_scores": [2, 3, 4, 3],
-  "tags": ["resilience", "growth_mindset"]
-},
-{
-  "id": 37,
-  "question": "When you're misunderstood, you usually:",
-  "options": [
-    "Withdraw",
-    "Try to clarify",
-    "Accept it silently",
-    "Feel deeply frustrated"
-  ],
-  "option_scores": [1, 3, 2, 1],
-  "tags": ["emotional_awareness", "coping_mechanism"]
-},
   {
-  "id": 38,
-  "question": "What phase do you feel you're currently in?",
-  "options": [
-    "Survival",
-    "Healing",
-    "Rebuild",
-    "A quiet becoming"
-  ],
-  "option_scores": [1, 2, 3, 4],
-  "tags": ["self_perception", "growth_mindset"]
-},
-{
-  "id": 39,
-  "question": "What do you crave most right now?",
-  "options": [
-    "Stability",
-    "Depth",
-    "Inspiration",
-    "Belonging"
-  ],
-  "option_scores": [1, 2, 3, 4],
-  "tags": ["coping_mechanism", "emotional_awareness"]
-},
-{
-  "id": 40,
-  "question": "When someone sets a boundary, you:",
-  "options": [
-    "Feel rejected",
-    "Respect it",
-    "Feel unsure how to respond",
-    "Appreciate the honesty"
-  ],
-  "option_scores": [1, 2, 3, 4],
-  "tags": ["emotional_awareness", "self_perception"]
-},
-{
-  "id": 41,
-  "question": "What tends to drain your energy most?",
-  "options": [
-    "Pretending to be okay",
-    "Unfinished tasks",
-    "Unclear goals",
-    "People-pleasing"
-  ],
-  "option_scores": [2, 3, 2, 1],
-  "tags": ["coping_mechanism", "emotional_awareness"]
-},
-{
-  "id": 42,
-  "question": "When someone is emotionally distant, you usually:",
-  "options": [
-    "Blame yourself",
-    "Get frustrated",
-    "Respect their space",
-    "Overanalyze it"
-  ],
-  "option_scores": [1, 2, 4, 3],
-  "tags": ["emotional_awareness", "coping_mechanism"]
-},
-{
-  "id": 43,
-  "question": "You find clarity when you:",
-  "options": [
-    "Step back",
-    "Speak aloud",
-    "Write it down",
-    "Sit with silence"
-  ],
-  "option_scores": [2, 3, 3, 4],
-  "tags": ["self_perception", "coping_mechanism"]
-},
-{
-  "id": 44,
-  "question": "When you think about your past self, you mostly feel:",
-  "options": [
-    "Shame",
-    "Compassion",
-    "Pride",
-    "Detachment"
-  ],
-  "option_scores": [1, 3, 4, 2],
-  "tags": ["self_perception", "growth_mindset"]
-},
-{
-  "id": 45,
-  "question": "The hardest part of healing is:",
-  "options": [
-    "Accepting what happened",
-    "Forgiving yourself",
-    "Facing the truth",
-    "Being patient"
-  ],
-  "option_scores": [2, 4, 3, 3],
-  "tags": ["resilience", "coping_mechanism"]
-},
-{
-  "id": 46,
-  "question": "You trust people who:",
-  "options": [
-    "Are consistent",
-    "Speak kindly",
-    "Show vulnerability",
-    "Respect boundaries"
-  ],
-  "option_scores": [3, 2, 4, 4],
-  "tags": ["emotional_awareness", "self_perception"]
-},
-{
-  "id": 47,
-  "question": "When you're mentally overloaded, your response is:",
-  "options": [
-    "Shutting down",
-    "Scrolling or numbing",
-    "Talking it out",
-    "Journaling or walking"
-  ],
-  "option_scores": [1, 2, 3, 4],
-  "tags": ["coping_mechanism", "resilience"]
-},
-{
-  "id": 48,
-  "question": "The thought that scares you the most is:",
-  "options": [
-    "“I’m falling behind”",
-    "“No one really sees me”",
-    "“What if this is it?”",
-    "“I’m not enough”"
-  ],
-  "option_scores": [2, 3, 2, 1],
-  "tags": ["self_perception", "emotional_awareness"]
-},
-{
-  "id": 49,
-  "question": "What would your younger self need to hear right now?",
-  "options": [
-    "You’re safe now",
-    "You’re doing your best",
-    "You are loved as you are",
-    "You’re going to be okay"
-  ],
-  "option_scores": [3, 3, 4, 2],
-  "tags": ["growth_mindset", "coping_mechanism"]
-},
-{
-  "id": 50,
-  "question": "What do you hide the most?",
-  "options": [
-    "Your fears",
-    "Your softness",
-    "Your dreams",
-    "Your anger"
-  ],
-  "option_scores": [2, 3, 4, 2],
-  "tags": ["emotional_awareness", "self_perception"]
-},
-{
-  "id": 51,
-  "question": "Which of these patterns do you often fall into?",
-  "options": [
-    "Overcommitting",
-    "Avoiding decisions",
-    "Negative self-talk",
-    "Comparing constantly"
-  ],
-  "option_scores": [2, 2, 1, 1],
-  "tags": ["coping_mechanism", "self_perception"]
-},
-{
-  "id": 52,
-  "question": "You feel most yourself when you are:",
-  "options": [
-    "Alone and reflecting",
-    "Laughing with someone safe",
-    "Lost in something creative",
-    "Helping others"
-  ],
-  "option_scores": [3, 3, 4, 2],
-  "tags": ["self_perception", "emotional_awareness"]
-},
-{
-  "id": 53,
-  "question": "What do you tend to postpone?",
-  "options": [
-    "Difficult conversations",
-    "Rest",
-    "Self-reflection",
-    "Asking for help"
-  ],
-  "option_scores": [2, 3, 4, 2],
-  "tags": ["coping_mechanism", "emotional_awareness"]
-},
-{
-  "id": 54,
-  "question": "When you cry, it’s usually because:",
-  "options": [
-    "You’ve been holding too much",
-    "You feel unseen",
-    "You’re overwhelmed",
-    "You feel deeply moved"
-  ],
-  "option_scores": [2, 2, 3, 4],
-  "tags": ["emotional_awareness", "coping_mechanism"]
-},
-{
-  "id": 55,
-  "question": "What kind of growth are you avoiding?",
-  "options": [
-    "Emotional vulnerability",
-    "Letting go of control",
-    "Accepting uncertainty",
-    "Taking a leap"
-  ],
-  "option_scores": [2, 2, 3, 4],
-  "tags": ["growth_mindset", "adaptability"]
-},
-{
-  "id": 56,
-  "question": "Which statement feels truest for you right now?",
-  "options": [
-    "I’m in survival mode",
-    "I’m holding on",
-    "I’m searching",
-    "I’m growing quietly"
-  ],
-  "option_scores": [1, 2, 3, 4],
-  "tags": ["resilience", "self_perception"]
-},
-{
-  "id": 57,
-  "question": "When you think of rest, you think of:",
-  "options": [
-    "Guilt",
-    "Permission",
-    "A necessity",
-    "A form of self-respect"
-  ],
-  "option_scores": [1, 2, 3, 4],
-  "tags": ["coping_mechanism", "self_perception"]
-},
-{
-  "id": 58,
-  "question": "When you're not okay, you:",
-  "options": [
-    "Keep going anyway",
-    "Retreat in silence",
-    "Ask for space",
-    "Try to hide it with a smile"
-  ],
-  "option_scores": [2, 2, 4, 1],
-  "tags": ["coping_mechanism", "emotional_awareness"]
-},
-{
-  "id": 59,
-  "question": "When something excites you, you:",
-  "options": [
-    "Doubt if you deserve it",
-    "Try not to get too hopeful",
-    "Allow yourself to enjoy it",
-    "Embrace it fully"
-  ],
-  "option_scores": [1, 2, 3, 4],
-  "tags": ["growth_mindset", "emotional_awareness"]
-},
-{
-  "id": 60,
-  "question": "When asked how you are, you usually say:",
-  "options": [
-    "“I’m fine” (even if not)",
-    "“Tired, but okay”",
-    "“Not sure, actually”",
-    "“Trying my best”"
-  ],
-  "option_scores": [1, 2, 3, 4],
-  "tags": ["emotional_awareness", "self_perception"]
-},
-{
-  "id": 61,
-  "question": "What’s the first thing you notice when you enter a room full of people?",
-  "options": [
-    "Who might judge me",
-    "Where I can feel safe",
-    "Who looks approachable",
-    "How I’m feeling internally"
-  ],
-  "option_scores": [1, 2, 3, 4],
-  "tags": ["self_perception", "emotional_awareness"]
-},
-{
-  "id": 62,
-  "question": "What do you often seek, even without realizing it?",
-  "options": [
-    "Validation",
-    "Understanding",
-    "Peace",
-    "Purpose"
-  ],
-  "option_scores": [1, 2, 3, 4],
-  "tags": ["emotional_awareness", "coping_mechanism"]
-},
-{
-  "id": 63,
-  "question": "When a relationship starts to feel distant, you:",
-  "options": [
-    "Overthink what you did",
-    "Try to reconnect",
-    "Pull back protectively",
-    "Accept the space"
-  ],
-  "option_scores": [1, 3, 2, 4],
-  "tags": ["coping_mechanism", "emotional_awareness"]
-},
-{
-  "id": 64,
-  "question": "You define connection as:",
-  "options": [
-    "Feeling seen",
-    "Vulnerable moments",
-    "Emotional safety",
-    "Mutual presence"
-  ],
-  "option_scores": [2, 3, 3, 4],
-  "tags": ["emotional_awareness", "self_perception"]
-},
-{
-  "id": 65,
-  "question": "You feel most disconnected from yourself when:",
-  "options": [
-    "You’re busy nonstop",
-    "You’re constantly online",
-    "You avoid hard questions",
-    "You ignore your needs"
-  ],
-  "option_scores": [2, 1, 3, 2],
-  "tags": ["coping_mechanism", "self_perception"]
-},
-{
-  "id": 66,
-  "question": "What do you wish others would ask you more often?",
-  "options": [
-    "“How are you, really?”",
-    "“What are you passionate about?”",
-    "“What do you need?”",
-    "“What’s on your mind today?”"
-  ],
-  "option_scores": [2, 3, 4, 3],
-  "tags": ["emotional_awareness", "self_perception"]
-},
-{
-  "id": 67,
-  "question": "What kind of validation do you seek most?",
-  "options": [
-    "Emotional support",
-    "Recognition of effort",
-    "Affirmation of worth",
-    "Proof that I’m not alone"
-  ],
-  "option_scores": [2, 3, 4, 3],
-  "tags": ["coping_mechanism", "self_perception"]
-},
-{
-  "id": 68,
-  "question": "What’s your usual response to burnout?",
-  "options": [
-    "Ignore it and keep working",
-    "Feel guilty for needing rest",
-    "Collapse before addressing it",
-    "Step back and reevaluate"
-  ],
-  "option_scores": [1, 2, 3, 4],
-  "tags": ["resilience", "coping_mechanism"]
-},
-{
-  "id": 69,
-  "question": "How do you typically handle disappointment?",
-  "options": [
-    "Blame myself",
-    "Shrug it off",
-    "Hide how I feel",
-    "Use it to grow"
-  ],
-  "option_scores": [1, 2, 2, 4],
-  "tags": ["resilience", "growth_mindset"]
-},
-{
-  "id": 70,
-  "question": "What part of you are you still learning to accept?",
-  "options": [
-    "My sensitivity",
-    "My uncertainty",
-    "My imperfections",
-    "My ambition"
-  ],
-  "option_scores": [2, 3, 4, 3],
-  "tags": ["self_perception", "growth_mindset"]
-},
-{
-  "id": 71,
-  "question": "What brings you quiet joy?",
-  "options": [
-    "Noticing little things",
-    "Deep conversations",
-    "Creating something",
-    "Feeling understood"
-  ],
-  "option_scores": [2, 3, 3, 4],
-  "tags": ["emotional_awareness", "self_perception"]
-},
-{
-  "id": 72,
-  "question": "When you journal (or if you did), what would likely appear?",
-  "options": [
-    "Worries and confusion",
-    "Honest thoughts",
-    "Hopeful ideas",
-    "Emotional truths"
-  ],
-  "option_scores": [1, 2, 3, 4],
-  "tags": ["coping_mechanism", "emotional_awareness"]
-},
-{
-  "id": 73,
-  "question": "What do you fear revealing about yourself?",
-  "options": [
-    "My needs",
-    "My past",
-    "My emotions",
-    "My struggles"
-  ],
-  "option_scores": [2, 2, 3, 4],
-  "tags": ["self_perception", "coping_mechanism"]
-},
-{
-  "id": 74,
-  "question": "You know you’re healing when:",
-  "options": [
-    "You react differently to old triggers",
-    "You set clearer boundaries",
-    "You forgive yourself more easily",
-    "You choose peace over proving"
-  ],
-  "option_scores": [2, 3, 3, 4],
-  "tags": ["growth_mindset", "resilience"]
-},
-{
-  "id": 75,
-  "question": "What part of your past still influences your present?",
-  "options": [
-    "A moment of loss",
-    "A time I felt rejected",
-    "A lesson in resilience",
-    "A silence I never broke"
-  ],
-  "option_scores": [2, 2, 4, 3],
-  "tags": ["resilience", "self_perception"]
-},
-{
-  "id": 76,
-  "question": "How do you usually feel after being vulnerable?",
-  "options": [
-    "Exposed",
-    "Empowered",
-    "Unsure",
-    "Relieved"
-  ],
-  "option_scores": [1, 4, 2, 3],
-  "tags": ["emotional_awareness", "coping_mechanism"]
-},
-{
-  "id": 77,
-  "question": "What do you often forget to give yourself credit for?",
-  "options": [
-    "Showing up every day",
-    "How far I’ve come",
-    "Handling the hard things",
-    "Still believing in myself"
-  ],
-  "option_scores": [2, 3, 4, 4],
-  "tags": ["growth_mindset", "resilience"]
-},
-{
-  "id": 78,
-  "question": "What kind of emotional space do you often hold for others?",
-  "options": [
-    "Listening without judgment",
-    "Offering solutions",
-    "Absorbing their emotions",
-    "Keeping it light and positive"
-  ],
-  "option_scores": [4, 2, 2, 3],
-  "tags": ["emotional_awareness", "coping_mechanism"]
-},
-{
-  "id": 79,
-  "question": "You most often resist change when it involves:",
-  "options": [
-    "Loss of familiarity",
-    "Uncertainty in identity",
-    "Letting go of people",
-    "Questioning your path"
-  ],
-  "option_scores": [2, 2, 3, 4],
-  "tags": ["adaptability", "growth_mindset"]
-},
-{
-  "id": 80,
-  "question": "What is a question you ask yourself often—but rarely answer?",
-  "options": [
-    "“What do I really want?”",
-    "“What if I fail?”",
-    "“Is this worth it?”",
-    "“Who am I becoming?”"
-  ],
-  "option_scores": [2, 1, 3, 4],
-  "tags": ["self_perception", "growth_mindset"]
-},
-{
-  "id": 81,
-  "question": "What does “being seen” mean to you?",
-  "options": [
-    "Being understood beyond words",
-    "Being accepted without changing",
-    "Being appreciated without effort",
-    "Being heard when I speak"
-  ],
-  "option_scores": [4, 3, 2, 3],
-  "tags": ["emotional_awareness", "self_perception"]
-},
-{
-  "id": 82,
-  "question": "In conflict, you tend to:",
-  "options": [
-    "Avoid it at all costs",
-    "Keep peace, even if it hurts",
-    "Over-explain yourself",
-    "Face it directly and calmly"
-  ],
-  "option_scores": [1, 2, 2, 4],
-  "tags": ["coping_mechanism", "emotional_awareness"]
-},
-{
-  "id": 83,
-  "question": "When you reflect on your dreams or goals, you feel:",
-  "options": [
-    "Unsure where to start",
-    "Motivated but anxious",
-    "Excited and aligned",
-    "Distracted by self-doubt"
-  ],
-  "option_scores": [2, 3, 4, 1],
-  "tags": ["growth_mindset", "self_perception"]
-},
-{
-  "id": 84,
-  "question": "You tend to compare yourself most when:",
-  "options": [
-    "You feel stuck",
-    "Others are achieving more",
-    "You’re scrolling online",
-    "You feel lost in purpose"
-  ],
-  "option_scores": [2, 2, 1, 3],
-  "tags": ["self_perception", "coping_mechanism"]
-},
-{
-  "id": 85,
-  "question": "What message do you hope someone would write to you right now?",
-  "options": [
-    "“You’re not alone.”",
-    "“You’re doing enough.”",
-    "“You matter, even on hard days.”",
-    "“You’re allowed to rest.”"
-  ],
-  "option_scores": [3, 3, 4, 3],
-  "tags": ["coping_mechanism", "emotional_awareness"]
-},
-{
-  "id": 86,
-  "question": "You feel most emotionally safe when:",
-  "options": [
-    "I’m not judged",
-    "I’m not rushed",
-    "I’m allowed to feel",
-    "I’m fully accepted"
-  ],
-  "option_scores": [3, 2, 3, 4],
-  "tags": ["emotional_awareness", "self_perception"]
-},
-{
-  "id": 87,
-  "question": "What belief about yourself are you currently challenging?",
-  "options": [
-    "That I must earn love",
-    "That rest means laziness",
-    "That I’m not good enough",
-    "That change must be painful"
-  ],
-  "option_scores": [2, 3, 2, 4],
-  "tags": ["growth_mindset", "self_perception"]
-},
-{
-  "id": 88,
-  "question": "What does being “strong” mean to you now?",
-  "options": [
-    "Carrying on when it’s hard",
-    "Asking for help",
-    "Being gentle with myself",
-    "Letting go gracefully"
-  ],
-  "option_scores": [2, 3, 3, 4],
-  "tags": ["resilience", "growth_mindset"]
-},
-{
-  "id": 89,
-  "question": "Which fear still holds you back the most?",
-  "options": [
-    "Fear of failing",
-    "Fear of disappointing others",
-    "Fear of change",
-    "Fear of being misunderstood"
-  ],
-  "option_scores": [2, 3, 2, 3],
-  "tags": ["self_perception", "coping_mechanism"]
-},
-{
-  "id": 90,
-  "question": "What brings you back to yourself when you feel lost?",
-  "options": [
-    "A quiet walk or nature",
-    "Music that resonates",
-    "A conversation with someone safe",
-    "Writing my thoughts out"
-  ],
-  "option_scores": [4, 3, 3, 4],
-  "tags": ["coping_mechanism", "self_perception"]
-}
-,
-{
-  "id": 91,
-  "question": "What’s your typical response when you're praised?",
-  "options": [
-    "I downplay it",
-    "I feel awkward",
-    "I try to change the topic",
-    "I let it sink in, even if it feels weird"
-  ],
-  "option_scores": [1, 2, 2, 4],
-  "tags": ["self_perception", "emotional_awareness"]
-},
-{
-  "id": 92,
-  "question": "When you look at your current habits, you feel:",
-  "options": [
-    "Disconnected from my intentions",
-    "Stuck in cycles I don’t question",
-    "Curious about my patterns",
-    "Proud of the shifts I’ve made"
-  ],
-  "option_scores": [1, 2, 3, 4],
-  "tags": ["growth_mindset", "self_perception"]
-},
-{
-  "id": 93,
-  "question": "Which of these do you find hardest to say?",
-  "options": [
-    "“I need help”",
-    "“I’m not okay”",
-    "“I was wrong”",
-    "“I love myself”"
-  ],
-  "option_scores": [2, 2, 3, 4],
-  "tags": ["emotional_awareness", "coping_mechanism"]
-},
-{
-  "id": 94,
-  "question": "What emotion do you often judge yourself for feeling?",
-  "options": [
-    "Anger",
-    "Sadness",
-    "Jealousy",
-    "Fear"
-  ],
-  "option_scores": [2, 2, 1, 2],
-  "tags": ["emotional_awareness", "self_perception"]
-},
-{
-  "id": 95,
-  "question": "You feel most overwhelmed when:",
-  "options": [
-    "Everything piles up silently",
-    "I don’t know where to start",
-    "I can’t meet others’ expectations",
-    "I’m disconnected from meaning"
-  ],
-  "option_scores": [2, 2, 2, 3],
-  "tags": ["coping_mechanism", "resilience"]
-},
-{
-  "id": 96,
-  "question": "When someone truly listens to you, you feel:",
-  "options": [
-    "Lighter",
-    "Validated",
-    "Emotional",
-    "Unsure how to respond"
-  ],
-  "option_scores": [3, 4, 2, 1],
-  "tags": ["emotional_awareness", "coping_mechanism"]
-},
-{
-  "id": 97,
-  "question": "What kind of growth do you find yourself avoiding?",
-  "options": [
-    "Setting boundaries",
-    "Speaking my truth",
-    "Facing difficult memories",
-    "Slowing down and resting"
-  ],
-  "option_scores": [2, 2, 3, 4],
-  "tags": ["growth_mindset", "coping_mechanism"]
-},
-{
-  "id": 98,
-  "question": "When you feel lost, what do you instinctively seek?",
-  "options": [
-    "A familiar routine",
-    "External advice",
-    "Silence and solitude",
-    "Something to distract me"
-  ],
-  "option_scores": [3, 2, 4, 1],
-  "tags": ["coping_mechanism", "self_perception"]
-},
-{
-  "id": 99,
-  "question": "How do you define “home”?",
-  "options": [
-    "Where I’m fully accepted",
-    "Where I can be quiet",
-    "Where I feel emotionally safe",
-    "Where I don't have to explain myself"
-  ],
-  "option_scores": [4, 3, 4, 3],
-  "tags": ["emotional_awareness", "self_perception"]
-},
-{
-  "id": 100,
-  "question": "The most honest thing you can tell yourself today is:",
-  "options": [
-    "I’m not okay, and that’s okay",
-    "I want more than I admit",
-    "I’ve been avoiding something important",
-    "I’m doing the best I can"
-  ],
-  "option_scores": [3, 2, 2, 4],
-  "tags": ["self_perception", "coping_mechanism"]
-},
-{
-  "id": 101,
-  "question": "When you feel stuck, what is your default reaction?",
-  "options": [
-    "Try harder",
-    "Shut down",
-    "Distract myself",
-    "Ask for help"
-  ],
-  "option_scores": [2, 1, 2, 4],
-  "tags": ["coping_mechanism", "resilience"]
-},
-{
-  "id": 102,
-  "question": "Which small act of self-respect do you need more of?",
-  "options": [
-    "Saying no",
-    "Taking breaks",
-    "Celebrating small wins",
-    "Letting go of perfection"
-  ],
-  "option_scores": [3, 3, 4, 4],
-  "tags": ["growth_mindset", "coping_mechanism"]
-},
-{
-  "id": 103,
-  "question": "What emotion are you most uncomfortable sitting with?",
-  "options": [
-    "Shame",
-    "Loneliness",
-    "Guilt",
-    "Envy"
-  ],
-  "option_scores": [1, 2, 2, 1],
-  "tags": ["emotional_awareness", "self_perception"]
-},
-{
-  "id": 104,
-  "question": "When something deeply moves you, your reaction is usually:",
-  "options": [
-    "I don’t know how to express it",
-    "I reflect inward quietly",
-    "I feel the urge to share it",
-    "I cry or feel chills"
-  ],
-  "option_scores": [1, 3, 3, 4],
-  "tags": ["emotional_awareness", "self_perception"]
-},
-{
-  "id": 105,
-  "question": "What keeps you from opening up to others?",
-  "options": [
-    "Fear of burdening them",
-    "Fear of rejection",
-    "Fear of being misunderstood",
-    "Fear of losing control"
-  ],
-  "option_scores": [2, 2, 2, 1],
-  "tags": ["coping_mechanism", "emotional_awareness"]
-},
-{
-  "id": 106,
-  "question": "What does emotional maturity mean to you?",
-  "options": [
-    "Responding, not reacting",
-    "Owning your patterns",
-    "Listening to understand",
-    "Choosing peace over proving"
-  ],
-  "option_scores": [3, 4, 3, 4],
-  "tags": ["emotional_awareness", "growth_mindset"]
-},
-{
-  "id": 107,
-  "question": "When do you feel most disconnected from your purpose?",
-  "options": [
-    "When I’m overwhelmed by tasks",
-    "When I’m comparing myself",
-    "When I’m out of alignment",
-    "When I ignore my intuition"
-  ],
-  "option_scores": [2, 2, 3, 4],
-  "tags": ["self_perception", "growth_mindset"]
-},
-{
-  "id": 108,
-  "question": "What kind of love do you think you’re still learning to receive?",
-  "options": [
-    "Patient love",
-    "Unconditional love",
-    "Affirming love",
-    "Gentle love"
-  ],
-  "option_scores": [2, 3, 3, 4],
-  "tags": ["self_perception", "emotional_awareness"]
-},
-{
-  "id": 109,
-  "question": "When faced with a life decision, what question do you ask first?",
-  "options": [
-    "Will others approve?",
-    "What feels aligned?",
-    "What if I fail?",
-    "Will this grow me?"
-  ],
-  "option_scores": [1, 3, 2, 4],
-  "tags": ["growth_mindset", "self_perception"]
-},
-{
-  "id": 110,
-  "question": "What lesson do you keep relearning in different forms?",
-  "options": [
-    "Letting go isn’t weakness",
-    "My feelings are valid",
-    "Rest is productive",
-    "I can’t fix everything"
-  ],
-  "option_scores": [3, 3, 4, 4],
-  "tags": ["resilience", "growth_mindset"]
-},
-{
-  "id": 111,
-  "question": "Which of these feels truest about your inner world?",
-  "options": [
-    "It’s louder than I show",
-    "It’s more compassionate than it sounds",
-    "It’s seeking stillness",
-    "It’s full of quiet questions"
-  ],
-  "option_scores": [2, 3, 4, 4],
-  "tags": ["self_perception", "emotional_awareness"]
-},
-{
-  "id": 112,
-  "question": "What personal truth are you still hiding from others?",
-  "options": [
-    "How tired I am",
-    "How much I care",
-    "How afraid I feel",
-    "How deeply I think"
-  ],
-  "option_scores": [2, 2, 3, 4],
-  "tags": ["coping_mechanism", "self_perception"]
-},
-{
-  "id": 113,
-  "question": "Which part of your identity do you protect the most?",
-  "options": [
-    "My vulnerability",
-    "My softness",
-    "My ambition",
-    "My creativity"
-  ],
-  "option_scores": [2, 3, 3, 4],
-  "tags": ["self_perception", "resilience"]
-},
-{
-  "id": 114,
-  "question": "In your healing, what needs more attention?",
-  "options": [
-    "My inner child",
-    "My body",
-    "My boundaries",
-    "My narrative"
-  ],
-  "option_scores": [2, 3, 3, 4],
-  "tags": ["growth_mindset", "coping_mechanism"]
-},
-{
-  "id": 115,
-  "question": "When do you feel the most alive?",
-  "options": [
-    "When I create",
-    "When I’m truly heard",
-    "When I’m connected to nature",
-    "When I surprise myself"
-  ],
-  "option_scores": [3, 3, 4, 4],
-  "tags": ["self_perception", "emotional_awareness"]
-},
-{
-  "id": 116,
-  "question": "What do you avoid saying out loud—but know is true?",
-  "options": [
-    "I need more than I’m asking for",
-    "I miss something I can’t name",
-    "I’m afraid to slow down",
-    "I’m changing in ways others may not see"
-  ],
-  "option_scores": [2, 3, 2, 4],
-  "tags": ["self_perception", "growth_mindset"]
-},
-{
-  "id": 117,
-  "question": "Which voice in your head needs softening?",
-  "options": [
-    "The one that says “not enough”",
-    "The one that compares",
-    "The one that never rests",
-    "The one that doubts love"
-  ],
-  "option_scores": [2, 2, 3, 3],
-  "tags": ["coping_mechanism", "emotional_awareness"]
-},
-{
-  "id": 118,
-  "question": "What’s a truth you’ve grown into?",
-  "options": [
-    "Peace is more important than perfection",
-    "I don’t need to prove my worth",
-    "Healing isn’t linear",
-    "Boundaries are a gift"
-  ],
-  "option_scores": [3, 4, 4, 4],
-  "tags": ["growth_mindset", "resilience"]
-},
-{
-  "id": 119,
-  "question": "What are you unlearning lately?",
-  "options": [
-    "That success defines worth",
-    "That being busy means I matter",
-    "That I must be strong always",
-    "That asking is weakness"
-  ],
-  "option_scores": [3, 3, 2, 4],
-  "tags": ["growth_mindset", "self_perception"]
-},
-{
-  "id": 120,
-  "question": "Which of these affirmations do you need most today?",
-  "options": [
-    "“I am enough as I am.”",
-    "“I’m allowed to grow slowly.”",
-    "“I release the need to be perfect.”",
-    "“I honor how I feel.”"
-  ],
-  "option_scores": [3, 4, 3, 4],
-  "tags": ["coping_mechanism", "emotional_awareness"]
-}
-
+    "id": 31,
+    "question": "Did you feel tense or unable to sit still?",
+    "options": [
+      "Never",
+      "Sometimes",
+      "Often",
+      "Always"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["anxiety"]
+  },
+  {
+    "id": 32,
+    "question": "Were you easily startled or jumpy?",
+    "options": [
+      "Never",
+      "Occasionally",
+      "Often",
+      "Very often"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["anxiety"]
+  },
+  {
+    "id": 33,
+    "question": "Did you avoid situations out of fear or worry?",
+    "options": [
+      "Not at all",
+      "Rarely",
+      "Sometimes",
+      "Often"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["anxiety"]
+  },
+  {
+    "id": 34,
+    "question": "Did you experience physical symptoms like a racing heart or shaking?",
+    "options": [
+      "Never",
+      "Occasionally",
+      "Frequently",
+      "Always"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["anxiety"]
+  },
+  {
+    "id": 35,
+    "question": "Did you feel pressure in your chest or trouble breathing?",
+    "options": [
+      "Not at all",
+      "A few times",
+      "Often",
+      "Very often"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["anxiety"]
+  },
+  {
+    "id": 36,
+    "question": "How often did anxiety interfere with your daily life?",
+    "options": [
+      "Never",
+      "Sometimes",
+      "Often",
+      "All the time"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["anxiety"]
+  },
+  {
+    "id": 37,
+    "question": "Did you experience restlessness or fidgeting?",
+    "options": [
+      "Not at all",
+      "Sometimes",
+      "Often",
+      "Always"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["anxiety"]
+  },
+  {
+    "id": 38,
+    "question": "Were you overly self-conscious in social situations?",
+    "options": [
+      "Not at all",
+      "Occasionally",
+      "Frequently",
+      "Always"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["anxiety"]
+  },
+  {
+    "id": 39,
+    "question": "Did your anxiety cause sleep problems?",
+    "options": [
+      "Never",
+      "Rarely",
+      "Often",
+      "Very often"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["anxiety"]
+  },
+  {
+    "id": 40,
+    "question": "How often did you feel overwhelmed by your responsibilities?",
+    "options": [
+      "Rarely",
+      "Sometimes",
+      "Often",
+      "Always"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["anxiety"]
+  },
+  {
+    "id": 41,
+    "question": "Did you struggle to control worrying about multiple things?",
+    "options": [
+      "Not at all",
+      "A little",
+      "Quite a bit",
+      "Extremely"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["anxiety"]
+  },
+  {
+    "id": 42,
+    "question": "Did you worry excessively about things going wrong?",
+    "options": [
+      "Never",
+      "Occasionally",
+      "Frequently",
+      "Always"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["anxiety"]
+  },
+  {
+    "id": 43,
+    "question": "Did you feel out of control when anxious?",
+    "options": [
+      "Not at all",
+      "Sometimes",
+      "Often",
+      "Always"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["anxiety"]
+  },
+  {
+    "id": 44,
+    "question": "Did you feel dizzy or lightheaded during anxious moments?",
+    "options": [
+      "Never",
+      "Rarely",
+      "Often",
+      "Very often"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["anxiety"]
+  },
+  {
+    "id": 45,
+    "question": "Did you worry about what others think of you excessively?",
+    "options": [
+      "Not at all",
+      "Occasionally",
+      "Frequently",
+      "Constantly"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["anxiety"]
+  },
+  {
+    "id": 46,
+    "question": "Did you overthink conversations or past events?",
+    "options": [
+      "Not really",
+      "Sometimes",
+      "Often",
+      "Constantly"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["anxiety"]
+  },
+  {
+    "id": 47,
+    "question": "Did anxiety affect your performance at school or work?",
+    "options": [
+      "Not at all",
+      "Rarely",
+      "Often",
+      "Significantly"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["anxiety"]
+  },
+  {
+    "id": 48,
+    "question": "Did you feel physically drained from your anxious thoughts?",
+    "options": [
+      "Never",
+      "Sometimes",
+      "Often",
+      "Always"
+    ],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["anxiety"]
+  },
+  {
+    "id": 49,
+    "question": "How often do you feel that you are a person of worth?",
+    "options": ["Rarely", "Sometimes", "Often", "Almost always"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_worth"]
+  },
+  {
+    "id": 50,
+    "question": "How comfortable are you being yourself around others?",
+    "options": ["Very uncomfortable", "Somewhat", "Mostly comfortable", "Fully comfortable"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_worth"]
+  },
+  {
+    "id": 51,
+    "question": "Do you believe your opinions matter?",
+    "options": ["Not at all", "Rarely", "Sometimes", "Always"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_worth"]
+  },
+  {
+    "id": 52,
+    "question": "When receiving criticism, how do you usually feel?",
+    "options": ["Worthless", "Embarrassed", "Reflective", "Empowered to improve"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_worth"]
+  },
+  {
+    "id": 53,
+    "question": "How often do you compare yourself negatively to others?",
+    "options": ["Always", "Often", "Sometimes", "Rarely"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_worth"]
+  },
+  {
+    "id": 54,
+    "question": "Do you feel confident in your decisions?",
+    "options": ["Never", "Occasionally", "Usually", "Always"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_worth"]
+  },
+  {
+    "id": 55,
+    "question": "How often do you acknowledge your own strengths?",
+    "options": ["Never", "Sometimes", "Often", "Every day"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_worth"]
+  },
+  {
+    "id": 56,
+    "question": "When facing failure, how do you view yourself?",
+    "options": ["As a failure", "As weak", "As someone who tried", "As someone learning and growing"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_worth"]
+  },
+  {
+    "id": 57,
+    "question": "Do you feel you deserve happiness?",
+    "options": ["No", "Maybe", "Mostly", "Absolutely"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_worth"]
+  },
+  {
+    "id": 58,
+    "question": "How often do you feel proud of yourself?",
+    "options": ["Rarely", "Sometimes", "Often", "Very often"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_worth"]
+  },
+  {
+    "id": 59,
+    "question": "Do you base your value on other people’s approval?",
+    "options": ["Always", "Often", "Sometimes", "Never"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_worth"]
+  },
+  {
+    "id": 60,
+    "question": "How well do you accept compliments?",
+    "options": ["I reject them", "I feel awkward", "I appreciate them", "I accept them with confidence"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_worth"]
+  },
+  {
+    "id": 61,
+    "question": "Do you feel you have something meaningful to offer others?",
+    "options": ["Not really", "Sometimes", "Mostly", "Absolutely"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_worth"]
+  },
+  {
+    "id": 62,
+    "question": "When alone, do you feel at peace with yourself?",
+    "options": ["Not at all", "Rarely", "Mostly", "Always"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_worth"]
+  },
+  {
+    "id": 63,
+    "question": "Do you forgive yourself when you make mistakes?",
+    "options": ["Never", "Rarely", "Often", "Always"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_worth"]
+  },
+  {
+    "id": 64,
+    "question": "How often do you put your needs first?",
+    "options": ["Never", "Sometimes", "Often", "Always"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_worth"]
+  },
+  {
+    "id": 65,
+    "question": "Do you feel comfortable asserting your boundaries?",
+    "options": ["Never", "Rarely", "Sometimes", "Always"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_worth"]
+  },
+  {
+    "id": 66,
+    "question": "How often do you talk positively about yourself?",
+    "options": ["Never", "Rarely", "Often", "Very often"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_worth"]
+  },
+  {
+    "id": 67,
+    "question": "Do you feel like your presence makes a difference?",
+    "options": ["Never", "Rarely", "Sometimes", "Often"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_worth"]
+  },
+  {
+    "id": 68,
+    "question": "When things go wrong, how do you treat yourself?",
+    "options": ["Criticize harshly", "Blame myself", "Stay neutral", "Speak kindly to myself"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_worth"]
+  },
+  {
+    "id": 69,
+    "question": "How would you describe your self-esteem overall?",
+    "options": ["Very low", "Below average", "Average", "High"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_worth"]
+  },
+  {
+    "id": 70,
+    "question": "Do you feel you are enough as you are?",
+    "options": ["No", "Not really", "Mostly", "Yes"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_worth"]
+  },
+  {
+    "id": 71,
+    "question": "Do you celebrate your wins, big or small?",
+    "options": ["Never", "Rarely", "Often", "Always"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_worth"]
+  },
+  {
+    "id": 72,
+    "question": "Do you believe you are lovable?",
+    "options": ["Not at all", "Sometimes", "Mostly", "Absolutely"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["self_worth"]
+  },
+  {
+    "id": 73,
+    "question": "How often do you have trouble focusing on tasks?",
+    "options": ["Always", "Often", "Sometimes", "Rarely"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["concentration"]
+  },
+  {
+    "id": 74,
+    "question": "Can you complete tasks without getting distracted?",
+    "options": ["Never", "Occasionally", "Usually", "Always"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["concentration"]
+  },
+  {
+    "id": 75,
+    "question": "How often do you lose track of what you were doing?",
+    "options": ["Very often", "Sometimes", "Rarely", "Almost never"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["concentration"]
+  },
+  {
+    "id": 76,
+    "question": "When studying or reading, how long can you maintain focus?",
+    "options": ["Less than 5 min", "5–15 min", "15–30 min", "30+ min"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["concentration"]
+  },
+  {
+    "id": 77,
+    "question": "Do small distractions pull your attention away quickly?",
+    "options": ["Always", "Often", "Sometimes", "Rarely"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["concentration"]
+  },
+  {
+    "id": 78,
+    "question": "Can you focus on conversations without zoning out?",
+    "options": ["Rarely", "Sometimes", "Usually", "Always"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["concentration"]
+  },
+  {
+    "id": 79,
+    "question": "How often do you reread or redo things due to lack of focus?",
+    "options": ["Always", "Often", "Sometimes", "Rarely"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["concentration"]
+  },
+  {
+    "id": 80,
+    "question": "Can you follow instructions easily and accurately?",
+    "options": ["Rarely", "Sometimes", "Usually", "Always"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["concentration"]
+  },
+  {
+    "id": 81,
+    "question": "Do you feel mentally foggy during the day?",
+    "options": ["Always", "Often", "Sometimes", "Rarely"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["concentration"]
+  },
+  {
+    "id": 82,
+    "question": "When someone gives directions, do you remember them easily?",
+    "options": ["Not at all", "A little", "Mostly", "Completely"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["concentration"]
+  },
+  {
+    "id": 83,
+    "question": "How often do you procrastinate even on important tasks?",
+    "options": ["Always", "Often", "Sometimes", "Rarely"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["concentration"]
+  },
+  {
+    "id": 84,
+    "question": "Do you need complete silence to concentrate?",
+    "options": ["Yes, always", "Usually", "Sometimes", "No, I can adapt"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["concentration"]
+  },
+  {
+    "id": 85,
+    "question": "How often do you multitask effectively?",
+    "options": ["Never", "Rarely", "Sometimes", "Frequently"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["concentration"]
+  },
+  {
+    "id": 86,
+    "question": "How well can you maintain focus in noisy environments?",
+    "options": ["Very poorly", "Not well", "Somewhat well", "Very well"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["concentration"]
+  },
+  {
+    "id": 87,
+    "question": "Do you feel mentally present during daily activities?",
+    "options": ["Rarely", "Sometimes", "Often", "Always"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["concentration"]
+  },
+  {
+    "id": 88,
+    "question": "How often do you finish what you start?",
+    "options": ["Almost never", "Sometimes", "Often", "Always"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["concentration"]
+  },
+  {
+    "id": 89,
+    "question": "Are your thoughts often scattered?",
+    "options": ["Always", "Frequently", "Sometimes", "Rarely"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["concentration"]
+  },
+  {
+    "id": 90,
+    "question": "Do you find it hard to stay focused in meetings or classes?",
+    "options": ["Always", "Often", "Sometimes", "Never"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["concentration"]
+  },
+  {
+    "id": 91,
+    "question": "When reading, how often do you retain what you read?",
+    "options": ["Almost never", "Sometimes", "Usually", "Almost always"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["concentration"]
+  },
+  {
+    "id": 92,
+    "question": "How quickly can you refocus after being interrupted?",
+    "options": ["Not at all", "Slowly", "Moderately", "Quickly"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["concentration"]
+  },
+  {
+    "id": 93,
+    "question": "Do you stay focused under time pressure?",
+    "options": ["Never", "Rarely", "Sometimes", "Always"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["concentration"]
+  },
+  {
+    "id": 94,
+    "question": "How often do you use tools to manage distractions (e.g., timers, lists)?",
+    "options": ["Never", "Occasionally", "Often", "Always"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["concentration"]
+  },
+  {
+    "id": 95,
+    "question": "How often do you enter a state of ‘deep focus’ or flow?",
+    "options": ["Never", "Rarely", "Sometimes", "Frequently"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["concentration"]
+  },
+  {
+    "id": 96,
+    "question": "At the end of the day, how focused do you feel you were?",
+    "options": ["Not at all", "Somewhat", "Mostly", "Very focused"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["concentration"]
+  },
+  {
+    "id": 97,
+    "question": "When you're overwhelmed, how do you usually respond?",
+    "options": ["Shut down completely", "Complain to others", "Try to push through it", "Pause and create a plan"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["stress_management"]
+  },
+  {
+    "id": 98,
+    "question": "How often do you take breaks during high-stress tasks?",
+    "options": ["Never", "Only when forced", "Occasionally", "Regularly and intentionally"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["stress_management"]
+  },
+  {
+    "id": 99,
+    "question": "How do you handle criticism under stress?",
+    "options": ["Feel crushed", "Get defensive", "Accept but feel anxious", "View it constructively"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["stress_management"]
+  },
+  {
+    "id": 100,
+    "question": "At the end of a stressful day, you:",
+    "options": ["Keep working", "Ruminate about the day", "Distract with social media", "Engage in relaxing rituals"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["stress_management"]
+  },
+  {
+    "id": 101,
+    "question": "How often do you feel physically tense due to stress?",
+    "options": ["All the time", "Most days", "Sometimes", "Rarely"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["stress_management"]
+  },
+  {
+    "id": 102,
+    "question": "When deadlines loom, you usually:",
+    "options": ["Procrastinate more", "Panic and rush", "Organize a little", "Prioritize calmly"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["stress_management"]
+  },
+  {
+    "id": 103,
+    "question": "What’s your first instinct when stress builds up?",
+    "options": ["Ignore it", "Complain", "Distract yourself", "Address the cause"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["stress_management"]
+  },
+  {
+    "id": 104,
+    "question": "Do you use any stress-reduction techniques?",
+    "options": ["No", "Rarely", "Sometimes", "Yes, regularly"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["stress_management"]
+  },
+  {
+    "id": 105,
+    "question": "How well do you sleep when you're stressed?",
+    "options": ["Not at all", "Interrupted", "Fairly", "Very well"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["stress_management"]
+  },
+  {
+    "id": 106,
+    "question": "How do you cope with unexpected challenges?",
+    "options": ["Panic", "Blame others", "Try to adapt", "Break it into small steps"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["stress_management"]
+  },
+  {
+    "id": 107,
+    "question": "What role does breathing or mindfulness play in your routine?",
+    "options": ["None", "Occasional when desperate", "Sometimes to unwind", "It's part of my daily routine"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["stress_management"]
+  },
+  {
+    "id": 108,
+    "question": "How often do you feel in control of your reactions?",
+    "options": ["Almost never", "Rarely", "Often", "Almost always"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["stress_management"]
+  },
+  {
+    "id": 109,
+    "question": "When you’re too busy, you:",
+    "options": ["Say yes to everything", "Complain but still agree", "Set some limits", "Confidently say no"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["stress_management"]
+  },
+  {
+    "id": 110,
+    "question": "How do you view taking time off for mental health?",
+    "options": ["As weakness", "As a last resort", "Important sometimes", "Absolutely essential"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["stress_management"]
+  },
+  {
+    "id": 111,
+    "question": "What’s your first step when you feel burnout coming?",
+    "options": ["Ignore and continue", "Complain about it", "Try to adjust workload", "Take intentional rest"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["stress_management"]
+  },
+  {
+    "id": 112,
+    "question": "How do you feel after social interactions when stressed?",
+    "options": ["Drained and irritable", "A bit better", "Neutral", "Recharged"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["stress_management"]
+  },
+  {
+    "id": 113,
+    "question": "When under stress, how often do you eat well?",
+    "options": ["Never", "Rarely", "Usually", "Always"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["stress_management"]
+  },
+  {
+    "id": 114,
+    "question": "How do you view stress in your life?",
+    "options": ["As a constant burden", "As something unfair", "As manageable sometimes", "As something I can control"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["stress_management"]
+  },
+  {
+    "id": 115,
+    "question": "Do you take time for hobbies or fun during stress?",
+    "options": ["Never", "Rarely", "Sometimes", "Always"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["stress_management"]
+  },
+  {
+    "id": 116,
+    "question": "What is your attitude toward asking for help?",
+    "options": ["I avoid it", "Only when desperate", "Sometimes comfortable", "Very open"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["stress_management"]
+  },
+  {
+    "id": 117,
+    "question": "When faced with multiple tasks, you:",
+    "options": ["Feel paralyzed", "Start randomly", "Make a basic list", "Prioritize effectively"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["stress_management"]
+  },
+  {
+    "id": 118,
+    "question": "How much does stress affect your productivity?",
+    "options": ["Completely ruins it", "Reduces it significantly", "Somewhat affects", "Rarely impacts it"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["stress_management"]
+  },
+  {
+    "id": 119,
+    "question": "How do you deal with people who stress you out?",
+    "options": ["Avoid but stay angry", "Argue back", "Try to understand", "Set healthy boundaries"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["stress_management"]
+  },
+  {
+    "id": 120,
+    "question": "How often do you self-reflect after a stressful situation?",
+    "options": ["Never", "Occasionally", "Often", "Always"],
+    "option_scores": [1, 2, 3, 4],
+    "tags": ["stress_management"]
+  }
 ]

@@ -1,9 +1,18 @@
 import mongoose from "mongoose";
 
 const scoreEntrySchema = mongoose.Schema({
-  date: { type: String, required: true },  
-  score: { type: Number, required: true }
+  date: { type: String, required: true },
+  score: { type: Number, required: true },
+  sleepActivityScore: { type: Number, default: 0 },
+  categories: {
+    depression: { type: Number, default: 0 },
+    anxiety: { type: Number, default: 0 },
+    self_worth: { type: Number, default: 0 },
+    stress_management: { type: Number, default: 0 },
+    concentration: { type: Number, default: 0 },
+  }
 }, { _id: false });
+
 
 const userSchema = mongoose.Schema({
 
@@ -16,7 +25,6 @@ const userSchema = mongoose.Schema({
   avatar: { type: String, default: '' },
   todaysScore: { type: Number, default: 0 },
   scoreHistory: [scoreEntrySchema],
-  
 }, { timestamps: true });
 
 const User = mongoose.model('User', userSchema);
