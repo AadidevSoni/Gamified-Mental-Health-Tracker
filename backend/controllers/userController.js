@@ -209,20 +209,36 @@ const getLeaderBoard = asyncHandler(async(req,res) => {
 
 const saveTodayScore = asyncHandler(async (req, res) => {
   try {
-    const { score } = req.body;
+    const { score, sleepActivityScore, categories } = req.body;
     const user = req.user;
     const today = new Date().toLocaleDateString('en-CA');
 
-    // Check if today's score already exists
     const existingIndex = user.scoreHistory.findIndex(entry => entry.date === today);
 
+    const newEntry = {
+      date: today,
+      score,
+      sleepActivityScore: sleepActivityScore || 0,
+      categories: categories || {
+        depression: 0,
+        anxiety: 0,
+        self_worth: 0,
+        stress_management: 0,
+        concentration: 0
+      }
+    };
+
     if (existingIndex !== -1) {
-      user.scoreHistory[existingIndex].score = score; // update
+      // Update existing entry
+      user.scoreHistory[existingIndex] = newEntry;
     } else {
-      user.scoreHistory.push({ date: today, score }); // insert
+      // Insert new entry
+      user.scoreHistory.push(newEntry);
     }
 
     user.todaysScore = score;
+    user.exp += score;
+
     await user.save();
 
     res.status(200).json({ message: 'Score saved successfully', score });

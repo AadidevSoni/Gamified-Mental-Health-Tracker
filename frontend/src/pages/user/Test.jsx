@@ -55,7 +55,11 @@ const Test = () => {
             const picked = pool.sort(() => 0.5 - Math.random()).slice(0, 4);
             selected.push(...picked);
           }
-          setDailyQuestions(selected.sort(() => 0.5 - Math.random()));
+          if (selected.length > 0) {
+            setDailyQuestions(selected.sort(() => 0.5 - Math.random()));
+          } else {
+            console.warn('❌ No questions were selected. Check tags or allQuestions.json');
+          }
         }
       } catch (err) {
         console.error('Error fetching history:', err);
@@ -124,7 +128,11 @@ const Test = () => {
     });
 
     try {
-      await axios.post('/api/users/score', { score: total }, {
+      await axios.post('/api/users/score', {
+        score: total,
+        sleepActivityScore: sleepActScore,
+        categories: categoryTotals,
+      }, {
         headers: { Authorization: `Bearer ${userInfo.token}` },
       });
 
@@ -156,14 +164,16 @@ const Test = () => {
         <div className="video-overlay"></div>
       </div>
       <div className="result-summary">
-        <h2>🟢 SCADS Wellness Summary</h2>
+        <h2 className='scads-result-head'>SCADS Wellness Summary</h2>
         
-        <p><strong>Total Score:</strong> {totalScore}</p>
-        <p><strong>Wellness %:</strong> {(totalScore / 200 * 100).toFixed(1)}%</p>
+        <div className="score-wellness">
+          <p className='totalScore'><strong>Total Score:</strong> {totalScore}</p>
+          <p className='wellness'><strong>Wellness %:</strong> {(totalScore / 185 * 100).toFixed(1)}%</p>
+        </div>
 
         <div className="scoreBreakdown">
           <div className="scoreContainerAns">
-            <p><strong>Sleep + Activity:</strong> {((sleepActivityScore) / 105 *  100).toFixed(0)}%</p>
+            <p className='cat-name-score'><strong>Sleep + Activity:</strong> {((sleepActivityScore) / 105 *  100).toFixed(0)}%</p>
               <div className="scoreSlider">
                 <input
                   type="range"
@@ -175,21 +185,76 @@ const Test = () => {
                 />
               </div>
           </div>
-          {Object.entries(categoryScores).map(([cat, score]) => (
-            <div className="scoreContainerAns">
-              <div key={cat} className="scoreSlider">
-                <label>{cat.replace('_', ' ').toUpperCase()} {((score) / 16 *  100).toFixed(0)}%</label>
-                <input
-                  type="range"
-                  min="0"
-                  max="16"
-                  value={score}
-                  disabled
-                  className="slider"
-                />
+          {Object.entries(categoryScores).map(([cat, score]) => {
+            const percent = (score / 16) * 100;
+
+            let bgColor = 'rgba(255, 0, 0, 0.63)'; // Red by default
+            let message = '';
+
+            if (percent >= 75) {
+              bgColor = 'rgba(0, 200, 100, 0.64)'; // Green
+            } else if (percent >= 50) {
+              bgColor = 'rgba(255, 238, 0, 0.75)'; // Yellow
+            } else if (percent >= 25) {
+              bgColor = 'rgba(255, 166, 0, 0.78)'; // Orange
+            }
+
+            // Messages map
+            const messages = {
+              depression: [
+                "You may be feeling overwhelmed or emotionally numb. You're not alone — it's okay to ask for help.",
+                "You might be in a low mood. Try journaling or reaching out to someone you trust.",
+                "You’re doing okay, but be mindful of your energy. Take time for self-care.",
+                "You're emotionally balanced. Keep nurturing your mental health!",
+              ],
+              anxiety: [
+                "You may be feeling anxious or restless. Try grounding exercises or deep breathing.",
+                "Tension is present — consider calming routines like meditation or nature walks.",
+                "You're managing okay. Keep an eye on your thoughts and rest well.",
+                "You're in a calm headspace. Great job maintaining emotional clarity.",
+              ],
+              self_worth: [
+                "You might be doubting yourself. Remember, your worth isn't defined by your bad days.",
+                "You’re growing — try affirmations or writing down what you like about yourself.",
+                "You're valuing yourself more. Keep celebrating your small wins.",
+                "You believe in your worth. That’s a powerful mindset!",
+              ],
+              concentration: [
+                "Focus feels scattered. Try short bursts of work with mindful breaks.",
+                "Distractions are common. Consider limiting noise or screen time.",
+                "You're managing focus fairly well. Keep refining your routines.",
+                "Your focus is sharp! Keep building that momentum.",
+              ],
+              stress_management: [
+                "Stress is likely high. Prioritize rest, slow breathing, and kindness to yourself.",
+                "You’re juggling things. Try to balance responsibilities with calm moments.",
+                "You're handling stress decently. Recharge regularly to stay steady.",
+                "You're in control of your stress. Keep using those healthy coping strategies.",
+              ],
+            };
+
+            const messageIndex = percent < 25 ? 0 : percent < 50 ? 1 : percent < 75 ? 2 : 3;
+            message = messages[cat][messageIndex];
+
+            return (
+              <div key={cat} className="scoreContainerAns" style={{ backgroundColor: bgColor}}>
+                <div className="scoreSlider">
+                  <label className="cat-name-score">
+                    {cat.replace('_', ' ').toUpperCase()} {percent.toFixed(0)}%
+                  </label>
+                  <input
+                    type="range"
+                    min="0"
+                    max="16"
+                    value={score}
+                    disabled
+                    className="slider"
+                  />
+                  <p className="categoryMessage">{message}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>
@@ -259,16 +324,15 @@ const Test = () => {
               </div>
             )}
 
-            {step >= 2 && step < 22 && (
+            {step >= 2 && step < 22 && dailyQuestions[step - 2] && (
               <div className="step">
-                <p className="testQues"><strong>Q{step - 1}:</strong> {dailyQuestions[step - 2].question}</p>
+                <p className="testQues">
+                  <strong>Q{step - 1}:</strong> {dailyQuestions[step - 2].question}
+                </p>
                 {dailyQuestions[step - 2].options.map((opt, i) => {
                   const isSelected = answers[dailyQuestions[step - 2].id] === i;
                   return (
-                    <label
-                      key={i}
-                      className={`radio-option ${isSelected ? 'selected' : ''}`}
-                    >
+                    <label key={i} className={`radio-option ${isSelected ? 'selected' : ''}`}>
                       <input
                         type="radio"
                         name={`q-${dailyQuestions[step - 2].id}`}

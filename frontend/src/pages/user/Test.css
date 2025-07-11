@@ -340,12 +340,13 @@
 }
 
 .result-summary {
-  background-color: rgba(255, 255, 255, 0.07);
+  background-color: rgb(2, 55, 33);
   padding: 2rem;
   border-radius: 12px;
   text-align: center;
-  margin-top: 2rem;
-  margin-left: 4rem;
+  margin-top: 4rem;
+  margin-left: 30rem;
+  margin-bottom: 4rem;
   margin-right: 4rem;
 }
 
@@ -371,6 +372,8 @@
   background: #4ade80;
   border-radius: 6px;
   outline: none;
+  margin-bottom: 2rem;
+  border: 2px solid rgb(10, 148, 61);
 }
 
 .submitButtonTest {
@@ -380,9 +383,37 @@
 }
 
 .scoreContainerAns {
-  background-color: rgba(118, 255, 191, 0.18);
+  background-color: rgba(14, 112, 63, 0.54);
   border-radius: 10px;
   padding: 2rem;
-  margin: 2rem;
+  margin: 4rem;
   text-align: center;
+}
+
+.scads-result-head {
+  font-size: 3rem;
+  margin-top:3rem;
+  margin-bottom: 4rem;
+}
+
+.score-wellness {
+  background-color: rgba(13, 112, 66, 0.56);
+  border-radius: 15px;
+  padding: 2rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+.totalScore {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.wellness {
+  font-size: 1.5rem;
+}
+
+.cat-name-score {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
 }
