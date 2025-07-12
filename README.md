@@ -13,7 +13,7 @@ The SCADS Test generates a personalized wellness report and gives suggestions ba
 
 ---
 
-## 🌿 Daily Wellness Visual — The Lily Pad
+## Daily Wellness Visual — The Lily Pad
 
 Your daily progress is visualized using a **lily pad that changes color** depending on your SCADS score:
 
@@ -36,8 +36,17 @@ The **calendar section** displays a lily pad for each day of the year, helping u
 
 ---
 
+### 🛠️ Admin Functionality
+- Protected by `authenticate` and `authorizedAdmin` middleware
+- Admin features:
+  - View all user accounts (excluding passwords)
+  - Edit usernames and emails
+  - Delete accounts (except other admins)
+
+---
+
 ### 📅 Daily Mental Health Test
-- **Submit once per day** (resets at midnight)
+- SCADS test **Submitted once per day** (resets at midnight)
 - Inputs:
   - Sleep hours  
   - Daily activities  
@@ -49,12 +58,10 @@ The **calendar section** displays a lily pad for each day of the year, helping u
 
 ---
 
-### 🛠️ Admin Functionality
-- Protected by `authenticate` and `authorizedAdmin` middleware
-- Admin features:
-  - View all user accounts (excluding passwords)
-  - Edit usernames and emails
-  - Delete accounts (except other admins)
+### 📈 Graphical Representation
+- Users can visualize a graph of their mental health patterns
+- Gives a graph pattern for each categories
+- Analyses each graph and gives a report to the user suggesting where the user needs improvements
 
 ---
 
@@ -67,9 +74,10 @@ The **calendar section** displays a lily pad for each day of the year, helping u
 
 ### 📆 Score Calendar
 - Visualizes your daily score using colored lily pads:
-  - 🟥 Score < 50  
-  - 🟧 50–79  
-  - 🟩 80+  
+  - 🟥 **Red** – Lower scores
+  - 🟧 **Orange** – Below average scores
+  - 🟨 **Yellow** – Above average scores
+  - 🟩 **Green** – Higher scores
 - Automatically pulls data from each user’s `scoreHistory`
 
 ---
@@ -83,11 +91,6 @@ The **calendar section** displays a lily pad for each day of the year, helping u
   - Level up at every 100 EXP (resets to 0 after leveling)
   - Better mental health → higher level!
 
-### 📈 Graphical Representation
-- Users can visualize a graph of their mental health patterns
-- Gives a graph pattern for each categories
-- Analyses each graph and gives a report to the user
-
 ---
 
 ## 🔐 Authentication
@@ -97,24 +100,5 @@ The **calendar section** displays a lily pad for each day of the year, helping u
   - Login / Logout
   - Secure password hashing with `bcryptjs`
   - Cookie-based session tracking
-
----
-
-## ⚙️ Tech Stack
-
-- **Frontend:** React.js, Redux Toolkit  
-- **Backend:** Node.js, Express.js  
-- **Database:** MongoDB, Mongoose  
-- **Authentication:** JWT, bcryptjs, cookie-parser  
-
----
-
-## 📌 Future Enhancements
-- Habit tracking and streaks  
-- Avatar customization based on achievements  
-- Challenge rooms for group check-ins  
-- Mobile PWA support for daily reminders  
-
----
 
 > 🌱 *Mindleap is your daily mental wellness companion — grow one lily pad at a time.*
