@@ -151,7 +151,7 @@
 
 .explevelDisplay {
   display: flex;
-  justify-conten: space-between;
+  justify-content: space-between;
   flex-direction: row;
   margin-bottom: 2rem;
 }
@@ -239,4 +239,83 @@
   margin-bottom: 6rem;
   font-family: "Oswald", sans-serif;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .profileText-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profileSecOne,
+  .profileSecTwo {
+    width: 100%;
+    margin: 0;
+  }
+
+  .profileHeading,
+  .profileHeadingUp {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .explevelDisplay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .levelDisplay,
+  .expDisplay {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .badgeDisplay {
+    font-size: 1rem;
+    margin: 1rem auto;
+    width: fit-content;
+  }
+
+  .lilypadBreakdown {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .lilyPadScore {
+    width: 60px;
+    height: 60px;
+  }
+
+  .scoreText {
+    font-size: 1rem;
+  }
+
+  .profileHeadingUp {
+    margin-top: 4rem;
+  }
+
+  .profileFormContainer {
+    padding: 0 1rem;
+  }
+
+  .profileFormInput {
+    font-size: 0.9rem;
+  }
+
+  .profileButton {
+    font-size: 1rem;
+  }
+
+  .profileContainer {
+    padding: 2rem 1rem;
+  }
 }

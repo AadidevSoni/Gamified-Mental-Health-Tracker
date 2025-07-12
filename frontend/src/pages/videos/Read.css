@@ -44,3 +44,47 @@
   text-align: center;
   font-size: 1.5rem,
 }
+
+@media (max-width: 1024px) {
+  .videoCardGrid-yoga {
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+  }
+
+  .videoThumbnail-yoga {
+    height: 320px;
+  }
+
+  .videoTitle-yoga {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .videoCardGrid-yoga {
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    padding: 0 1rem;
+  }
+
+  .videoThumbnail-yoga {
+    height: 280px;
+  }
+
+  .videoTitle-yoga {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .videoCardGrid-yoga {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .videoThumbnail-yoga {
+    height: 220px;
+  }
+
+  .videoTitle-yoga {
+    font-size: 1rem;
+  }
+}

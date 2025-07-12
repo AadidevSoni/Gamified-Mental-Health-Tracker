@@ -100,3 +100,45 @@
   font-size: 1.2rem;
   margin-top: 1rem;
 }
+
+@media (max-width: 1024px) {
+  .btn-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .months {
+    width: 9rem;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .months {
+    width: 8rem;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .months {
+    width: 80%;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}

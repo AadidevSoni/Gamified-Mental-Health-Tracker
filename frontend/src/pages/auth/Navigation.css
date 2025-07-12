@@ -193,3 +193,55 @@
   width: 120px;
   text-align: left;
 }
+
+@media (max-width: 768px) {
+
+.navigation-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 10%;
+  background-color: rgba(11, 39, 30, 0.73);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  transition: width 0.4s ease;
+  overflow: hidden;
+}
+
+.navigation-container:hover {
+  width: 18%;
+  cursor: pointer;
+}
+
+.nav-item-name {
+  display: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  color: rgba(152,248,185,1);
+  cursor: pointer;
+}
+
+.navigation-container:hover .nav-item-name {
+  display: block;
+  opacity: 1;
+  font-size: 0.8rem;
+  cursor: pointer;
+  margin-left: 9px;
+}
+
+.navigation-container:hover .nav-icon {
+  display: none;
+}
+
+.nav-list-item {
+  margin-left: 14px;
+  font-size: 0.8rem;
+}
+
+}

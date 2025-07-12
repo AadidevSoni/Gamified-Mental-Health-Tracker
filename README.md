@@ -24,6 +24,8 @@ By analysing the lily pad color, the user knows their mental health pattern each
 
 ### User Profile Management
 •⁠  Get Current User Profile 
+•⁠  Displays User Level and Exp as well as a *Badge* according to the user's level
+•⁠  Display total number of lilypads collected along with the color of the lilypad
 •⁠  Update User Profile 
 •⁠  Allows updating
   •⁠  username

@@ -269,6 +269,7 @@ const Test = () => {
         <div className="video-overlay"></div>
       </div>
 
+      <div className="testContentWrapper">
       <div className="testContent">
         <h1 className="testHeading">SCADS Wellness Test</h1>
 
@@ -354,6 +355,7 @@ const Test = () => {
             </div>
           </>
         )}
+      </div>
       </div>
     </div>
   );

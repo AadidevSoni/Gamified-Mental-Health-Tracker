@@ -43,3 +43,60 @@
   font-size: 1rem;
   text-align: center;
 }
+
+@media (max-width: 1024px) {
+  .yogaHeading {
+    font-size: 2.5rem;
+  }
+
+  .videoThumbnail {
+    height: 120px;
+  }
+
+  .videoTitle {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .yogaHeading {
+    font-size: 2.2rem;
+  }
+
+  .videoCardGrid {
+    padding: 0 1rem;
+    gap: 1.5rem;
+  }
+
+  .videoThumbnail {
+    height: 110px;
+  }
+
+  .videoTitle {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .yogaPage {
+    padding: 1rem;
+  }
+
+  .yogaHeading {
+    font-size: 1.8rem;
+    margin: 1.5rem 0;
+  }
+
+  .videoCardGrid {
+    gap: 1rem;
+  }
+
+  .videoThumbnail {
+    height: 100px;
+  }
+
+  .videoTitle {
+    font-size: 0.85rem;
+    padding: 0.8rem;
+  }
+}

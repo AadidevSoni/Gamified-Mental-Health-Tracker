@@ -417,3 +417,189 @@
   margin-bottom: 1rem;
   font-size: 1.4rem;
 }
+
+@media (max-width: 768px) {
+  .testContent {
+    max-width: 95%;
+    padding: 20px 15px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .testHeading {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .testQuestion {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+
+  .testSleepHourInput {
+    width: 20%;
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+
+  .activityButton {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+
+  .activityButtonGroup {
+    gap: 8px;
+  }
+
+  .scadsHeader {
+    width: 300px;
+    margin-left: 1rem;
+  }
+
+  .testQues {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
+
+  .testContentWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    padding: 2rem 1rem;
+  }
+
+  .radio-option {
+    font-size: 1.1rem;
+    margin: 10px;
+    padding: 8px;
+  }
+
+  .navButtons {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1.5rem;
+  }
+
+  .navButtons button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+
+  .result-summary {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1rem;
+  }
+
+  .scoreContainerAns {
+    margin: 1.5rem 1rem;
+    padding: 1.2rem;
+  }
+
+  .scoreSlider {
+    width: 100%;
+  }
+
+  .slider {
+    width: 100%;
+  }
+
+  .score-wellness {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1rem;
+  }
+
+  .scads-result-head {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Small screens (phones, 480px and below) */
+@media (max-width: 480px) {
+  .testContent {
+    max-width: 100%;
+    padding: 15px 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .testHeading {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .testQuestion {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .testSleepHourInput {
+    width: 30%;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+  }
+
+  .activityButton {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .testQues {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .radio-option {
+    font-size: 1rem;
+    margin: 8px;
+    padding: 6px;
+  }
+
+  .navButtons {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 1rem;
+  }
+
+  .navButtons button {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 8px 0;
+  }
+
+  .result-summary {
+    margin: 0 0.5rem;
+    padding: 0.8rem;
+  }
+
+  .scoreContainerAns {
+    margin: 1rem 0.5rem;
+    padding: 1rem;
+  }
+
+  .scoreSlider {
+    width: 100%;
+  }
+
+  .slider {
+    width: 100%;
+  }
+
+  .score-wellness {
+    margin: 0 0.5rem;
+    padding: 0.8rem;
+  }
+
+  .scads-result-head {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}

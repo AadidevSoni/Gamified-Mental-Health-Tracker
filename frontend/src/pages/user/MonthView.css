@@ -143,3 +143,80 @@
   text-shadow: 1px 1px 2px black;
   pointer-events: none;
 }
+
+@media (max-width: 1024px) {
+  .calendarGrid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
+  }
+
+  .calendarTree {
+    width: 90%;
+    height: 90%;
+  }
+
+  .scoreText {
+    font-size: 1.2rem;
+  }
+
+  .monthName {
+    font-size: 3rem;
+  }
+
+  .dayBox {
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .calendarGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    margin-top: 3rem;
+  }
+
+  .dayBox {
+    height: 80px;
+  }
+
+  .calendarTree {
+    width: 70%;
+    height: 70%;
+  }
+
+  .scoreText {
+    font-size: 1rem;
+  }
+
+  .monthName {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendarGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+
+  .dayBox {
+    height: 70px;
+  }
+
+  .calendarTree {
+    width: 60%;
+    height: 60%;
+  }
+
+  .scoreText {
+    font-size: 0.9rem;
+  }
+
+  .monthName {
+    font-size: 1.8rem;
+  }
+
+  .dayNumber {
+    font-size: 0.7rem;
+  }
+}
