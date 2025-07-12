@@ -1,0 +1,102 @@
+.trendsPage {
+  position: relative;
+  min-height: 100vh;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem;
+  overflow-x: hidden;
+}
+
+.video-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.video-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.trendsHeading {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  color: rgb(114, 250, 154);
+}
+
+.chartContainer {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 0 10px rgba(28, 255, 122, 0.5);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.trendAnalysis {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  margin: 3rem auto;
+  border-radius: 12px;
+  max-width: 1000px;
+  backdrop-filter: blur(6px);
+  color: white;
+}
+
+.analysisTitle {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #86efac;
+  text-align: center;
+}
+
+.analysisItem {
+  margin-bottom: 1.5rem;
+  background-color: rgba(24, 90, 50, 0.5);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.chartTitle {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #bbf7d0;
+}
+
+.recharts-wrapper {
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .trendsHeading {
+    font-size: 2.2rem;
+  }
+
+  .chartTitle {
+    font-size: 1.4rem;
+  }
+
+  .chartContainer {
+    padding: 1rem;
+  }
+}

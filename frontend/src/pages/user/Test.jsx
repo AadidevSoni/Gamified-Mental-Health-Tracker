@@ -172,19 +172,41 @@ const Test = () => {
         </div>
 
         <div className="scoreBreakdown">
-          <div className="scoreContainerAns">
-            <p className='cat-name-score'><strong>Sleep + Activity:</strong> {((sleepActivityScore) / 105 *  100).toFixed(0)}%</p>
-              <div className="scoreSlider">
-                <input
-                  type="range"
-                  min="0"
-                  max="105"
-                  value={sleepActivityScore}
-                  disabled
-                  className="slider"
-                />
+          {(() => {
+            const sleepPercent = (sleepActivityScore / 105) * 100;
+
+            let bgColor = 'rgba(255, 0, 0, 0.63)'; // Red by default
+            let sleepMessage = 'Very low balance. Rest more and consider light, mindful activities.';
+
+            if (sleepPercent >= 75) {
+              bgColor = 'rgba(0, 200, 100, 0.64)'; // Green
+              sleepMessage = 'Great sleep and activities! Keep this healthy momentum going!';
+            } else if (sleepPercent >= 50) {
+              bgColor = 'rgba(255, 238, 0, 0.75)'; // Yellow
+              sleepMessage = 'Fair balance. Try improving sleep quality or adding enriching habits.';
+            } else if (sleepPercent >= 25) {
+              bgColor = 'rgba(255, 166, 0, 0.78)'; // Orange
+              sleepMessage = 'Needs improvement. Try to sleep better or do something that calms you.';
+            }
+
+            return (
+              <div className="scoreContainerAns" style={{ backgroundColor: bgColor }}>
+                <p className='cat-name-score'><strong>Sleep + Activity:</strong> {sleepPercent.toFixed(0)}%</p>
+                <div className="scoreSlider">
+                  <input
+                    type="range"
+                    min="0"
+                    max="105"
+                    value={sleepActivityScore}
+                    disabled
+                    className="slider"
+                  />
+                  <p className="categoryMessage">{sleepMessage}</p>
+                </div>
               </div>
-          </div>
+            );
+          })()}
+
           {Object.entries(categoryScores).map(([cat, score]) => {
             const percent = (score / 16) * 100;
 

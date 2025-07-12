@@ -178,6 +178,13 @@
   cursor: pointer;
 }
 
+.categoryMessage {
+  margin-top: 0.8rem;
+  font-style: italic;
+  font-size: 1rem;
+  color: #f8fafc;
+}
+
 .radio-option input[type="radio"] {
   display: none; /* hides the dot */
 }
@@ -340,7 +347,7 @@
 }
 
 .result-summary {
-  background-color: rgb(2, 55, 33);
+  background-color: rgba(10, 27, 20, 0.74);
   padding: 2rem;
   border-radius: 12px;
   text-align: center;

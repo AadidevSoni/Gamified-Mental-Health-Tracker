@@ -83,6 +83,11 @@ The **calendar section** displays a lily pad for each day of the year, helping u
   - Level up at every 100 EXP (resets to 0 after leveling)
   - Better mental health → higher level!
 
+### 📈 Graphical Representation
+- Users can visualize a graph of their mental health patterns
+- Gives a graph pattern for each categories
+- Analyses each graph and gives a report to the user
+
 ---
 
 ## 🔐 Authentication

@@ -6,6 +6,7 @@ import { FaCalendarAlt } from "react-icons/fa";
 import { GiBrain } from "react-icons/gi";
 import { MdLeaderboard } from "react-icons/md";
 import { MdOndemandVideo } from "react-icons/md";
+import { BsGraphUp } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 import './Navigation.css';
 import { useNavigate } from 'react-router-dom'
@@ -67,6 +68,11 @@ const Navigation = () => {
         <Link to='/tests' className="nav-link" onClick={closeSideBar}>
           <GiBrain className='nav-icon' size={26} />
           <span className="nav-item-name">Tests</span>
+        </Link>
+
+        <Link to='/trends' className="nav-link" onClick={closeSideBar}>
+          <BsGraphUp className='nav-icon' size={26} />
+          <span className="nav-item-name">Trends</span>
         </Link>
 
         <Link to='/leaderboard' className="nav-link" onClick={closeSideBar}>

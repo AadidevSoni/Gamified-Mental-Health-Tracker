@@ -15,6 +15,7 @@ import Login from './pages/auth/Login.jsx';
 import Calendar from './pages/user/Calendar.jsx';
 import MonthView from './pages/user/MonthView.jsx';
 import Register from './pages/auth/Register.jsx';
+import Trends from './pages/user/Trends.jsx'
 
 import Profile from './pages/user/Profile.jsx';
 
@@ -38,6 +39,7 @@ const router = createBrowserRouter(
         <Route path='/profile' element={<Profile />}/>
         <Route path='/leaderboard' element={<Leaderboard />}/>
         <Route path='/tests' element={<Test />} />
+        <Route path="/trends" element={<Trends />} />
         <Route path='/activity' element={<Activity />} />
         <Route path='/calendar' element={<Calendar />} />
         <Route path="/calendar/:month" element={<MonthView />} />
