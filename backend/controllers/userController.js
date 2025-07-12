@@ -229,15 +229,18 @@ const saveTodayScore = asyncHandler(async (req, res) => {
     };
 
     if (existingIndex !== -1) {
-      // Update existing entry
       user.scoreHistory[existingIndex] = newEntry;
     } else {
-      // Insert new entry
       user.scoreHistory.push(newEntry);
     }
 
     user.todaysScore = score;
     user.exp += score;
+
+    while(user.exp >= 100) {
+      user.level++;
+      user.exp -= 100; 
+    }
 
     await user.save();
 

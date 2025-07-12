@@ -25,10 +25,6 @@ const Navigation = () => {
     setDropdownOpen(!dropdownOpen);
   };
 
-  const toggleSideBar = () => {
-    setShowSidebar(!showSidebar);
-  };
-
   const closeSideBar = () => {
     setShowSidebar(false);
   };
@@ -111,14 +107,9 @@ const Navigation = () => {
 
               {userInfo.isAdmin && (
                 <>
-                  <li>  
-                    <Link to='/admin/dashboard' className="nav-list-item">
-                      Dashboard
-                    </Link>
-                  </li>
                   <li>
                     <Link to='/admin/userList' className="nav-list-item">
-                      Users
+                      User List
                     </Link>
                   </li>
                 </>

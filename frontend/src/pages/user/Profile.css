@@ -1,13 +1,15 @@
 .profileBlock {
   position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;     
+  justify-content: flex-start;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;        
   padding: 2rem;
-  overflow: hidden;
+  overflow-x: hidden;        
   color: white;
 }
+
 
 .video-wrapper {
   position: fixed;
@@ -44,20 +46,22 @@
 .profileContainer {
   position: relative;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 3rem;
   border-radius: 12px;
   width: 100%;
-  max-width: 600px;
+  max-width: 1200px;
 }
 
 .profileText-container {
   margin: 0 auto;
+  display: flex;
+  flex-direction: row;
 }
 
 .profileHeading {
   font-size: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   font-family: "Oswald", sans-serif;
   font-weight: bold;
 }
@@ -143,4 +147,96 @@
 .loading-text {
   font-size: 1.2rem;
   margin-top: 1rem;
+}
+
+.explevelDisplay {
+  display: flex;
+  justify-conten: space-between;
+  flex-direction: row;
+  margin-bottom: 2rem;
+}
+
+.levelDisplay {
+  font-size: 1.5rem;
+}
+
+.expDisplay {
+  font-size: 1.5rem;
+  margin-left: 60%;
+}
+
+.badgeDisplay {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  color: #a7f3d0;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: rgb(7, 130, 78);
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.badgeDisplay:hover {
+  cursor: pointer;
+  background: rgb(39, 186, 125);
+}
+
+.lilypadBreakdown {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.lilyPadScore {
+  width: 80px;
+  height: 80px;
+  filter: saturate(0.8) brightness(1.2) contrast(1.4) sepia(0.1);
+  image-rendering: pixelated; 
+}
+
+.scoreText {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  pointer-events: none;
+}
+
+.redScore {
+  position: relative;
+}
+
+.orangeScore {
+  position: relative;
+}
+
+.yellowScore {
+  position: relative;
+}
+
+.greenScore {
+  position: relative;
+}
+
+.profileSecOne {
+  width: 50%;
+}
+
+.profileSecTwo {
+  margin-left: 4rem;
+  width: 50%;
+}
+
+.profileHeadingUp {
+  font-size: 3rem;
+  margin-bottom: 6rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
 }

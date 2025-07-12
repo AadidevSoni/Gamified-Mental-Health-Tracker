@@ -22,44 +22,51 @@ By analysing the lily pad color, the user knows their mental health pattern each
 
 ## 🌟 Key Features
 
-### 🧪 Daily Mental Health Test (⁠ /test ⁠)
+### User Profile Management
+•⁠  Get Current User Profile 
+•⁠  Update User Profile 
+•⁠  Allows updating
+  •⁠  username
+  •⁠  email (with duplication check)
+  •⁠  password (securely re-hashed)
+
+### Daily Mental Health Test 
 •⁠  ⁠Submit once a day (resets at midnight)
 •⁠  ⁠Inputs: Sleep hours, activities, 10 introspective questions
 •⁠  ⁠Calculates a wellness score as well as scores for each of the 5 categories and saves it with date
 •⁠  Gives suggestions according to the score they get for each of thr 5 categories
 
-### 🌿 Activity Overview (⁠ /activities ⁠)
+### Admin Functionality
+•⁠  Protected by authenticate and authorizedAdmin middlewares.
+•⁠  Get all User details except the password
+•⁠  Update User name and email ID
+•⁠  Delete user accounts
+•⁠  Prevents deletion of admin accounts
+
+### Activity Overview
 •⁠  ⁠Grid of wellness activities (Yoga, Journaling, Art, etc.)
 •⁠  ⁠Each links to a detailed content page
 •⁠  Including links to visual entertainment, music and reading websites.
 
-### 📆 Score Calendar (⁠ /calendar/:month ⁠)
+### Score Calendar 
 •⁠  ⁠Visualizes daily scores using colored lily pads:
   - 🟥 < 50
   - 🟧 50–79
   - 🟩 80+
 •⁠  ⁠Pulls the score from each user’s⁠ scoreHistory ⁠
 
-### 📆 Leaderboard ( /leaderboard)
+### Leaderboard
 •⁠  ⁠Leaderoard where users are ranked according to their level and exp
 •⁠  ⁠Level and exp are gained from the SCAD test scores that the user gets.
+•⁠  User gains the exp equivalent to the SCAD score received and the exp resets to 0 and level increments by 1 when the exp reaches 100
 •⁠  ⁠Better the mental well being, higher the level!
 
 ---
 
-## 🔄 Additional Highlights
+## Additional Highlights
 
+•⁠  User registration , login and logout system
 •⁠  ⁠JWT-secured user login & profile
-•⁠  ⁠Admin dashboard for managing users
-
----
-
-## 🔜 Coming Soon
-
-•⁠  ⁠🎯 XP Levels & Achievements  
-•⁠  ⁠🎨 Avatar Customization  
-•⁠  ⁠🏆 Leaderboard & Green-Day Challenges  
-•⁠  ⁠🛍️ Virtual Reward Store  
 
 ---
 
