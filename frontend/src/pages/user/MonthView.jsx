@@ -6,9 +6,10 @@ import './MonthView.css';
 
 const MonthView = () => {
   const { month } = useParams();
+  const { userInfo } = useSelector((state) => state.auth);
   const [loadingScreen, setLoadingScreen] = useState(true);
   const [scoreHistory, setScoreHistory] = useState({});
-  const { userInfo } = useSelector((state) => state.auth);
+  const [selectedDay, setSelectedDay] = useState(null);
 
   const monthMap = {
     january: 0, february: 1, march: 2, april: 3, may: 4, june: 5,
@@ -24,23 +25,18 @@ const MonthView = () => {
     const fetchScoreHistory = async () => {
       try {
         const { data } = await axios.get('/api/users/score/history', {
-          headers: {
-            Authorization: `Bearer ${userInfo.token}`,
-          },
+          headers: { Authorization: `Bearer ${userInfo.token}` },
         });
 
-        // Transform array to { 'YYYY-MM-DD': score }
         const transformed = {};
         data.forEach(entry => {
-          transformed[entry.date] = entry.score;
+          transformed[entry.date] = entry;
         });
         setScoreHistory(transformed);
       } catch (err) {
         console.error('Failed to fetch score history:', err);
       } finally {
-        setTimeout(() => {
-          setLoadingScreen(false);
-        }, 1000);
+        setTimeout(() => setLoadingScreen(false), 1000);
       }
     };
 
@@ -54,11 +50,20 @@ const MonthView = () => {
     return 'lilyRed.png';
   };
 
+  const getColorClass = (value) => {
+    if (value < 25) return 'redText';
+    if (value < 50) return 'orangeText';
+    if (value < 75) return 'yellowText';
+    return 'greenText';
+  };
+
   const formatDate = (day) => {
     const m = (monthIndex + 1).toString().padStart(2, '0');
     const d = day.toString().padStart(2, '0');
     return `${year}-${m}-${d}`;
   };
+
+  const getPercentage = (value, max) => ((value / max) * 100).toFixed(1);
 
   return (
     <div className='monthContainer'>
@@ -81,26 +86,40 @@ const MonthView = () => {
       <div className='calendarGrid'>
         {days.map((day) => {
           const dateKey = formatDate(day);
-          const score = scoreHistory[dateKey];
-          const imageName = score ? getLilypadColor(score) : null;
+          const entry = scoreHistory[dateKey];
+          const imageName = entry ? getLilypadColor(entry.score) : null;
 
           return (
-            <div key={day} className='dayBox'>
+            <div key={day} className='dayBox' onClick={() => entry && setSelectedDay(entry)}>
               <span className='dayNumber'>{day}</span>
               {imageName && (
                 <div className="lilypadWrapper">
-                  <img
-                    className="calendarTree"
-                    src={`/pictures/${imageName}`}
-                    alt="lilypad"
-                  />
-                  <span className="scoreText">{score}</span>
+                  <img className="calendarTree" src={`/pictures/${imageName}`} alt="lilypad" />
+                  <span className="scoreText">{entry.score}</span>
                 </div>
               )}
             </div>
           );
         })}
       </div>
+
+      {selectedDay && (
+        <div className="popupOverlay" onClick={() => setSelectedDay(null)}>
+          <div className="popupCard" onClick={(e) => e.stopPropagation()}>
+            <h2>Report for {selectedDay.date}</h2>
+            <ul className="scoreReportList">
+              <li>Total Score: <span className={getColorClass(getPercentage(selectedDay.score, 185))}>{getPercentage(selectedDay.score, 185)}%</span></li>
+              <li>Sleep + Activity: <span className={getColorClass(getPercentage(selectedDay.sleepActivityScore, 105))}>{getPercentage(selectedDay.sleepActivityScore, 105)}%</span></li>
+              {Object.entries(selectedDay.categories).map(([key, val]) => (
+                <li key={key}>
+                  {key.replace('_', ' ')}: <span className={getColorClass(getPercentage(val, 16))}>{getPercentage(val, 16)}%</span>
+                </li>
+              ))}
+            </ul>
+            <button className="closeButton" onClick={() => setSelectedDay(null)}>Close</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
