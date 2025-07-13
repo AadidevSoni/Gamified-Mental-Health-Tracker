@@ -8,20 +8,25 @@ import './Login.css';
 import Loader from '../../components/Loader';
 
 const Login = () => {
+  //UseStates
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loadingScreen, setLoadingScreen] = useState(true);
 
+  //React redux methods
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
-  const [login, { isLoading }] = useLoginMutation();
   const { userInfo } = useSelector((state) => state.auth);
 
+  //UserApiSlice call
+  const [login, { isLoading }] = useLoginMutation();
+
+  //Redirects
   const { search } = useLocation();
   const sp = new URLSearchParams(search);
   const redirect = sp.get('redirect') ?? '/';
 
+  //Loading screen timer
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoadingScreen(false);
@@ -30,17 +35,18 @@ const Login = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  //Redirect if user already logged in
   useEffect(() => {
     if (userInfo) {
       navigate(redirect);
     }
   }, [navigate, redirect, userInfo]);
 
+  //Handls submit button
   const submitHandler = async (e) => {
     e.preventDefault();
-
     try {
-      const res = await login({ email, password }).unwrap();
+      const res = await login({ email, password }).unwrap(); //Call login mutation api call
       dispatch(setCredentials({ ...res }));
       navigate(redirect);
     } catch (error) {
@@ -56,6 +62,7 @@ const Login = () => {
           <p className="loading-text">Loading your Login Screen...</p>
         </div>
       )}
+
       <div className="video-wrapper">
         <video
           autoPlay
@@ -69,7 +76,6 @@ const Login = () => {
         <div className="video-overlay"></div>
       </div>
 
-      {/* Login Form */}
       <div className="loginContainer">
         <div className="loginText-container">
           <h1 className="sign">Sign In</h1>

@@ -8,21 +8,27 @@ import { useRegisterMutation } from '../redux/api/userApiSlice';
 import './Register.css';
 
 const Register = () => {
+  //UseStates
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [loadingScreen, setLoadingScreen] = useState(true);
 
+  //Redux methods
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [register, { isLoading }] = useRegisterMutation();
   const { userInfo } = useSelector((state) => state.auth);
 
-  const { search } = useLocation();
-  const sp = new URLSearchParams(search);
-  const redirect = sp.get('redirect') || '/';
+  //UserApiSlice calls
+  const [register, { isLoading }] = useRegisterMutation();
 
+  //Redirects
+  const { search } = useLocation(); //Gets the query string (everything after ?) from the current URL, like ?redirect=/test
+  const sp = new URLSearchParams(search); //Parses the search string into an object-like structure for easy access to parameters
+  const redirect = sp.get('redirect') || '/'; //Retrieves the value of the redirect parameter (e.g. /test)
+
+  //Loading Screen method
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoadingScreen(false);
@@ -31,20 +37,22 @@ const Register = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  //Automatically redirect the user after login or if already logged in
   useEffect(() => {
     if (userInfo) {
       navigate(redirect);
     }
   }, [navigate, redirect, userInfo]);
 
+  //Handls submit button
   const submitHandler = async (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
       toast.error('Passwords do not match!');
     } else {
       try {
-        const res = await register({ username, email, password }).unwrap();
-        dispatch(setCredentials({ ...res }));
+        const res = await register({ username, email, password }).unwrap(); //userApiSlice call
+        dispatch(setCredentials({ ...res })); //Stores the returned user data in Redux state using your authSlice
         navigate(redirect);
         toast.success('User successfully registered!');
       } catch (error) {
@@ -61,6 +69,7 @@ const Register = () => {
           <p className="loading-text">Loading your Register Screen...</p>
         </div>
       )}
+      
       <div className="video-wrapper">
         <video
           autoPlay

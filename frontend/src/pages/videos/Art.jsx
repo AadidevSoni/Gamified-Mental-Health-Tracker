@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Yoga.css';
 
+//Dataset
 const artVideos = [
   {
     title: 'Bob Ross - FULL EPISODE',
@@ -55,8 +56,11 @@ const artVideos = [
 ];
 
 const Yoga = () => {
+
+  //UseStates
   const [loadingScreen, setLoadingScreen] = useState(true);
 
+  //Loading screen timer
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoadingScreen(false);

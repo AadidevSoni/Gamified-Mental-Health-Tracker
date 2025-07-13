@@ -79,6 +79,7 @@ The **calendar section** displays a lily pad for each day of the year, helping u
   - 🟨 **Yellow** – Above average scores
   - 🟩 **Green** – Higher scores
 - Automatically pulls data from each user’s `scoreHistory`
+- View your score history for each category on that given day
 
 ---
 

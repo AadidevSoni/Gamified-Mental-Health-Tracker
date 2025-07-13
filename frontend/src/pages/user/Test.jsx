@@ -5,7 +5,11 @@ import { useSelector } from 'react-redux';
 import axios from 'axios';
 
 const Test = () => {
+
+  //Redux store 
   const { userInfo } = useSelector((state) => state.auth);
+
+  //UseStates
   const [loadingScreen, setLoadingScreen] = useState(true);
   const [alreadySubmittedToday, setAlreadySubmittedToday] = useState(false);
   const [testClicked, setTestClicked] = useState(false);
@@ -19,19 +23,23 @@ const Test = () => {
   const [categoryScores, setCategoryScores] = useState({});
   const [sleepActivityScore, setSleepActivityScore] = useState(0);
 
+  //Get today's date
   const today = new Date().toLocaleDateString('en-CA');
+
+  //Datasets
   const categories = ['depression', 'anxiety', 'self_worth', 'stress_management', 'concentration'];
   const mentalActivities = [
-    'Reading', 'Yoga', 'Meditation', 'Walking', 'Cycling', 'Journaling',
-    'Exercise', 'Art', 'Listening to Music', 'Travelling',
+    'Reading', 'Yoga', 'Meditation', 'Walking', 'Cycling', 'Journaling','Exercise', 'Art', 'Listening to Music', 'Travelling',
     'Visual entertainment', 'Socializing',
   ];
 
+  //Loading screen
   useEffect(() => {
     const timer = setTimeout(() => setLoadingScreen(false), 800);
     return () => clearTimeout(timer);
   }, []);
 
+  //Fetch score history
   useEffect(() => {
     const fetchHistory = async () => {
       try {

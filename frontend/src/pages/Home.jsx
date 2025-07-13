@@ -3,15 +3,19 @@ import React, { useEffect, useState } from 'react';
 
 const Home = () => {
 
+  //UseStates
   const [loadingScreen, setLoadingScreen] = useState(true);
+  const [activePopup, setActivePopup] = useState(null);
 
+  //Loading screen timer
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoadingScreen(false);
-    }, 2000);
+    }, 1000);
     return () => clearTimeout(timer);
   }, []);
 
+  //datas
   const popups = {
     about: {
       title: 'About Us',
@@ -27,11 +31,9 @@ const Home = () => {
     },
   };
 
-  const [activePopup, setActivePopup] = useState(null);
-
+  //Functions
   const openPopup = (key) => setActivePopup(key);
   const closePopup = () => setActivePopup(null);
-
 
   return (
     <div className='homeContainer'>
@@ -41,6 +43,7 @@ const Home = () => {
           <p className="loading-text">Loading Home Page...</p>
         </div>
       )}
+
       <div className="video-wrapper">
         <video
           autoPlay
@@ -73,7 +76,6 @@ const Home = () => {
 
         <h1 className='homeTitle'>Welcome to <br /> <span className='canopy'><span className='calm'>Mind</span><span className='canopy-word'>Leap</span></span></h1>
         <p className="homeSubtitle">Hop into a happier you — track moods, build habits, and grow mentally strong with your frog companion!</p>
-        <img className="forest" src="'/pictures/forest3.jpg'" alt="" />
       </div>
     </div>
   );

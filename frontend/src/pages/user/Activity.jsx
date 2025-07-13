@@ -3,8 +3,10 @@ import './Activity.css';
 import { Link } from 'react-router-dom';
 
 const Activity = () => {
+  //UseStates
   const [loadingScreen, setLoadingScreen] = useState(true);
 
+  //Activity dataset
   const activities = [
     { title: 'Yoga', image: '/pictures/yoga.png', path: '/activity/yoga' },
     { title: 'Reading', image: '/pictures/reading.png', path: '/activity/reading' },
@@ -16,6 +18,7 @@ const Activity = () => {
     { title: 'Soacializing', image: '/pictures/socializing.png', path: '/activity/socializing' }
   ];
 
+  //Loading screen timer
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoadingScreen(false);

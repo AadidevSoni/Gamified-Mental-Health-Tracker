@@ -7,9 +7,14 @@ import { useSelector } from 'react-redux';
 import './Trends.css';
 
 const Trends = () => {
+
+  //Redux store
   const { userInfo } = useSelector((state) => state.auth);
+
+  //UseStates
   const [scoreHistory, setScoreHistory] = useState([]);
 
+  //Fetch score history
   useEffect(() => {
     const fetchScoreHistory = async () => {
       try {
@@ -43,12 +48,14 @@ const Trends = () => {
     fetchScoreHistory();
   }, [userInfo]);
 
+  //getAverage percentage
   const getAverage = (arr, key) => {
     const values = arr.map(d => parseFloat(d[key] || 0));
     const sum = values.reduce((acc, val) => acc + val, 0);
     return (sum / values.length).toFixed(1);
   };
 
+  //Text generator
   const generateTrendMessage = (avg, label) => {
     if (avg >= 75) return `${label} is in great shape. Keep up the good habits!`;
     if (avg >= 50) return `${label} is moderate. Stay consistent and mindful.`;

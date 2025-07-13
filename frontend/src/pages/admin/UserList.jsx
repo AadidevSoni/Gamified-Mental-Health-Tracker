@@ -9,59 +9,62 @@ import Message from '../../components/Message'
 
 const UserList = () => {
 
+  //UserApiSlice Calls
   const {data: users,refetch,isLoading,error} = useGetUsersQuery();
   const [deleteUser] = useDeleteUserMutation();
   const [updateUser] = useUpdateUserMutation();
-  const [loadingScreen, setLoadingScreen] = useState(true);
 
+  //UseStates
+  const [loadingScreen, setLoadingScreen] = useState(true);
   const [editableUserId,setEditableUseId] = useState(null);
   const [editableUsername,setEditableUsername] = useState('');
   const [editableUserEmail,setEditableUserEmail] = useState('');
 
+  //Forced refetch
   useEffect(() => {
     refetch()
   }, [refetch]);
 
+  //Loadign screen
   useEffect(() => {
-      const timer = setTimeout(() => {
-        setLoadingScreen(false);
-      }, 1000);
-  
-      return () => clearTimeout(timer);
-    }, []);
+    const timer = setTimeout(() => {
+      setLoadingScreen(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
-    const deleteHandler = async(id) => {
-      if(window.confirm("Are you sure you want to delete the USER?")){
-        try {
-          await deleteUser(id);
-        } catch (error) {
-          toast.error(error.data.message || error.error);
-        }
-      }
-    }
-
-    const toggleEdit = (id,username,email) => {
-      setEditableUseId(id);
-      setEditableUsername(username);
-      setEditableUserEmail(email);
-    }
-
-    const updateHandler = async(id) => {
+  //Delete user logic
+  const deleteHandler = async(id) => {
+    if(window.confirm("Are you sure you want to delete the USER?")){
       try {
-
-        await updateUser({
-          userId: id,
-          username: editableUsername,
-          email: editableUserEmail
-        })
-
-        setEditableUseId(null);
-        refetch()
-
+        await deleteUser(id);
       } catch (error) {
-        toast.error(error.data.message || error.error);
+         toast.error(error.data.message || error.error);
       }
     }
+  }
+
+  //Edit button logic
+  const toggleEdit = (id,username,email) => {
+    setEditableUseId(id);
+    setEditableUsername(username);
+    setEditableUserEmail(email);
+  }
+
+  //Update User Logic
+  const updateHandler = async(id) => {
+    try {
+      await updateUser({
+        userId: id,
+        username: editableUsername,
+        email: editableUserEmail
+      })
+      setEditableUseId(null);
+      refetch()
+    } catch (error) {
+      toast.error(error.data.message || error.error);
+    }
+  }
 
   return <div className='userlistContainer'>
     {loadingScreen && (
@@ -85,10 +88,13 @@ const UserList = () => {
     </div>
 
     <h1>
-      {isLoading ? (<Loader />):error ? (
-        <Message variant={danger}>
-          {error?.data.message || error.message}
-        </Message>) : (
+      {isLoading ? (
+          <Loader />
+        ) : error ? (
+          <Message variant="danger">
+            {error?.data?.message || error.message}
+          </Message>
+        ) : (
         <div className='userTableContainer'>
           <table className='userlistTable'>
             <thead>

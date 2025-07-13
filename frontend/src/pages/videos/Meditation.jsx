@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Yoga.css';
 
+//Dataset
 const medVideos = [
   {
     title: '10-Minute Guided Meditation: Self-Love | SELF',
@@ -55,8 +56,10 @@ const medVideos = [
 ];
 
 const Yoga = () => {
+  //UseStates
   const [loadingScreen, setLoadingScreen] = useState(true);
 
+  //Loading screen timer
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoadingScreen(false);

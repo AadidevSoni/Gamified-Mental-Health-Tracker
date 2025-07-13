@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Read.css';
 
+//Dataset
 const booksLibrary = [
   {
     title: 'The Art of Happiness',
@@ -78,8 +79,10 @@ const booksLibrary = [
 
 
 const Yoga = () => {
+  //UseStates
   const [loadingScreen, setLoadingScreen] = useState(true);
 
+  //Loading screen timer
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoadingScreen(false);

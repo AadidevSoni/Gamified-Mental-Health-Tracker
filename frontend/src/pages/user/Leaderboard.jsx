@@ -6,25 +6,34 @@ import { useGetLeaderboardQuery } from '../redux/api/userApiSlice';
 import './Leaderboard.css';
 
 const Leaderboard = () => {
-  const { userInfo } = useSelector((state) => state.auth);
+
+  //UserApiSlice call
   const { data: Leaderboard = [], isLoading, error, refetch } = useGetLeaderboardQuery();
 
+  //React redux methods
+  const { userInfo } = useSelector((state) => state.auth);
+
+  //UseStates
   const [loadingScreen, setLoadingScreen] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
 
+  //Refetch method
   useEffect(() => {
     refetch();
   }, [refetch]);
 
+  //Loading screen timer
   useEffect(() => {
     const timer = setTimeout(() => setLoadingScreen(false), 1000);
     return () => clearTimeout(timer);
   }, []);
 
+  //Search logic
   const filteredLeaderboard = Leaderboard.filter(user =>
     user.username.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  //Rank logic and find user
   const currentUserRank = Leaderboard.findIndex(user => user._id === userInfo._id) + 1;
   const currentUserData = Leaderboard.find(user => user._id === userInfo._id);
 
@@ -50,7 +59,7 @@ const Leaderboard = () => {
         {/* Search bar */}
         <input
           type="text"
-          placeholder="Search by username..."
+          placeholder="Search User"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="searchInput"

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Yoga.css';
 
+//Dataset
 const exerciseVideos = [
   {
     title: 'FAST Walking in 30 minutes | Fitness Videos',
@@ -55,8 +56,11 @@ const exerciseVideos = [
 ];
 
 const Yoga = () => {
+
+  //UseStates
   const [loadingScreen, setLoadingScreen] = useState(true);
 
+  //Loading screen timer
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoadingScreen(false);

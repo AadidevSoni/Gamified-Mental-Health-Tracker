@@ -17,11 +17,16 @@ import {logout} from '../redux/features/authSlice'
 
 const Navigation = () => {
 
-  const {userInfo} = useSelector(state => state.auth); //This callback tells useSelector to return the auth slice of your Redux state.
+  //React redux store method
+  const {userInfo} = useSelector(state => state.auth); 
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
+  //UseStates
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
 
+  //Functions
   const toggleDropDown = () => {
     setDropdownOpen(!dropdownOpen);
   };
@@ -30,18 +35,15 @@ const Navigation = () => {
     setShowSidebar(false);
   };
 
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
+  //API call
   const [logoutApiCall] = useLogoutMutation();
 
+  //Logout handler
   const logoutHandler = async() => {
     try {
-
       await logoutApiCall().unwrap();
       dispatch(logout());
-      navigate('/login')
-      
+      navigate('/login')    
     } catch (error) {
       console.log(error);
     }
@@ -120,21 +122,20 @@ const Navigation = () => {
                   </li>
                 </>
               )}
-
-          <li>
-            <Link to='/admin/profile' className="nav-list-item">
-              Profile
-            </Link>
-          </li>
-           <li>
-              <button
-                onClick={logoutHandler}
-                className="nav-list-item listButton" 
-              >
-                Logout
-            </button>
-          </li>
-        </ul>
+              <li>
+                <Link to='/admin/profile' className="nav-list-item">
+                  Profile
+                </Link>
+              </li>
+              <li>
+                  <button
+                    onClick={logoutHandler}
+                    className="nav-list-item listButton" 
+                  >
+                    Logout
+                </button>
+              </li>
+            </ul>
           )}
       </div>
 

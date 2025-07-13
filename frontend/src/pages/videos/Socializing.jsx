@@ -2,6 +2,7 @@ import React from 'react'
 import './Socializing.css'
 import { useEffect, useState } from 'react';
 
+//Dataset
 const socials = [
   {
     title: 'Instagram',
@@ -56,8 +57,10 @@ const socials = [
 ];
 
 const Socializing = () => {
+  //UseStates
   const [loadingScreen, setLoadingScreen] = useState(true);
 
+  //Loading screen timer
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoadingScreen(false);

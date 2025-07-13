@@ -7,7 +7,21 @@
   import './Profile.css';
   import axios from 'axios';
 
+  //Badge dataset
+  const getBadgeName = (level) => {
+    if (level < 10) return { name: "Seedling", emoji: "🌱" };
+    if (level < 20) return { name: "Sprout", emoji: "🌿" };
+    if (level < 30) return { name: "Sapling", emoji: "🌾" };
+    if (level < 40) return { name: "Mindful Explorer", emoji: "🌼" };
+    if (level < 50) return { name: "Wellness Warrior", emoji: "⚔️" };
+    if (level < 60) return { name: "Calm Guardian", emoji: "🛡️" };
+    if (level < 70) return { name: "Serenity Sage", emoji: "🧘‍♂️" };
+    return { name: "Enlightened One", emoji: "🌟" };
+  };
+
   const Profile = () => {
+
+    //UseStates
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPasword] = useState('');
@@ -15,24 +29,17 @@
     const [loadingScreen, setLoadingScreen] = useState(true);
     const [level,setLevel] = useState(0);
     const [exp,setExp] = useState(0);
+    const { name, emoji } = getBadgeName(level);
+    const [scoreHistory, setScoreHistory] = useState([]);
 
+    //React redux methods
     const { userInfo } = useSelector((state) => state.auth);
-    const [updateProfile, { isLoading: loadingUpdateProfile }] = useProfileMutation();
     const dispatch = useDispatch();
 
-    const getBadgeName = (level) => {
-      if (level < 3) return { name: "Seedling", emoji: "🌱" };
-      if (level < 6) return { name: "Sprout", emoji: "🌿" };
-      if (level < 10) return { name: "Sapling", emoji: "🌾" };
-      if (level < 15) return { name: "Mindful Explorer", emoji: "🌼" };
-      if (level < 20) return { name: "Wellness Warrior", emoji: "⚔️" };
-      if (level < 30) return { name: "Calm Guardian", emoji: "🛡️" };
-      if (level < 50) return { name: "Serenity Sage", emoji: "🧘‍♂️" };
-      return { name: "Enlightened One", emoji: "🌟" };
-    };
+    //userApiSlice call
+    const [updateProfile, { isLoading: loadingUpdateProfile }] = useProfileMutation();
 
-    const { name, emoji } = getBadgeName(level);
-
+    //Setting all profile datas
     useEffect(() => {
       setUsername(userInfo.username);
       setEmail(userInfo.email);
@@ -40,6 +47,7 @@
       setExp(userInfo.exp);
     }, [userInfo.username, userInfo.email]);
 
+    //Loading screen timer
     useEffect(() => {
       const timer = setTimeout(() => {
         setLoadingScreen(false);
@@ -47,18 +55,14 @@
       return () => clearTimeout(timer);
     }, []);
 
+    //Handles submit logic
     const submitHandler = async (e) => {
       e.preventDefault();
       if (password !== confirmPassword) {
         toast.error('Passwords do not match!');
       } else {
         try {
-          const res = await updateProfile({
-            _id: userInfo._id,
-            username,
-            email,
-            password,
-          }).unwrap();
+          const res = await updateProfile({_id: userInfo._id,username,email,password,}).unwrap();
           dispatch(setCredentials({ ...res }));
           toast.success('Profile updated successfully!');
         } catch (error) {
@@ -67,8 +71,7 @@
       }
     };
 
-    const [scoreHistory, setScoreHistory] = useState([]);
-
+    //Fetchesa score history
     useEffect(() => {
       const fetchHistory = async () => {
         try {
@@ -80,10 +83,10 @@
           console.error('Failed to fetch score history:', err);
         }
       };
-
       fetchHistory();
     }, [userInfo]);
 
+    //Lilypads
     const totalLilypads = scoreHistory.length;
 
     const colorCounts = {
@@ -99,8 +102,6 @@
       else if (score < 110) colorCounts.yellow++;
       else colorCounts.green++;
     });
-
-
 
     return (
       <section className="profileBlock">
