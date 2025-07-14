@@ -7,6 +7,7 @@ import { GiBrain } from "react-icons/gi";
 import { MdLeaderboard } from "react-icons/md";
 import { MdOndemandVideo } from "react-icons/md";
 import { BsGraphUp } from "react-icons/bs";
+import { IoGameController } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 import './Navigation.css';
 import { useNavigate } from 'react-router-dom'
@@ -85,6 +86,11 @@ const Navigation = () => {
         <Link to='/activity' className="nav-link" onClick={closeSideBar}>
           <MdOndemandVideo className='nav-icon' size={26} />
           <span className="nav-item-name">Activity</span>
+        </Link>
+
+        <Link to='/game' className="nav-link" onClick={closeSideBar}>
+          <IoGameController className='nav-icon' size={26} />
+          <span className="nav-item-name">Game</span>
         </Link>
       </div>
 

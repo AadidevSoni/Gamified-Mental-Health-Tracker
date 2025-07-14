@@ -30,6 +30,7 @@ import Exercise from './pages/videos/Exercise.jsx'
 import Art from './pages/videos/Art.jsx'
 import Meditation from './pages/videos/Meditation.jsx';
 import Socializing from './pages/videos/Socializing.jsx';
+import Game from './pages/user/Game.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -43,6 +44,7 @@ const router = createBrowserRouter(
         <Route path='/activity' element={<Activity />} />
         <Route path='/calendar' element={<Calendar />} />
         <Route path="/calendar/:month" element={<MonthView />} />
+        <Route path="/game" element={<Game />} />
       </Route>
 
       <Route path='/activity/yoga' element={<Yoga />} />
