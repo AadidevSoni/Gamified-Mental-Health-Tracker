@@ -94,6 +94,23 @@ The **calendar section** displays a lily pad for each day of the year, helping u
 
 ---
 
+### 🎮 Game Mode – Froggy's Journey
+- Froggy Journey is a gamified way to reflect on your weekly mental wellness.
+- The frog must cross a 7-tile pond using lilypads earned from your last 7 SCADS test scores.
+- Each day’s score is converted into a colored lilypad:
+  - 🟥 Red: <50 → Move back 2 tiles
+  - 🟧 Orange: 50–79 → Move back 1 tile
+  - 🟨 Yellow: 80–109 → Move forward 1 tile
+  - 🟩 Green: ≥110 → Move forward 2 tiles
+- Gameplay:
+- Drag and drop lilypads onto the path.
+- Start from the left (dryland) and reach the goal tile (greenland).
+- Strategy matters! The placement of lilypads determines if Froggy makes it safely.
+- If Froggy lands on an empty tile — he drowns!
+- Purpose: Visualize weekly trends and make mindful decisions to improve your SCADS scores.
+
+---
+
 ## 🔐 Authentication
 - JWT-secured login system
 - Features:
