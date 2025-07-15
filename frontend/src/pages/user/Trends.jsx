@@ -72,14 +72,13 @@ const Trends = () => {
         <div className="video-overlay"></div>
       </div>
 
-      <h1 className="trendsHeading">📈 SCADS Wellness Trends</h1>
+      <h1 className="trendsHeading">SCADS Wellness Trends</h1>
 
       <div className="chartContainer">
         <h2 className="chartTitle">Total SCADS Score Graph</h2>
         <ResponsiveContainer width="100%" height={300}>
           <LineChart data={scoreHistory}>
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="date" tick={{ fill: '#94f7c2' }} />
             <YAxis domain={[0, 100]} tickFormatter={(tick) => `${tick}%`} />
             <Tooltip />
             <Legend />
@@ -93,7 +92,6 @@ const Trends = () => {
         <ResponsiveContainer width="100%" height={300}>
           <LineChart data={scoreHistory}>
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="date" tick={{ fill: '#94f7c2' }} />
             <YAxis domain={[0, 100]} tickFormatter={(tick) => `${tick}%`} />
             <Tooltip />
             <Legend />
@@ -110,7 +108,6 @@ const Trends = () => {
             <ResponsiveContainer width="100%" height={300}>
               <LineChart data={scoreHistory}>
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="date" tick={{ fill: '#94f7c2' }} />
                 <YAxis domain={[0, 100]} tickFormatter={(tick) => `${tick}%`} />
                 <Tooltip />
                 <Legend />

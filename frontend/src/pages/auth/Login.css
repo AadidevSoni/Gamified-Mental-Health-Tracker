@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+html {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .loginBlock {
   position: relative;
   display: flex;
@@ -23,11 +31,14 @@
   margin: 0 auto;
 }
 
+/* Start Login Input */
+
 .sign {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 2rem;
-  font-family: "Oswald", sans-serif;
-  font-weight: bold;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .loginFormContainer {
@@ -39,38 +50,52 @@
 }
 
 .loginEmail {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   display: block;
   margin-bottom: -1rem;
 }
 
 .loginEmailInput {
   width: 100%;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   padding: 10px;
-  margin-top: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 1.4rem;
   border: none;
 }
 
+/* End Login Input */
+
+/* Start Login Button */
+
 .loginButton {
-  margin-top: 0.2rem;
+  margin-top: 1rem;
   width: 100%;
   padding: 0.75rem;
   background-color: #22845d;
   color: #77e9bb;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   border: none;
   border-radius: 25px;
   font-weight: bold;
   cursor: pointer;
-  font-family: "Oswald", sans-serif;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .loginButton:hover {
   background-color: #56b991;
   color: #051711;
 }
+
+/* End Login Button */
+
+/* Start Redirect */
 
 .registerLink {
   color: #77e9bb;
@@ -79,6 +104,8 @@
 }
 
 .newUserContainer {
-  margin-top: 1.5rem;
-  font-size: 1.1rem;
+  margin-top: 2rem;
+  font-size: 1.5rem;
 }
+
+/* End Redirect */

@@ -1,79 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+html {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Start Test Intro */
 .testContainer {
   position: relative;
   min-height: 100vh;
   overflow-x: hidden;
   color: #fff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.video-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
-}
-
-.testQuestion1 {
-  font-size: 1.3rem;
-}
-
-
-.testQuestion {
-  font-size: 1.4rem;
-  margin-top: 3rem;
-}
-
-.activityButtonGroup {
-  margin-top: 20px;
-}
-
-.video-background {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.testQuestions {
-  font-size: 1.5rem;
-  margin-left: 16rem;
-
-}
-
-.video-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.initial-loading-screen {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background:rgb(12, 33, 22);
-  color: #fff;
-}
-
-.loader-circle {
-  width: 60px;
-  height: 60px;
-  border: 6px solid #94a3b8;
-  border-top-color:rgb(49, 234, 104);
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin-bottom: 20px;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  font-style: normal;
 }
 
 .testContent {
@@ -89,22 +31,72 @@
 }
 
 .testHeading {
-  font-size: 2.2rem;
+  font-size: 3rem;
   margin-bottom: 4rem;
   text-align: center;
   color:rgb(74, 237, 123);
 }
 
-.loginFormContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+.scadsHeader {
+  font-size: 2.5rem;
+  text-align: center;
+  color:rgb(32, 96, 55);
+  margin-bottom: 2rem;
+  margin-left: 5rem;
 }
 
-.loginContainers {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
+.scadsSubText {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.scadsList {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.scadsList li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 1.4rem;
+}
+
+.scadsNote {
+  font-style: italic;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.takeTestButton {
+  display: block;
+  margin: 2rem auto 0;
+  background-color:rgb(36, 150, 89);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.takeTestButton:hover {
+  background-color:rgb(23, 133, 72);
+}
+
+/* End Test Intro */
+
+/* Start Sleep */
+
+.testQuestion {
+  font-size: 1.8rem;
 }
 
 .testSleepHourInput {
@@ -112,17 +104,26 @@
   border-radius: 8px;
   border: none;
   width: 8%;
-  font-size: 1rem;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.7rem;
   background: rgba(255, 255, 255, 0.15);
   color: #fff;
   backdrop-filter: blur(4px);
   margin-left: 2rem;
 }
 
+/* End Sleep */
+
+/* Start Activity */
+
 .activityButtonGroup {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .activityButton {
@@ -132,7 +133,10 @@
   border-radius: 8px;
   background-color:rgb(12, 179, 79);
   color: white;
-  font-size: 1.2rem;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -142,31 +146,26 @@
   background-color:rgb(45, 230, 116);
 }
 
-.testQues {
-  margin-bottom: 3rem;
-  margin-top: 1.5rem;
-  text-align: center;
-  font-size: 1.7rem;
-}
-
 .activityButton.active {
   background-color:rgb(105, 216, 134);
 }
 
-.introspective-question {
-  background: rgba(255, 255, 255, 0.07);
-  padding: 16px;
-  border-radius: 12px;
-  color: #f1f5f9;
-  font-size: 1.3rem;
-  margin: 4rem;
+/* End Activity */
+
+/* Start Test Question */
+
+.testQues {
+  margin-bottom: 3rem;
+  margin-top: 5rem;
+  text-align: center;
+  font-size: 2rem;
 }
 
 .radio-option {
   display: block;
   margin-top: 6px;
   padding-left: 12px;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   text-align: center;
   background-color: rgb(7, 93, 44);
   padding: 10px;
@@ -176,13 +175,6 @@
   margin: 15px;
   transition: background-color 0.3s ease, color 0.3s ease;
   cursor: pointer;
-}
-
-.categoryMessage {
-  margin-top: 0.8rem;
-  font-style: italic;
-  font-size: 1rem;
-  color: #f8fafc;
 }
 
 .radio-option input[type="radio"] {
@@ -198,10 +190,38 @@
 }
 
 .radio-option.selected {
-  background-color: rgb(36, 173, 94); /* Selected background */
-  color: #fff; /* Make text white */
+  background-color: rgb(36, 173, 94); 
+  color: #fff; 
 }
 
+/* End Test Question */
+
+/* Start Nav Buttons */ 
+
+.navButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.navButtons button {
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+  background-color: rgb(15, 171, 83);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.navButtons button:hover {
+  background-color:rgb(49, 191, 110);
+}
 
 .submitTestButton {
   background-color: #22c55e;
@@ -216,6 +236,61 @@
 
 .submitTestButton:hover {
   background-color: #16a34a;
+}
+
+/* End Nav Buttons */ 
+
+/* Start Test Result */
+
+.result-summary {
+  background-color: rgba(10, 27, 20, 0.74);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 4rem;
+  margin-left: 30rem;
+  margin-bottom: 4rem;
+  margin-right: 4rem;
+}
+
+.totalScore {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.wellness {
+  font-size: 2rem;
+}
+
+.cat-name-score {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.scoreContainerAns {
+  background-color: rgba(14, 112, 63, 0.54);
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 4rem;
+  text-align: center;
+}
+
+.categoryMessage {
+  margin-top: 0.8rem;
+  font-style: italic;
+  font-size: 1.4rem;
+  color: #f8fafc;
+}
+
+.slider {
+  width: 50%;
+  height: 10px;
+  appearance: none;
+  background: #4ade80;
+  border-radius: 6px;
+  outline: none;
+  margin-bottom: 2rem;
+  border: 2px solid rgb(10, 148, 61);
 }
 
 .testScore {
@@ -237,22 +312,6 @@
   text-align: center;
 }
 
-.takeTestButton {
-  margin-top: 3rem;
-  padding: 15px 20px;
-  font-size: 1.3rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: rgb(61, 191, 111);
-  border: none;
-  color: white;
-  border-radius: 7px;
-}
-
-.takeTestButton:hover {
-  background-color: rgb(90, 226, 142);
-  cursor: pointer;
-}
-
 .testIntroContainer {
   background-color: rgba(25, 218, 93, 0.59);
   padding: 2rem;
@@ -261,78 +320,6 @@
   margin: 2rem auto;
   text-align: left;
   backdrop-filter: blur(6px);
-}
-
-.scadsHeader {
-  font-size: 2rem;
-  text-align: center;
-  color:rgb(32, 96, 55);
-  margin-bottom: 2rem;
-  margin-left: 5rem;
-}
-
-.scadsSubText {
-  font-size: 1.2rem;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.scadsList {
-  list-style-type: none;
-  padding: 0;
-  margin: 1rem 0;
-}
-
-.scadsList li {
-  margin-bottom: 1rem;
-  line-height: 1.6;
-  font-size: 1rem;
-}
-
-.scadsNote {
-  font-style: italic;
-  text-align: center;
-  margin-top: 2rem;
-  font-size: 1.05rem;
-  margin-bottom: 2rem;
-}
-
-.takeTestButton {
-  display: block;
-  margin: 2rem auto 0;
-  background-color:rgb(36, 150, 89);
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.takeTestButton:hover {
-  background-color:rgb(23, 133, 72);
-}
-
-.navButtons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2rem;
-}
-
-.navButtons button {
-  padding: 10px 20px;
-  font-weight: bold;
-  border-radius: 8px;
-  background-color: rgb(15, 171, 83);
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.navButtons button:hover {
-  background-color:rgb(49, 191, 110);
 }
 
 .step {
@@ -344,17 +331,6 @@
   margin-top: 5rem;
   font-size: 1.5rem;
   color: lightgreen;
-}
-
-.result-summary {
-  background-color: rgba(10, 27, 20, 0.74);
-  padding: 2rem;
-  border-radius: 12px;
-  text-align: center;
-  margin-top: 4rem;
-  margin-left: 30rem;
-  margin-bottom: 4rem;
-  margin-right: 4rem;
 }
 
 .scoreBreakdown {
@@ -383,20 +359,6 @@
   border: 2px solid rgb(10, 148, 61);
 }
 
-.submitButtonTest {
-  margin-left: 23rem;
-  font-size: 2rem;
-  padding: 15px 20px;
-}
-
-.scoreContainerAns {
-  background-color: rgba(14, 112, 63, 0.54);
-  border-radius: 10px;
-  padding: 2rem;
-  margin: 4rem;
-  text-align: center;
-}
-
 .scads-result-head {
   font-size: 3rem;
   margin-top:3rem;
@@ -411,19 +373,7 @@
   margin-right: 10rem;
 }
 
-.totalScore {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.wellness {
-  font-size: 1.5rem;
-}
-
-.cat-name-score {
-  margin-bottom: 1rem;
-  font-size: 1.4rem;
-}
+/* RESPONSIVE */
 
 @media (max-width: 768px) {
   .testContent {

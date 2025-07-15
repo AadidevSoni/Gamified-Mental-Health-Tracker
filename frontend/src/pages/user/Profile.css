@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+html {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .profileBlock {
   position: relative;
   display: flex;
@@ -27,9 +35,11 @@
 }
 
 .profileHeading {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 4rem;
-  font-family: "Oswald", sans-serif;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-weight: bold;
 }
 
@@ -42,16 +52,19 @@
 }
 
 .profileFormLabel {
-  font-size: 1.2rem;
+  font-size: 2rem;
   display: block;
 }
 
 .profileFormInput {
   width: 100%;
-  padding: 10px;
+  padding: 15px;
   margin-top: 0.5rem;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   border: none;
 }
 
@@ -61,12 +74,14 @@
   padding: 0.75rem;
   background-color: #22845d;
   color: #77e9bb;
-  font-size: 1.2rem;
+  font-size: 2rem;
   border: none;
   border-radius: 25px;
   font-weight: bold;
   cursor: pointer;
-  font-family: "Oswald", sans-serif;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .profileButton:hover {
@@ -82,19 +97,18 @@
 }
 
 .levelDisplay {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .expDisplay {
-  font-size: 1.5rem;
-  margin-left: 60%;
+  font-size: 2rem;
+  margin-left: 40%;
 }
 
 .badgeDisplay {
   margin-top: 1rem;
-  font-size: 1.3rem;
+  font-size: 2rem;
   color: #a7f3d0;
-  font-weight: bold;
   margin-bottom: 2rem;
   text-align: center;
   background: rgb(7, 130, 78);
@@ -127,7 +141,7 @@
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: bold;
   color: white;
   text-shadow: 1px 1px 2px black;
@@ -160,9 +174,11 @@
 }
 
 .profileHeadingUp {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 6rem;
-  font-family: "Oswald", sans-serif;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-weight: bold;
 }
 

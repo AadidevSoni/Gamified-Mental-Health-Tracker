@@ -1,46 +1,6 @@
-.homeContainer {
-  min-height: 100vh;
-  color: white;
-  padding: 3rem;
-  box-sizing: border-box;
-  background-size: cover;
-  background-attachment: scroll;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
 
-.homeTitle {
-  text-align: center;
-  font-size: 6rem;
-  margin-top: 1rem;
-  line-height: 1;
-  z-index: 1;
-  transform: translateY(70px);
-}
-
-.canopy {
-  display: block;
-  font-size: 9rem;
-  transform: translateY(170px);
-  z-index: 1;
-}
-
-.homeSubtitle {
-  text-align: center;
-  margin-top: 1rem;
-  font-size: 1.5rem;
-  font-weight: 300;
-  z-index: 1;
-  transform: translateY(290px);
-}
-
-.homeContent {
-  z-index: 1;
-  text-align: center;
-  padding-bottom: 10rem;
-}
+/* Start Background Video */
 
 .video-wrapper {
   position: fixed;
@@ -73,6 +33,10 @@
   z-index: -1;
 }
 
+/* End Background Video */
+
+/* Start Loading Screen */
+
 .initial-loading-screen {
   position: fixed;
   top: 0;
@@ -87,7 +51,9 @@
   z-index: 9999;
   color: #77e9bb;
   font-size: 1.5rem;
-  font-family: "Oswald", sans-serif;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .loader-circle {
@@ -114,6 +80,29 @@
   margin-top: 1rem;
 }
 
+/* End Background Video */
+
+.homeContainer {
+  min-height: 100vh;
+  color: white;
+  padding: 3rem;
+  box-sizing: border-box;
+  background-size: cover;
+  background-attachment: scroll;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Start Home Buttons */
+
+.homeContent {
+  z-index: 1;
+  text-align: center;
+  padding-bottom: 10rem;
+}
+
 .homeBtnContainer {
   display: flex;
   flex-direction: row;
@@ -125,27 +114,68 @@
   transform: translateY(-100px);
 }
 
-.homeButton {
-  padding: 12px 28px;
-  margin: 8px;
-  font-size: 1.1rem;
-  border: 2px solid #ffffffcc;
-  border-radius: 30px;
-  background-color: rgba(255, 255, 255, 0.15);
-  color: #fff;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(5px);
-}
-
 .homeButton:hover {
   background-color: #ffffff33;
   border-color: #ffffff;
   transform: scale(1.05);
   box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
 }
+
+.homeButton {
+  padding: 12px 28px;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 8px;
+  font-size: 1.5rem;
+  border: 2px solid #ffffffcc;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+/* End Home Buttons */
+
+/* Start Home Titles */
+
+.homeTitle {
+  text-align: center;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 8rem;
+  margin-top: 1rem;
+  line-height: 1;
+  z-index: 1;
+  transform: translateY(70px);
+}
+
+.canopy {
+  display: block;
+  font-size: 10rem;
+  transform: translateY(130px);
+  z-index: 1;
+}
+
+.homeSubtitle {
+  text-align: center;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: 300;
+  z-index: 1;
+  transform: translateY(230px);
+}
+
+/* End Home Titles */
+
+/* Start popups */
 
 .popupOverlay {
   position: fixed;
@@ -169,29 +199,41 @@
   max-width: 500px;
   width: 90%;
   box-shadow: 0 0 20px rgba(0, 255, 162, 0.3);
-  font-family: 'Oswald', sans-serif;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   text-align: center;
 }
 
 .popupBox h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 4rem;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 2rem;
   color: #77e9bb;
 }
 
 .popupBox pre {
   white-space: pre-wrap;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   text-align: left;
-  line-height: 1.6;
+  font-size: 1.5rem;
+  line-height: 1;
 }
 
 .closePopupBtn {
   margin-top: 1.5rem;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   padding: 10px 20px;
-  font-size: 1rem;
+  font-size: 1.4rem;
   border-radius: 25px;
   background-color: #77e9bb;
-  color: #000;
+  color: rgb(8, 51, 26);
   border: none;
   cursor: pointer;
   font-weight: bold;
@@ -201,6 +243,10 @@
 .closePopupBtn:hover {
   background-color: #51c8a2;
 }
+
+/* End popups */
+
+/* Start Responsive */
 
 @media (max-width: 768px) {
   .video-background {
@@ -215,7 +261,7 @@
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Press Start 2P', cursive;
   }
 
   .popupBox {

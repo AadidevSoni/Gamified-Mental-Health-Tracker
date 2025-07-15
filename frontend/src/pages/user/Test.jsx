@@ -171,12 +171,13 @@ const Test = () => {
         </video>
         <div className="video-overlay"></div>
       </div>
+
       <div className="result-summary">
         <h2 className='scads-result-head'>SCADS Wellness Summary</h2>
         
         <div className="score-wellness">
           <p className='totalScore'><strong>Total Score:</strong> {totalScore}</p>
-          <p className='wellness'><strong>Wellness %:</strong> {(totalScore / 185 * 100).toFixed(1)}%</p>
+          <p className='wellness'><strong>Wellness:</strong> {(totalScore / 185 * 100).toFixed(1)}%</p>
         </div>
 
         <div className="scoreBreakdown">

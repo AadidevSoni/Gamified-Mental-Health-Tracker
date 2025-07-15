@@ -1,44 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+html {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .trendsPage {
   position: relative;
   min-height: 100vh;
   color: #fff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   padding: 2rem;
   overflow-x: hidden;
 }
 
-.video-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
-}
-
-.video-background {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.video-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-}
-
 .trendsHeading {
   text-align: center;
-  font-size: 3rem;
+  font-size: 4rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
   color: rgb(114, 250, 154);
 }
+
+/* Start Charts */
 
 .chartContainer {
   background: rgba(255, 255, 255, 0.05);
@@ -52,6 +39,17 @@
   margin-right: auto;
 }
 
+.chartTitle {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #bbf7d0;
+}
+
+/* End Charts */
+
+/* Start Analysis */
+
 .trendAnalysis {
   background-color: rgba(0, 0, 0, 0.4);
   padding: 2rem;
@@ -63,7 +61,7 @@
 }
 
 .analysisTitle {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 2rem;
   color: #86efac;
   text-align: center;
@@ -73,19 +71,17 @@
   margin-bottom: 1.5rem;
   background-color: rgba(24, 90, 50, 0.5);
   padding: 1rem;
+  font-size: 1.5rem;
   border-radius: 8px;
-}
-
-.chartTitle {
-  text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
-  color: #bbf7d0;
 }
 
 .recharts-wrapper {
   margin: 0 auto;
 }
+
+/* End Analysis */
+
+/* Start Responsive */
 
 @media (max-width: 768px) {
   .trendsHeading {

@@ -54,7 +54,7 @@ const Leaderboard = () => {
       </div>
 
       <div className="leaderboardContainer">
-        <h1 className="leaderboardHeading">🏆 Leaderboard</h1>
+        <h1 className="leaderboardHeading">Leaderboard</h1>
 
         {/* Search bar */}
         <input
