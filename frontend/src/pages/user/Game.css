@@ -1,5 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+html {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .game-grid {
   display: flex;
@@ -10,10 +15,12 @@
 }
 
 .gameTitle {
-  font-family: "Michroma", sans-serif;
+  font-family: "Jersey 10", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 3.3rem;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5rem;
   text-align: center;
   color: white;
   margin: 2rem;
@@ -62,8 +69,10 @@
 .lilypad.green { background-color: #2ecc71; }
 
 .reset-btn {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 0.7rem;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3rem;
   padding: 12px 20px;
   background-color: #ff5252;
   color: white;
@@ -94,8 +103,10 @@
 }
 
 .start-btn {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 0.7rem;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3rem;
   padding: 12px 20px;
   background-color: rgb(25, 217, 114);
   color: white;
@@ -129,7 +140,9 @@
 }
 
 .frog-message {
-  font-family: "Michroma", sans-serif;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-weight: 400;
   font-style: normal;
   font-size: 2rem;
@@ -137,7 +150,9 @@
 }
 
 .gameInventory {
-  font-family: "Michroma", sans-serif;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-weight: 400;
   font-style: normal;
   font-size: 2rem;
@@ -160,8 +175,10 @@
   border: 2px solid white;
   border-radius: 10px;
   color: white;
-  font-size: 1rem;
-  font-family: "Michroma", sans-serif;
+  font-size: 2rem;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -188,32 +205,39 @@
   color: white;
   padding: 2rem 3rem;
   border-radius: 15px;
+  font-size: 1.3rem;
   text-align: center;
-  font-family: "Michroma", sans-serif;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   box-shadow: 0 0 20px rgba(6, 222, 139, 0.6);
 }
 
 .help-content h2 {
   margin-bottom: 1rem;
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 .help-content ul {
   text-align: left;
   list-style: none;
   padding: 0;
+  font-size: 1.6rem;
   margin-bottom: 1rem;
 }
 
 .help-content li {
   margin: 0.5rem 0;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 }
 
 .close-help-btn {
   margin-top: 1rem;
   padding: 10px 20px;
-  font-size: 1.2rem;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
   background-color: #ffcd4d;
   border: none;
   border-radius: 8px;
@@ -267,7 +291,9 @@
   align-items: center;
   justify-content: center;
   animation: fadeIn 0.5s ease-in;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .modal-content {
@@ -295,7 +321,9 @@
 }
 
 .modal-content button {
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 0.7rem;
   padding: 10px 20px;
   background-color: #ffcd4d;
@@ -328,13 +356,15 @@
   flex-direction: column;
   align-items: center;
   box-shadow: 0 0 0 4px #555, 0 0 0 8px #000;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   position: relative;
 }
 
 .inventory-container::before {
   content: 'INVENTORY';
-  font-size: 0.8rem;
+  font-size: 1.4rem;
   color: #ffffff;
   position: absolute;
   top: -20px;
@@ -343,7 +373,9 @@
   padding: 2px 8px;
   border: 2px solid #fff;
   box-shadow: 2px 2px 0px #444;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .inventory-row {

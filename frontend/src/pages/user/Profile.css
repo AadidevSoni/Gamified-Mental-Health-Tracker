@@ -36,7 +36,7 @@ html {
 
 .profileHeading {
   font-size: 4rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   font-family: "Jersey 10", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -107,7 +107,7 @@ html {
 
 .badgeDisplay {
   margin-top: 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #a7f3d0;
   margin-bottom: 2rem;
   text-align: center;
@@ -175,7 +175,7 @@ html {
 
 .profileHeadingUp {
   font-size: 4rem;
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
   font-family: "Jersey 10", sans-serif;
   font-weight: 400;
   font-style: normal;

@@ -13,6 +13,13 @@ const Trends = () => {
 
   //UseStates
   const [scoreHistory, setScoreHistory] = useState([]);
+  const [loadingScreen, setLoadingScreen] = useState(true);
+
+  //Loading screen timer
+  useEffect(() => {
+    const timer = setTimeout(() => setLoadingScreen(false), 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   //Fetch score history
   useEffect(() => {
@@ -65,6 +72,13 @@ const Trends = () => {
 
   return (
     <div className="trendsPage">
+      {loadingScreen && (
+        <div className="initial-loading-screen">
+          <div className="loader-circle"></div>
+          <p className="loading-text">Loading Leaderboard...</p>
+        </div>
+      )}
+
       <div className="video-wrapper">
         <video autoPlay muted loop className="video-background">
           <source src="/videos/frog1.mp4" type="video/mp4" />
