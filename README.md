@@ -1,122 +1,59 @@
-# 🧠 Mindleap
+## Mindleap
+Mindleap is a mental health tracking platform that combines gamification with personalized insights to support emotional well-being. It features the SCADS Test, an interactive quiz assessing five key mental health parameters:
 
-**Mindleap** is a calming, gamified mental health tracker that helps users analyze their mood, sleep, and emotional wellness.  
-This is done through an interactive and engaging quiz called the **SCADS Test**, which evaluates five key mental health parameters:
-
-- **S** — Stress  
-- **C** — Concentration  
-- **A** — Anxiety  
-- **D** — Depression  
-- **S** — Self-Worth  
-
-The SCADS Test generates a personalized wellness report and gives suggestions based on the user's current mental state.
-
+- Stress
+- Concentration
+- Anxiety
+- Depression
+- Self-Worth
+The test provides a personalized wellness report and tailored recommendations based on your current mental state.
 ---
+## Key Features
+## Daily Wellness Visualization
 
-## Daily Wellness Visual — The Lily Pad
+- Lily Pad Indicator: Changes color (Red, Orange, Yellow, Green) based on your SCADS score to reflect your daily mental health status.
+- Score Calendar: Displays lily pads across the year, highlighting mental health trends over time.
 
-Your daily progress is visualized using a **lily pad that changes color** depending on your SCADS score:
+## User Profile Management
 
-- 🟥 **Red** – High distress  
-- 🟧 **Orange** – Moderate imbalance  
-- 🟨 **Yellow** – Moderate balance  
-- 🟩 **Green** – Balanced and healthy  
+- View and update profile details (username, email, password).
+- Track earned badges, total lily pads, and level progress.
+- Review detailed lily pad collection by color.
 
-The **calendar section** displays a lily pad for each day of the year, helping users identify mental health trends over time.
+## SCADS Test & Reports
 
+- Submit a daily mental health assessment (once per day).
+- Input sleep, activities, and answer introspective questions.
+- Receive personalized scores, insights, and suggestions.
+
+## Data Visualization & Analysis
+
+- Graphical representation of your mental health patterns across categories.
+- Analytical reports highlighting areas for improvement.
+
+## Activities & Resources
+
+- Engage with wellness activities (e.g., Yoga, Journaling, Art).
+- Access external resources like music, books, and visual content.
+
+## Score Tracking & Leaderboard
+
+- Visualize daily scores with color-coded lily pads.
+- Compete and compare with others based on level and EXP.
+- Gain EXP from SCADS scores, leveling up as your mental health improves.
+
+## Gamified Experience: Froggy’s Journey
+
+- A mini-game simulating weekly progress, where lily pads earned influence Froggy’s crossing across a pond.
+- Visualize weekly trends and motivate positive changes through interactive gameplay.
 ---
+## Security & Admin Features
 
-## 🌟 Key Features
-
-### 🧑‍💼 User Profile Management
-- View current profile with username, email, level, and EXP
-- Display earned **badge** based on level
-- Track total lily pads collected with color breakdown
-- Update profile info (username, email, password)
-
+- JWT-based authentication with bcryptjs for secure login.
+- Admin panel protected by middleware to manage user accounts, view reports, and perform edits.
 ---
+## Grow Your Wellbeing
 
-### 🛠️ Admin Functionality
-- Protected by `authenticate` and `authorizedAdmin` middleware
-- Admin features:
-  - View all user accounts (excluding passwords)
-  - Edit usernames and emails
-  - Delete accounts (except other admins)
-
+Mindleap encourages daily reflection and mindful growth—one lily pad at a time.
 ---
-
-### 📅 Daily Mental Health Test
-- SCADS test **Submitted once per day** (resets at midnight)
-- Inputs:
-  - Sleep hours  
-  - Daily activities  
-  - 20 introspective questions (4 per SCADS category)
-- Calculates and stores:
-  - Total wellness score
-  - Individual category scores
-- Personalized suggestions based on each category score
-
----
-
-### 📈 Graphical Representation
-- Users can visualize a graph of their mental health patterns
-- Gives a graph pattern for each categories
-- Analyses each graph and gives a report to the user suggesting where the user needs improvements
-
----
-
-### 🎯 Activity Overview
-- Grid of engaging wellness activities (Yoga, Journaling, Art, etc.)
-- Each activity links to a themed content page
-- Includes external resources for music, books, visual entertainment
-
----
-
-### 📆 Score Calendar
-- Visualizes your daily score using colored lily pads:
-  - 🟥 **Red** – Lower scores
-  - 🟧 **Orange** – Below average scores
-  - 🟨 **Yellow** – Above average scores
-  - 🟩 **Green** – Higher scores
-- Automatically pulls data from each user’s `scoreHistory`
-- View your score history for each category on that given day
-
----
-
-### 🏆 Leaderboard
-- Ranks users based on:
-  - **Level**
-  - **EXP** (gained from SCADS test scores)
-- EXP System:
-  - Earn EXP equal to your SCADS test score
-  - Level up at every 100 EXP (resets to 0 after leveling)
-  - Better mental health → higher level!
-
----
-
-### 🎮 Game Mode – Froggy's Journey
-- Froggy Journey is a gamified way to reflect on your weekly mental wellness.
-- The frog must cross a 7-tile pond using lilypads earned from your last 7 SCADS test scores.
-- Each day’s score is converted into a colored lilypad:
-  - 🟥 Red: <50 → Move back 2 tiles
-  - 🟧 Orange: 50–79 → Move back 1 tile
-  - 🟨 Yellow: 80–109 → Move forward 1 tile
-  - 🟩 Green: ≥110 → Move forward 2 tiles
-- Gameplay:
-- Drag and drop lilypads onto the path.
-- Start from the left (dryland) and reach the goal tile (greenland).
-- Strategy matters! The placement of lilypads determines if Froggy makes it safely.
-- If Froggy lands on an empty tile — he drowns!
-- Purpose: Visualize weekly trends and make mindful decisions to improve your SCADS scores.
-
----
-
-## 🔐 Authentication
-- JWT-secured login system
-- Features:
-  - User Registration
-  - Login / Logout
-  - Secure password hashing with `bcryptjs`
-  - Cookie-based session tracking
-
-> 🌱 *Mindleap is your daily mental wellness companion — grow one lily pad at a time.*
+>For more details, visit our repository.
