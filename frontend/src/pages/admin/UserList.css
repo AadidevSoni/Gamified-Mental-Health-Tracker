@@ -1,93 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+html {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .userlistContainer {
-    padding: 1rem;
-    font-family: "Oswald", sans-serif;
-    font-size: 1rem;
-    color: white;
+  padding: 1rem;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  color: white;
 }
 
 .userlistTable {
-    width: 100%;
-
+  width: 100%;
 }
 
 .userTableContainer {
-    display: flex;
-    flex-direction :column;
-    background: rgba(195, 195, 195, 0.11);
-    border-radius: 10px;
-    border: solid 2px rgba(1, 2, 23, 0.33);
+  display: flex;
+  flex-direction :column;
+  background: rgba(195, 195, 195, 0.11);
+  border-radius: 10px;
+  border: solid 2px rgba(1, 2, 23, 0.33);
 }
 
 .thStyle {
-    padding-bottom: 3rem;
-    padding-top: 2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    text-align: left;
-    font-size: 1.8rem;
+  padding-bottom: 3rem;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-right: 1rem;
+  text-align: left;
+  font-size: 2rem;
 }
 
 .tdStyle {
-    padding: 1rem;
-    font-size: 1.2rem;
+  padding: 1rem;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
 }
 
 .userlistEditableId {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .inputEditUsername {
-    width: 75%;
-    padding: 10px;
-    border-radius: 8px;
-    border: none;
-    font-family: "Oswald", sans-serif;
-    font-size: 1rem;
-    font-weight: bold
+  width: 75%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
 }
 
 .userlistButton {
-    margin-left: 10px;
-    background-color: rgb(25, 232, 156);
-    color: white;
-    padding: 6px;
-    border-radius: 7px;
-    border: none;
+  margin-left: 10px;
+  background-color: rgb(25, 232, 156);
+  color: white;
+  padding: 6px;
+  border-radius: 7px;
+  border: none;
 }
 
 .userlistButton:hover {
-    background-color: rgb(123, 252, 204);
-    cursor: pointer;
+  background-color: rgb(123, 252, 204);
+  cursor: pointer;
 }
 
 .listEdit {
-    padding: 1px;
+  padding: 1px;
 }
 
 .editButton {
-    margin-left: 1rem;
-    padding: 1px;
+  margin-left: 1rem;
+  padding: 1px;
 }
 
 .editButton:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .deleteButton {
-    background-color: rgb(238, 39, 21);
-    color: white;
-    font-weight: bold;
-    padding: 4px;
-    border-radius: 7px;
-    border: none;
-    padding: 7px;
-    border: solid 2px rgba(1, 2, 23, 0.33);
+  background-color: rgb(238, 39, 21);
+  color: white;
+  padding: 4px;
+  border-radius: 7px;
+  border: none;
+  padding: 7px;
+  border: solid 2px rgba(1, 2, 23, 0.33);
 }
 
 .deleteButton:hover {
-    background-color: rgb(238, 98, 86);
-    cursor: pointer;
+  background-color: rgb(238, 98, 86);
+  cursor: pointer;
 }
 
 @media (max-width: 1024px) {

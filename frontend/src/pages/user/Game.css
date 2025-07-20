@@ -6,161 +6,7 @@ html {
   font-style: normal;
 }
 
-.game-grid {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 12px;
-  margin: 2rem 0;
-}
-
-.gameTitle {
-  font-family: "Jersey 10", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 5rem;
-  text-align: center;
-  color: white;
-  margin: 2rem;
-  margin-bottom: 6rem;
-}
-
-.grid-tile,
-.goal-tile,
-.frog-tile {
-  width: 120px;
-  height: 120px;
-  border-radius: 10px;
-  background-color:rgba(255, 255, 255, 0.09);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.frog-tile {
-  background-color:rgba(255, 255, 255, 0);
-}
-
-.goal-tile {
-  background-color:rgb(5, 235, 97);
-}
-
-.frog-sprite {
-  position: absolute;
-  width: 100px;
-  animation: frogHop 0.4s ease;
-  pointer-events: none;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-@keyframes frogHop {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-50px); }
-  100% { transform: translateY(0); }
-}
-
-.lilypad.red { background-color: #e74c3c; }
-.lilypad.orange { background-color: #e67e22; }
-.lilypad.yellow { background-color: #f1c40f; }
-.lilypad.green { background-color: #2ecc71; }
-
-.reset-btn {
-  font-family: "Jersey 10", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.3rem;
-  padding: 12px 20px;
-  background-color: #ff5252;
-  color: white;
-  border: 4px solid #000;
-  border-radius: 0;
-  cursor: pointer;
-  box-shadow: 0 0 0 4px #fff, 0 0 0 8px #000;
-  text-transform: uppercase;
-  transition: transform 0.1s ease-in-out, background-color 0.2s;
-}
-
-.reset-btn:hover {
-  background-color: #ff7979;
-  transform: translateY(-2px);
-}
-
-.reset-btn:active {
-  background-color: #e64545;
-  transform: translateY(1px);
-}
-
-.btn-container-game {
-  margin-top: 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-
-.start-btn {
-  font-family: "Jersey 10", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.3rem;
-  padding: 12px 20px;
-  background-color: rgb(25, 217, 114);
-  color: white;
-  border: 4px solid #000;
-  border-radius: 0;
-  cursor: pointer;
-  box-shadow: 0 0 0 4px #fff, 0 0 0 8px #000;
-  text-transform: uppercase;
-  margin-right: 7rem;
-  transition: transform 0.1s ease-in-out, background-color 0.2s;
-}
-
-.start-btn:hover {
-  background-color: rgb(68, 236, 146);
-  transform: translateY(-2px);
-}
-
-.start-btn:active {
-  background-color: rgb(20, 180, 100);
-  transform: translateY(1px);
-}
-
-.gameMsgContainer {
-  margin-top: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  padding: 20px;
-  margin-bottom: 3rem;
-}
-
-.frog-message {
-  font-family: "Jersey 10", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 2rem;
-  color: white;
-}
-
-.gameInventory {
-  font-family: "Jersey 10", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 2rem;
-  text-align: center;
-  color: white;
-  margin: 5rem;
-  margin-bottom: 1rem;
-}
+/* Start Help */
 
 .top-bar {
   position: absolute;
@@ -251,18 +97,38 @@ html {
   background-color: #ffe68c;
 }
 
-.start-tile
- {
+/* End Help */
+
+/* Start Ttiels */
+
+.gameTitle {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5rem;
+  text-align: center;
+  color: white;
+  margin: 2rem;
+  margin-bottom: 6rem;
+}
+
+.grid-tile,
+.goal-tile,
+.frog-tile {
   width: 120px;
   height: 120px;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color:rgba(255, 255, 255, 0.09);
   display: flex;
-  background-color:rgb(201, 153, 8);
   justify-content: center;
   align-items: center;
   position: relative;
-  border: 2px dashed white;
+}
+
+.frog-tile {
+  background-color:rgba(255, 255, 255, 0);
 }
 
 .goal-tile
@@ -279,69 +145,176 @@ html {
   border: 2px dashed white;
 }
 
-.game-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(20, 20, 40, 0.9);
-  z-index: 1000;
+/* End Titles */
+
+/* Start Game Grid */
+
+.game-grid {
   display: flex;
-  align-items: center;
   justify-content: center;
-  animation: fadeIn 0.5s ease-in;
+  align-items: flex-end;
+  gap: 12px;
+  margin: 2rem 0;
+}
+
+/* End Game Grid */
+
+/* Start Game Items */  
+
+.frog-sprite {
+  width: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Apply to frog */
+.frog-sprite.jump {
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+/* Arc jump: forward 1 tile */
+@keyframes jump-forward-1 {
+  0%   { transform: translate(0, 0); }
+  50%  { transform: translate(60px, -60px); }
+  100% { transform: translate(120px, 0); }
+}
+
+/* Arc jump: forward 2 tiles */
+@keyframes jump-forward-2 {
+  0%   { transform: translate(0, 0); }
+  50%  { transform: translate(120px, -80px); }
+  100% { transform: translate(240px, 0); }
+}
+
+/* Arc jump: backward 1 tile */
+@keyframes jump-backward-1 {
+  0%   { transform: translate(0, 0); }
+  50%  { transform: translate(-60px, -60px); }
+  100% { transform: translate(-120px, 0); }
+}
+
+/* Arc jump: backward 2 tiles */
+@keyframes jump-backward-2 {
+  0%   { transform: translate(0, 0); }
+  50%  { transform: translate(-120px, -80px); }
+  100% { transform: translate(-240px, 0); }
+}
+
+.lilypad.red { background-color: #e74c3c; }
+.lilypad.orange { background-color: #e67e22; }
+.lilypad.yellow { background-color: #f1c40f; }
+.lilypad.green { background-color: #2ecc71; }
+
+/* End Game Items */
+
+/* Start Game Buttons */
+
+.btn-container-game {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.reset-btn {
   font-family: "Jersey 10", sans-serif;
   font-weight: 400;
   font-style: normal;
-}
-
-.modal-content {
-  background: #fff;
-  padding: 2rem;
-  border: 6px solid #000;
-  border-radius: 0;
-  text-align: center;
-  box-shadow: 0 0 0 6px #fff, 0 0 0 12px #000;
-  animation: popIn 0.3s ease;
-  max-width: 500px;
-}
-
-.modal-content h2 {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-  color: #111;
-  text-shadow: 2px 2px 0 #ccc;
-}
-
-.modal-content p {
-  font-size: 0.7rem;
-  color: #222;
-  margin-bottom: 1rem;
-}
-
-.modal-content button {
-  font-family: "Jersey 10", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.7rem;
-  padding: 10px 20px;
-  background-color: #ffcd4d;
+  font-size: 1.3rem;
+  padding: 12px 20px;
+  background-color: #ff5252;
+  color: white;
   border: 4px solid #000;
   border-radius: 0;
   cursor: pointer;
   box-shadow: 0 0 0 4px #fff, 0 0 0 8px #000;
+  text-transform: uppercase;
   transition: transform 0.1s ease-in-out, background-color 0.2s;
 }
 
-.modal-content button:hover {
-  background-color: #ffe68c;
+.reset-btn:hover {
+  background-color: #ff7979;
   transform: translateY(-2px);
 }
 
-.modal-content button:active {
-  background-color: #ffd633;
+.reset-btn:active {
+  background-color: #e64545;
   transform: translateY(1px);
+}
+
+.start-btn {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3rem;
+  padding: 12px 20px;
+  background-color: rgb(25, 217, 114);
+  color: white;
+  border: 4px solid #000;
+  border-radius: 0;
+  cursor: pointer;
+  box-shadow: 0 0 0 4px #fff, 0 0 0 8px #000;
+  text-transform: uppercase;
+  margin-right: 7rem;
+  transition: transform 0.1s ease-in-out, background-color 0.2s;
+}
+
+.start-btn:hover {
+  background-color: rgb(68, 236, 146);
+  transform: translateY(-2px);
+}
+
+.start-btn:active {
+  background-color: rgb(20, 180, 100);
+  transform: translateY(1px);
+}
+
+/* End Game Buttons */
+
+/* Start Game Messages */
+
+.gameMsgContainer {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 20px;
+  margin-bottom: 3rem;
+}
+
+.frog-message {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  color: white;
+}
+
+/* End Game Messages */
+
+/* Start Inventory */
+
+.gameInventory {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  margin: 5rem;
+  margin-bottom: 1rem;
 }
 
 .inventory-container {
@@ -421,3 +394,87 @@ html {
 .inventory-lilypad:active .lilypad-img {
   transform: scale(0.95);
 }
+
+/* End Inventory */
+
+/* Start Game Over and Won */
+
+.start-tile
+ {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  display: flex;
+  background-color:rgb(201, 153, 8);
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 2px dashed white;
+}
+
+.game-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 20, 40, 0.9);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.5s ease-in;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border: 6px solid #000;
+  border-radius: 0;
+  text-align: center;
+  box-shadow: 0 0 0 6px #fff, 0 0 0 12px #000;
+  animation: popIn 0.3s ease;
+  max-width: 500px;
+}
+
+.modal-content h2 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  color: #111;
+  text-shadow: 2px 2px 0 #ccc;
+}
+
+.modal-content p {
+  font-size: 1.4rem;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.modal-content button {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  background-color: #ffcd4d;
+  border: 4px solid #000;
+  border-radius: 0;
+  cursor: pointer;
+  box-shadow: 0 0 0 4px #fff, 0 0 0 8px #000;
+  transition: transform 0.1s ease-in-out, background-color 0.2s;
+}
+
+.modal-content button:hover {
+  background-color: #ffe68c;
+  transform: translateY(-2px);
+}
+
+.modal-content button:active {
+  background-color: #ffd633;
+  transform: translateY(1px);
+}
+/* End Game Over and Won */

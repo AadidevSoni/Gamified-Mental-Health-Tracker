@@ -18,6 +18,9 @@ const Game = () => {
   const [showHelp, setShowHelp] = useState(false);
   const [gameOver, setGameOver] = useState(false);
   const [gameWon, setGameWon] = useState(false);
+  const [frogAnimationClass, setFrogAnimationClass] = useState('');
+  const [prevFrogPos, setPrevFrogPos] = useState(-1);
+
 
   //Loading Screen
   useEffect(() => {
@@ -96,7 +99,9 @@ const Game = () => {
     }
 
     let pos = 0;
+    let prev = 0;
     const steps = [0];
+    setPrevFrogPos(0); // reset at the start
 
     // Apply tile 0 lilypad movement
     const firstTile = grid[0];
@@ -141,25 +146,37 @@ const Game = () => {
 
     steps.forEach((step, index) => {
       setTimeout(() => {
-        if (step < 7 && !grid[step]) {
-          setMessage("Froggy drowned!");
-          setFrogPosition(step);
-          setGameOver(true);   
-          drowned = true;
-          return;
-        }
+        const delta = step - prevFrogPos;
+        let animationClass = '';
 
-        setFrogPosition(step);
+        if (delta === 1) animationClass = 'jump-forward-1';
+        else if (delta === 2) animationClass = 'jump-forward-2';
+        else if (delta === -1) animationClass = 'jump-backward-1';
+        else if (delta === -2) animationClass = 'jump-backward-2';
 
-        if (index === steps.length - 1 && !drowned) {
-          if (step >= 7) {
-            setMessage("Froggy made it to land!");
-            setGameWon(true);  
-          } else {
-            setMessage("Froggy couldn't reach the land.");
-            setGameOver(true); 
+        // Set animation WHILE frog is still in prevFrogPos tile
+        setFrogAnimationClass(animationClass);
+
+        // Don't move frogPosition yet, wait for animation to finish
+        setTimeout(() => {
+          setFrogAnimationClass('');         // Clear animation
+          setFrogPosition(step);             // Now move frog
+          setPrevFrogPos(step);              // Update prev
+
+          // Check for game states
+          if (step < 7 && !grid[step]) {
+            setMessage("Froggy drowned!");
+            setGameOver(true);
+          } else if (index === steps.length - 1) {
+            if (step >= 7) {
+              setMessage("Froggy made it to land!");
+              setGameWon(true);
+            } else {
+              setMessage("Froggy couldn't reach the land.");
+              setGameOver(true);
+            }
           }
-        }
+        }, 800); // Wait for animation to complete before moving frog
       }, index * 1000);
     });
   };
@@ -215,7 +232,7 @@ const Game = () => {
                 <img
                   src="/pictures/frog-pixel.gif"
                   alt="frog"
-                  className="frog-sprite"
+                  className={`frog-sprite jump ${frogAnimationClass}`}
                 />
               ) : null}
             </div>
@@ -302,6 +319,7 @@ const Game = () => {
           <button className="reset-btn" onClick={() => {
             setGrid(Array(7).fill(null));
             setSelectedLilypads(scoreHistory);
+            setFrogAnimationClass('');
             setFrogPosition(-1);
             setMessage('');
           }}>
