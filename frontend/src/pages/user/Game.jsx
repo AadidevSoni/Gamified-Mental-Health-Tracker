@@ -307,6 +307,7 @@ const Game = () => {
             <div className="modal-content">
               <h2>YOU WON!</h2>
               <p>Froggy reached the land safely.</p>
+              <p>Exp Gained: {selectedLilypads.length}</p>
             </div>
           </div>
         )}

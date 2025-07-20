@@ -66,7 +66,7 @@ const Test = () => {
           if (selected.length > 0) {
             setDailyQuestions(selected.sort(() => 0.5 - Math.random()));
           } else {
-            console.warn('❌ No questions were selected. Check tags or allQuestions.json');
+            console.warn('No questions were selected. Check tags or allQuestions.json');
           }
         }
       } catch (err) {
