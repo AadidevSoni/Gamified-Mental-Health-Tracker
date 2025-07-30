@@ -281,6 +281,26 @@ const addExpToUser = asyncHandler(async (req, res) => {
   res.json({ message: 'EXP added successfully', newExp: user.exp, level: user.level });
 });
 
+const gamePlayedToday = asyncHandler(async (req, res) => {
+  const user = await User.findById(req.user._id);
+
+  const lastPlayed = user.lastFrogGameWin;
+  const today = new Date().toDateString();
+
+  if (lastPlayed && new Date(lastPlayed).toDateString() === today) {
+    res.json({ playedToday: true });
+  } else {
+    res.json({ playedToday: false });
+  }
+});
+
+const gameMarkPlayed = asyncHandler(async (req, res) => {
+  const user = await User.findById(req.user._id);
+  user.lastFrogGameWin = new Date();
+  await user.save();
+  res.json({ success: true });
+});
+
 export { createUser,loginUser,logoutCurrentUser,getAllUsers,getCurrentUserProfile,updateCurrentUserProfile,deleteUserById,
-         getUserById,updateUserById,getLeaderBoard,saveTodayScore,getScoreHistory,addExpToUser
+         getUserById,updateUserById,getLeaderBoard,saveTodayScore,getScoreHistory,addExpToUser,gamePlayedToday,gameMarkPlayed
 };

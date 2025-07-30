@@ -1,6 +1,6 @@
 import express from "express";
 import {createUser,loginUser,logoutCurrentUser,getAllUsers,getCurrentUserProfile,updateCurrentUserProfile,deleteUserById,getUserById,updateUserById,
-  getLeaderBoard,saveTodayScore,getScoreHistory,addExpToUser
+  getLeaderBoard,saveTodayScore,getScoreHistory,addExpToUser,gamePlayedToday,gameMarkPlayed
 } from "../controllers/userController.js";
 import { authenticate, authorizedAdmin } from "../middlewares/authMiddleware.js";
 
@@ -27,5 +27,9 @@ router.post('/score', authenticate, saveTodayScore);
 router.get('/score/history', authenticate, getScoreHistory);
 
 router.post('/add-exp', authenticate, addExpToUser);
+
+router.get('/frog-played-today', authenticate, gamePlayedToday);
+
+router.post('/frog-mark-played', authenticate, gameMarkPlayed);
 
 export default router;
