@@ -73,6 +73,7 @@
   }
 
   .activityTitle {
+    font-family: "Jersey 10", sans-serif;
     font-size: 1.1rem;
   }
 }
