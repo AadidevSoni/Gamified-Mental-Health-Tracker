@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Game.css';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux'; // already imported
 
 const Game = () => {
 
@@ -20,7 +21,11 @@ const Game = () => {
   const [gameWon, setGameWon] = useState(false);
   const [frogAnimationClass, setFrogAnimationClass] = useState('');
   const [prevFrogPos, setPrevFrogPos] = useState(-1);
+  const [touchItem, setTouchItem] = useState(null);
+  const [touchIndex, setTouchIndex] = useState(null);
+  const [gainedExp, setGainedExp] = useState(0);
 
+  const dispatch = useDispatch();
 
   //Loading Screen
   useEffect(() => {
@@ -89,6 +94,28 @@ const Game = () => {
     setSelectedLilypads(updatedLilys);
   };
 
+  //Touch functionality
+  const handleTouchStart = (e, item, index) => {
+    setTouchItem(item);
+    setTouchIndex(index);
+  };
+
+  const handleTouchDrop = (dropIndex) => {
+    if (!touchItem || grid[dropIndex]) return;
+
+    const updatedGrid = [...grid];
+    updatedGrid[dropIndex] = touchItem;
+    setGrid(updatedGrid);
+
+    const updatedLilys = [...selectedLilypads];
+    updatedLilys.splice(touchIndex, 1);
+    setSelectedLilypads(updatedLilys);
+
+    setTouchItem(null);
+    setTouchIndex(null);
+  };
+
+
   //Jump Function
   const jump = () => {
     if (!grid[0]) {
@@ -111,7 +138,7 @@ const Game = () => {
         pos = Math.max(0, pos - 1);
         break;
       case 'Yellow':
-        pos = Math.min(7, pos + 1);
+        pos = Math.min(7, pos + 2);
         break;
       case 'Green':
         pos = Math.min(7, pos + 2);
@@ -120,27 +147,24 @@ const Game = () => {
     steps.push(pos);
 
     // Loop through remaining tiles and apply movement
-    for (let i = 1; i < grid.length; i++) {
-      const tile = grid[i];
-      if (!tile) continue;
+    while (pos < 7) {
+      steps.push(pos);
+      const tile = grid[pos];
+      if (!tile) break; // Froggy drowned!
 
       switch (tile.color) {
-        case 'Red':
-          pos = Math.max(0, pos - 2);
-          break;
-        case 'Orange':
-          pos = Math.max(0, pos - 1);
-          break;
-        case 'Yellow':
-          pos = Math.min(7, pos + 1);
-          break;
-        case 'Green':
-          pos = Math.min(7, pos + 2);
-          break;
+        case 'Red':     pos = Math.max(0, pos - 2); break;
+        case 'Orange':  pos = Math.max(0, pos - 1); break;
+        case 'Yellow':  pos = Math.min(7, pos + 2); break;
+        case 'Green':   pos = Math.min(7, pos + 2); break;
+        default:        break;
       }
 
-      steps.push(pos);
+      // Prevent infinite loop (e.g. Red on tile 0)
+      if (steps.includes(pos)) break;
     }
+
+    steps.push(pos); // Final step (win or drown)
 
     let drowned = false;
 
@@ -164,9 +188,43 @@ const Game = () => {
           setPrevFrogPos(step);              // Update prev
 
           // Check for game states
-          if (step < 7 && !grid[step]) {
-            setMessage("Froggy drowned!");
-            setGameOver(true);
+          if (step >= 7) {
+            setMessage("Froggy made it to land!");
+            setGameWon(true);
+
+            // Count lilypads used (non-null tiles)
+            const usedLilypads = grid.filter(tile => tile !== null).length;
+
+            // Determine EXP
+            let gainedExp = 0;
+            if (usedLilypads === 4) gainedExp = 400;
+            else if (usedLilypads === 5) gainedExp = 300;
+            else if (usedLilypads === 6) gainedExp = 200;
+            else if (usedLilypads === 7) gainedExp = 100;
+            else gainedExp = 0; // Less than 4 or more than 7 (if needed)
+            setGainedExp(gainedExp);
+
+            if (gainedExp > 0) {
+              axios.post(
+                '/api/users/add-exp',
+                { exp: gainedExp },
+                { headers: { Authorization: `Bearer ${userInfo.token}` } }
+              ).then((res) => {
+                console.log('EXP added:', res.data);
+              }).catch((err) => {
+                console.error('Failed to add EXP:', err);
+              });
+
+              // Refresh profile after adding EXP
+              axios.get('/api/users/profile', {
+                headers: { Authorization: `Bearer ${userInfo.token}` },
+              }).then((res) => {
+                dispatch(setCredentials({ ...res.data }));
+              }).catch((err) => {
+                console.error('Failed to refresh profile:', err);
+              });
+            }
+
           } else if (index === steps.length - 1) {
             if (step >= 7) {
               setMessage("Froggy made it to land!");
@@ -216,6 +274,9 @@ const Game = () => {
               onDrop={
                 idx !== 0 && idx !== 8 ? (e) => handleDrop(e, idx - 1) : undefined
               }
+              onTouchEnd={
+                idx !== 0 && idx !== 8 ? () => handleTouchDrop(idx - 1) : undefined
+              }
             >
               {/* Lilypad image */}
               {tile !== 'start' && tile !== 'goal' && tile && (
@@ -247,6 +308,7 @@ const Game = () => {
                   <div
                     draggable
                     onDragStart={(e) => handleDragStart(e, selectedLilypads[idx], idx)}
+                    onTouchStart={(e) => handleTouchStart(e, selectedLilypads[idx], idx)}
                     className={`inventory-lilypad ${selectedLilypads[idx].color}`}
                   >
                     <img
@@ -307,10 +369,19 @@ const Game = () => {
             <div className="modal-content">
               <h2>YOU WON!</h2>
               <p>Froggy reached the land safely.</p>
-              <p>Exp Gained: {selectedLilypads.length}</p>
+              <p><strong>EXP Gained: {gainedExp}</strong></p>
+              <button onClick={() => {
+                setGameWon(false);
+                setGrid(Array(7).fill(null));
+                setSelectedLilypads(scoreHistory);
+                setFrogAnimationClass('');
+                setFrogPosition(-1);
+                setMessage('');
+              }}>Close</button>
             </div>
           </div>
         )}
+
 
         <div className="btn-container-game">
           <button className="start-btn" onClick={jump}>

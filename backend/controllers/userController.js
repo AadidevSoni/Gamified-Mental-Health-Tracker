@@ -259,6 +259,28 @@ const getScoreHistory = asyncHandler(async (req, res) => {
   }
 });
 
+const addExpToUser = asyncHandler(async (req, res) => {
+  const user = await User.findById(req.user._id);
+  const { exp } = req.body;
+
+  if (!user) {
+    res.status(404);
+    throw new Error('User not found');
+  }
+
+  user.exp += exp;
+
+  // Handle level-up
+  while (user.exp >= 100) {
+    user.level += 1;
+    user.exp -= 100;
+  }
+
+  await user.save();
+
+  res.json({ message: 'EXP added successfully', newExp: user.exp, level: user.level });
+});
+
 export { createUser,loginUser,logoutCurrentUser,getAllUsers,getCurrentUserProfile,updateCurrentUserProfile,deleteUserById,
-         getUserById,updateUserById,getLeaderBoard,saveTodayScore,getScoreHistory
+         getUserById,updateUserById,getLeaderBoard,saveTodayScore,getScoreHistory,addExpToUser
 };

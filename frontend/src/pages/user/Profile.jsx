@@ -39,6 +39,44 @@
     //userApiSlice call
     const [updateProfile, { isLoading: loadingUpdateProfile }] = useProfileMutation();
 
+    //Update the level and exp on winning game and tests
+    useEffect(() => {
+      const fetchUpdatedProfile = async () => {
+        try {
+          const { data } = await axios.get('/api/users/profile', {
+            headers: {
+              Authorization: `Bearer ${userInfo.token}`,
+            },
+          });
+          dispatch(setCredentials({ ...data }));
+          setLevel(data.level);
+          setExp(data.exp);
+        } catch (err) {
+          console.error('Failed to refresh profile:', err);
+        }
+      };
+
+      fetchUpdatedProfile();
+    }, []);
+    useEffect(() => {
+      const fetchUpdatedProfile = async () => {
+        try {
+          const { data } = await axios.get('/api/users/profile', {
+            headers: {
+              Authorization: `Bearer ${userInfo.token}`,
+            },
+          });
+          dispatch(setCredentials({ ...data }));
+          setLevel(data.level);
+          setExp(data.exp);
+        } catch (err) {
+          console.error('Failed to refresh profile:', err);
+        }
+      };
+
+      fetchUpdatedProfile();
+    }, []);
+
     //Setting all profile datas
     useEffect(() => {
       setUsername(userInfo.username);
