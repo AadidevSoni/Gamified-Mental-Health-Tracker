@@ -1,4 +1,4 @@
-## Mindleap
+## Mindleap🍀
 Mindleap is a mental health tracking platform that combines gamification with personalized insights to support emotional well-being. It features the SCADS Test, an interactive quiz assessing five key mental health parameters:
 
 - Stress
