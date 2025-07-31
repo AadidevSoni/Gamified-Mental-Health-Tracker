@@ -16,12 +16,6 @@ connectDB();
 
 const app = express();
 
-// CORS middleware – customize origin in production
-app.use(cors({
-  origin: ['http://localhost:5173', 'https://your-frontend.onrender.com'], // Add all allowed origins
-  credentials: true
-}))
-
 app.use(express.json()); //Handles API requests from frontend that sends or fetches JSON files to be used as JS objects
 app.use(express.urlencoded({ extended: true })); //Allows nested objects
 app.use(cookieParser()); //Read cookies from HTTP Requests

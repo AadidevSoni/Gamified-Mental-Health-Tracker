@@ -24,7 +24,6 @@ const Game = () => {
   const [touchItem, setTouchItem] = useState(null);
   const [touchIndex, setTouchIndex] = useState(null);
   const [gainedExp, setGainedExp] = useState(0);
-  const [playedToday, setPlayedToday] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -33,20 +32,6 @@ const Game = () => {
     const timer = setTimeout(() => setLoadingScreen(false), 1000);
     return () => clearTimeout(timer);
   }, []);
-
-  useEffect(() => {
-    const checkIfPlayed = async () => {
-      try {
-        const { data } = await axios.get('/api/users/frog-played-today', {
-          headers: { Authorization: `Bearer ${userInfo.token}` }
-        });
-        setPlayedToday(data.playedToday);
-      } catch (err) {
-        console.error("Error checking daily play limit:", err);
-      }
-    };
-    checkIfPlayed();
-  }, [userInfo]);
 
   //Get lilypad color function
   const getColor = (score) => {
@@ -133,11 +118,6 @@ const Game = () => {
 
   //Jump Function
   const jump = () => {
-    if (playedToday) {
-      setMessage("You've already played today! Come back tomorrow.");
-      return;
-    }
-
     if (!grid[0]) {
       setMessage("Froggy drowned at the start!");
       setGameOver(true);
@@ -158,7 +138,7 @@ const Game = () => {
         pos = Math.max(0, pos - 1);
         break;
       case 'Yellow':
-        pos = Math.min(7, pos + 1);
+        pos = Math.min(7, pos + 2);
         break;
       case 'Green':
         pos = Math.min(7, pos + 2);
@@ -175,7 +155,7 @@ const Game = () => {
       switch (tile.color) {
         case 'Red':     pos = Math.max(0, pos - 2); break;
         case 'Orange':  pos = Math.max(0, pos - 1); break;
-        case 'Yellow':  pos = Math.min(7, pos + 1); break;
+        case 'Yellow':  pos = Math.min(7, pos + 2); break;
         case 'Green':   pos = Math.min(7, pos + 2); break;
         default:        break;
       }
@@ -209,10 +189,7 @@ const Game = () => {
 
           // Check for game states
           if (step >= 7) {
-            axios.post('/api/users/frog-mark-played', {}, {
-              headers: { Authorization: `Bearer ${userInfo.token}` }
-            });
-            setPlayedToday(true);
+            setMessage("Froggy made it to land!");
             setGameWon(true);
 
             // Count lilypads used (non-null tiles)
@@ -250,8 +227,10 @@ const Game = () => {
 
           } else if (index === steps.length - 1) {
             if (step >= 7) {
+              setMessage("Froggy made it to land!");
               setGameWon(true);
             } else {
+              setMessage("Froggy couldn't reach the land.");
               setGameOver(true);
             }
           }
@@ -405,8 +384,8 @@ const Game = () => {
 
 
         <div className="btn-container-game">
-          <button className="start-btn" onClick={jump} disabled={playedToday}>
-            {playedToday ? "Come Back Tomorrow" : "Start Journey"}
+          <button className="start-btn" onClick={jump}>
+            Start Journey
           </button>
 
           <button className="reset-btn" onClick={() => {
