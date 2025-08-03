@@ -138,7 +138,7 @@ const Game = () => {
         pos = Math.max(0, pos - 1);
         break;
       case 'Yellow':
-        pos = Math.min(7, pos + 2);
+        pos = Math.min(7, pos + 1);
         break;
       case 'Green':
         pos = Math.min(7, pos + 2);
@@ -155,7 +155,7 @@ const Game = () => {
       switch (tile.color) {
         case 'Red':     pos = Math.max(0, pos - 2); break;
         case 'Orange':  pos = Math.max(0, pos - 1); break;
-        case 'Yellow':  pos = Math.min(7, pos + 2); break;
+        case 'Yellow':  pos = Math.min(7, pos + 1); break;
         case 'Green':   pos = Math.min(7, pos + 2); break;
         default:        break;
       }
