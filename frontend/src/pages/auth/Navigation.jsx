@@ -129,7 +129,7 @@ const Navigation = () => {
                 </>
               )}
               <li>
-                <Link to='/admin/profile' className="nav-list-item">
+                <Link to='/profile' className="nav-list-item">
                   Profile
                 </Link>
               </li>
