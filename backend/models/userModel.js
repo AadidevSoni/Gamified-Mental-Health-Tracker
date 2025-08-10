@@ -24,6 +24,7 @@ const userSchema = mongoose.Schema({
   avatar: { type: String, default: '' },
   todaysScore: { type: Number, default: 0 },
   scoreHistory: [scoreEntrySchema],
+  lastGameWinDate: { type: String, default: null }
 }, { timestamps: true });
 
 const User = mongoose.model('User', userSchema);

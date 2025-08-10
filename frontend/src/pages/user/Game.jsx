@@ -3,6 +3,7 @@ import './Game.css';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux'; // already imported
+import {setCredentials} from "../redux/features/authSlice.js";
 
 const Game = () => {
 
@@ -24,6 +25,7 @@ const Game = () => {
   const [touchItem, setTouchItem] = useState(null);
   const [touchIndex, setTouchIndex] = useState(null);
   const [gainedExp, setGainedExp] = useState(0);
+  const [alreadyWonToday, setAlreadyWonToday] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -64,6 +66,24 @@ const Game = () => {
     };
     fetchScores();
   }, [userInfo]);
+
+  useEffect(() => {
+  const checkWinStatus = async () => {
+    try {
+      const { data } = await axios.get('/api/users/profile', {
+        headers: { Authorization: `Bearer ${userInfo.token}` },
+      });
+
+      const today = new Date().toISOString().split('T')[0];
+      if (data.lastGameWinDate === today) {
+        setAlreadyWonToday(true);
+      }
+    } catch (error) {
+      console.error('Error checking win status:', error);
+    }
+  };
+  checkWinStatus();
+}, [userInfo]);
 
   //Drag lilypad handler
   const handleDragStart = (e, item, index) => {
@@ -205,6 +225,17 @@ const Game = () => {
             setGainedExp(gainedExp);
 
             if (gainedExp > 0) {
+              // Record win in backend
+              axios.post(
+                '/api/users/game/win',
+                {},
+                { headers: { Authorization: `Bearer ${userInfo.token}` } }
+              ).then(() => {
+                setAlreadyWonToday(true); // disable button after win
+              }).catch((err) => {
+                console.error("Error recording win:", err);
+              });
+
               axios.post(
                 '/api/users/add-exp',
                 { exp: gainedExp },
@@ -384,8 +415,12 @@ const Game = () => {
 
 
         <div className="btn-container-game">
-          <button className="start-btn" onClick={jump}>
-            Start Journey
+          <button
+            className="start-btn"
+            onClick={jump}
+            disabled={alreadyWonToday}
+          >
+            {alreadyWonToday ? "Already Won Today" : "Start Journey"}
           </button>
 
           <button className="reset-btn" onClick={() => {

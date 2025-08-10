@@ -1,6 +1,6 @@
 import express from "express";
 import {createUser,loginUser,logoutCurrentUser,getAllUsers,getCurrentUserProfile,updateCurrentUserProfile,deleteUserById,getUserById,updateUserById,
-  getLeaderBoard,saveTodayScore,getScoreHistory,addExpToUser
+  getLeaderBoard,saveTodayScore,getScoreHistory,addExpToUser,alreadyWon
 } from "../controllers/userController.js";
 import { authenticate, authorizedAdmin } from "../middlewares/authMiddleware.js";
 
@@ -27,5 +27,7 @@ router.post('/score', authenticate, saveTodayScore);
 router.get('/score/history', authenticate, getScoreHistory);
 
 router.post('/add-exp', authenticate, addExpToUser);
+
+router.post('/game/win' , authenticate, alreadyWon);
 
 export default router;

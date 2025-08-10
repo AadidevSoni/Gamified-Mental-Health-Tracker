@@ -281,6 +281,24 @@ const addExpToUser = asyncHandler(async (req, res) => {
   res.json({ message: 'EXP added successfully', newExp: user.exp, level: user.level });
 });
 
+const alreadyWon = asyncHandler(async (req, res) => {
+  try {
+    const user = await User.findById(req.user._id);
+
+    const today = new Date().toISOString().split('T')[0];
+    if (user.lastGameWinDate === today) {
+      return res.status(400).json({ message: "Already won today" });
+    }
+
+    user.lastGameWinDate = today;
+    await user.save();
+
+    res.json({ message: "Game win recorded" });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
 export { createUser,loginUser,logoutCurrentUser,getAllUsers,getCurrentUserProfile,updateCurrentUserProfile,deleteUserById,
-         getUserById,updateUserById,getLeaderBoard,saveTodayScore,getScoreHistory,addExpToUser
+         getUserById,updateUserById,getLeaderBoard,saveTodayScore,getScoreHistory,addExpToUser,alreadyWon
 };
