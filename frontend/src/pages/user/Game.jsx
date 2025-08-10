@@ -68,22 +68,23 @@ const Game = () => {
   }, [userInfo]);
 
   useEffect(() => {
-  const checkWinStatus = async () => {
-    try {
-      const { data } = await axios.get('/api/users/profile', {
-        headers: { Authorization: `Bearer ${userInfo.token}` },
-      });
+    const checkWinStatus = async () => {
+      try {
+        const { data } = await axios.get('/api/users/profile', {
+          headers: { Authorization: `Bearer ${userInfo.token}` },
+        });
 
-      const today = new Date().toISOString().split('T')[0];
-      if (data.lastGameWinDate === today) {
-        setAlreadyWonToday(true);
+        const today = new Date().toISOString().split('T')[0];
+        setAlreadyWonToday(data.lastGameWinDate === today);
+      } catch (error) {
+        console.error("Error checking win status:", error);
       }
-    } catch (error) {
-      console.error('Error checking win status:', error);
+    };
+
+    if (userInfo?.token) {
+      checkWinStatus();
     }
-  };
-  checkWinStatus();
-}, [userInfo]);
+  }, [userInfo]);
 
   //Drag lilypad handler
   const handleDragStart = (e, item, index) => {
@@ -226,15 +227,17 @@ const Game = () => {
 
             if (gainedExp > 0) {
               // Record win in backend
-              axios.post(
-                '/api/users/game/win',
-                {},
-                { headers: { Authorization: `Bearer ${userInfo.token}` } }
-              ).then(() => {
-                setAlreadyWonToday(true); // disable button after win
-              }).catch((err) => {
-                console.error("Error recording win:", err);
-              });
+              if (!alreadyWonToday) {
+                axios.post(
+                  '/api/users/game/win',
+                  {},
+                  { headers: { Authorization: `Bearer ${userInfo.token}` } }
+                ).then(() => {
+                  setAlreadyWonToday(true); // instantly disable button after win
+                }).catch((err) => {
+                  console.error("Error recording win:", err);
+                });
+              }
 
               axios.post(
                 '/api/users/add-exp',
