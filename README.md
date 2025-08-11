@@ -148,7 +148,10 @@ npm run dev
 ---
 
 ## Demo Video
-[🎥 Watch Demo](frontend/public/videos/Demo.mp4)
+<video width="600" controls>
+  <source src="frontend/public/videos/demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ---
 ## Grow Your Wellbeing
