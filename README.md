@@ -148,7 +148,7 @@ npm run dev
 ---
 
 ## Demo Video
-
+[🎥 Watch Demo](frontend/public/videos/Demo.mp4)
 
 ---
 ## Grow Your Wellbeing
