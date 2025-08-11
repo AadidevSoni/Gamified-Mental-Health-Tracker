@@ -10,9 +10,7 @@ router.route('/').post(createUser).get(authenticate, authorizedAdmin, getAllUser
 router.post('/auth', loginUser);
 router.post('/logout', logoutCurrentUser);
 
-router.route('/profile')
-  .get(authenticate, getCurrentUserProfile)
-  .put(authenticate, updateCurrentUserProfile);
+router.route('/profile').get(authenticate, getCurrentUserProfile).put(authenticate, updateCurrentUserProfile);
 
 router.get('/leaderboard', authenticate, getLeaderBoard);
 
@@ -20,7 +18,6 @@ router.route('/:id')
   .delete(authenticate, authorizedAdmin, deleteUserById)
   .get(authenticate, authorizedAdmin, getUserById)
   .put(authenticate, authorizedAdmin, updateUserById);
-
 
 router.post('/score', authenticate, saveTodayScore);
 
