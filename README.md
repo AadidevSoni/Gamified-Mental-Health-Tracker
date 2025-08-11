@@ -83,26 +83,26 @@ Mindleap is a mental health tracking platform that combines gamification with pe
 
 <h2>Frontend Packages</h2>
 <ul>
-  <li>🔔 React-toastify for displaying toast notifications  </li>
-  <li>🧭 React-router and react-router-dom for routing/navigation in React apps</li>
-  <li>🧠 React-redux for connecting React with Redux for global state management</li>
-  <li>🎨 React-icons for using popular icons</li>
-  <li>📊 Recharts for visualizing charts</li>
-  <li>🔗 axios for making API requests like fetching datas from backend</li>
-  <li>🧰 @reduxjs/toolkit for modern way to write Redux logic with less boilerplate</li>
+  <li>React-toastify for displaying toast notifications  </li>
+  <li>React-router and react-router-dom for routing/navigation in React apps</li>
+  <li>React-redux for connecting React with Redux for global state management</li>
+  <li>React-icons for using popular icons</li>
+  <li>Recharts for visualizing charts</li>
+  <li>axios for making API requests like fetching datas from backend</li>
+  <li>@reduxjs/toolkit for modern way to write Redux logic with less boilerplate</li>
 </ul>
 
 <h2>Backend Packages</h2>
 <ul>
-  <li>🔁 Nodemon for auto restarting server on changes</li>
-  <li>🍃 Mongoose for ODM (Object Data Modeling) library for MongoDB</li>
-  <li>🔐 Jsonwebtoken for creating and verifying jwt for authentication and authorization</li>
-  <li>⚙️ Express-async-handler for simplifying error handling in async/await route handlers</li>
-  <li>🌍 Express for framework for building web servers and APIs in Node.js.</li>
-  <li>🔐 Dotenv for loading environment variables from .env files</li>
-  <li>🍪 Cookie-parser for parsing Cookie header and populates req.cookies with an object</li>
-  <li>🚀 Concurently for running multiple commands/scripts in parallel like frontend and backend</li>
-  <li>🔐 Bcryptjs for password hashing</li>
+  <li>Nodemon for auto restarting server on changes</li>
+  <li>Mongoose for ODM (Object Data Modeling) library for MongoDB</li>
+  <li>Jsonwebtoken for creating and verifying jwt for authentication and authorization</li>
+  <li>Express-async-handler for simplifying error handling in async/await route handlers</li>
+  <li>Express for framework for building web servers and APIs in Node.js.</li>
+  <li>Dotenv for loading environment variables from .env files</li>
+  <li>Cookie-parser for parsing Cookie header and populates req.cookies with an object</li>
+  <li>Concurently for running multiple commands/scripts in parallel like frontend and backend</li>
+  <li>Bcryptjs for password hashing</li>
 </ul>
 
 ---
@@ -167,7 +167,7 @@ npm run dev
 
 ## Note:
 Demo video was recorded a week before final website
-Features implemented:
+## Features implemented:
 - Better gameplay fonts
 - Exp gained on winning the game 
 - Game playable only once a day
