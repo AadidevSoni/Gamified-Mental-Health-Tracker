@@ -117,9 +117,8 @@ cd ../frontend
 npm install
 </pre>
 
-
-<pre>
 # 3️⃣ Configure Environment Variables
+<pre>
 
 # In the main directory, outside frontend and backend folder, create a .env file with the following:
 MONGO_URI=your_mongodb_connection_string
@@ -140,6 +139,15 @@ cd ../frontend
 npm run dev
 </pre>
 
+---
+
+## Team Members
+- Aadidev Soni
+- Ishika Gupta
+
+---
+
+## Demo Video
 
 
 ---
