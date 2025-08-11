@@ -7,7 +7,6 @@ Mindleap is a mental health tracking platform that combines gamification with pe
 - Depression
 - Self-Worth
 
-The test provides a personalized wellness report and tailored recommendations based on your current mental state.
 ---
 ## Screenshots
 <table>
@@ -23,7 +22,7 @@ The test provides a personalized wellness report and tailored recommendations ba
 
 ## Hosting status - Not Hosted
 
-## Fatures Implemented
+## Features Implemented
 ## Frontend
 
 ## User Profile Management
@@ -40,7 +39,7 @@ The test provides a personalized wellness report and tailored recommendations ba
 
 - Submit a daily mental health assessment (once per day).
 - Input sleep, activities, and answer introspective questions.
-- Receive personalized scores, insights, and suggestions.
+- Receive personalized scores, insights, and suggestions as well as a colored lilypad depending on your mental health score.
 
 ## Data Visualization & Analysis
 
@@ -62,7 +61,7 @@ The test provides a personalized wellness report and tailored recommendations ba
 
 - A mini-game simulating weekly progress, where lily pads earned influence Froggy’s crossing across a pond.
 - Visualize weekly trends and motivate positive changes through interactive gameplay.
-- Gain Exp by beating the game everydday with the lilypads you collected.
+- Gain Exp by beating the game everyday with the lilypads you collected.
 ---
 ## Backend
 
@@ -111,6 +110,11 @@ The test provides a personalized wellness report and tailored recommendations ba
 ## 🖥️ Localhost Setup
 Follow these steps to run the project locally:
 
+## Note:
+- You have to manually install all .mp4 files from frontend/public/videos and paste in their respective folders
+- This is because these files are large and were pushed through git lfs
+- If this is not done, none of the background Videos will be visible!
+
 ## 1️⃣ Clone the Repository
 <pre>
 git clone https://github.com/AadidevSoni/Gamified-Mental-Health-Tracker.git
@@ -150,11 +154,6 @@ cd ../frontend
 npm run dev
 </pre>
 
-## Note:
-- You have to manually install all .mp4 files from frontend/public/videos and paste in their respective folders
-- This is because these files are large and were pushed through git lfs
-- If this is not done, none of the background Videos will be visible!
-
 ---
 
 ## Team Members
@@ -166,8 +165,11 @@ npm run dev
 ## Demo Video
 [🎥 Watch Demo](frontend/public/videos/Demo.mp4)
 
----
-## Grow Your Wellbeing
+## Note:
+Demo video was recorded a week before final website
+Features implemented:
+- Better gameplay fonts
+- Exp gained on winning the game 
+- Game playable only once a day
 
-Mindleap encourages daily reflection and mindful growth—one lily pad at a time.
 ---
