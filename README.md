@@ -11,12 +11,12 @@ The test provides a personalized wellness report and tailored recommendations ba
 ## Screnshots
 <table>
   <tr>
-    <td><img src="pictures/HOME.png" width="300"></td>
-    <td><img src="pictures/PROFILE.png" width="300"></td>
+    <td><img src="frontend/public/pictures/HOME.png" width="300"></td>
+    <td><img src="frontend/public/pictures/PROFILE.png" width="300"></td>
   </tr>
   <tr>
-    <td><img src="pictures/GAME.png" width="300"></td>
-    <td><img src="pictures/CALENDAR.png" width="300"></td>
+    <td><img src="frontend/public/pictures/GAME.png" width="300"></td>
+    <td><img src="frontend/public/pictures/CALENDAR.png" width="300"></td>
   </tr>
 </table>
 
