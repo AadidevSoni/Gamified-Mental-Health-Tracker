@@ -103,8 +103,43 @@ Follow these steps to run the project locally:
 ## 1️⃣ Clone the Repository
 <pre>
 git clone https://github.com/AadidevSoni/Gamified-Mental-Health-Tracker.git
-cd &lt;your-repo-name&gt;
+cd Gamified-Mental-Health-Tracker
 </pre>
+
+## 2️⃣ Install Dependencies
+<pre>
+# Install backend dependencies
+cd backend
+npm install
+
+# Install frontend dependencies
+cd ../frontend
+npm install
+</pre>
+
+
+<pre>
+# 3️⃣ Configure Environment Variables
+
+# In the main directory, outside frontend and backend folder, create a .env file with the following:
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+PORT=5000
+
+</pre>
+
+## 4️⃣ Start the Development Servers
+
+<pre>
+# Start the Backend
+cd backend
+npm run server
+
+# Start the Frontend
+cd ../frontend
+npm run dev
+</pre>
+
 
 
 ---
