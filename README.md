@@ -129,7 +129,7 @@ npm install
 </pre>
 
 # 3️⃣ Configure Environment Variables
-# In the main directory, outside frontend and backend folder, create a .env file with the following:
+In the main directory, outside frontend and backend folder, create a .env file with the following:
 <pre>
 
 MONGO_URI=your_mongodb_connection_string
@@ -149,6 +149,11 @@ npm run server
 cd ../frontend
 npm run dev
 </pre>
+
+## Note:
+- You have to manually install all .mp4 files from frontend/public/videos and paste in their respective folders
+- This is because these files are large and were pushed through git lfs
+- If this is not done, none of the background Videos will be visible!
 
 ---
 
