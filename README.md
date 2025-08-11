@@ -6,6 +6,7 @@ Mindleap is a mental health tracking platform that combines gamification with pe
 - Anxiety
 - Depression
 - Self-Worth
+
 The test provides a personalized wellness report and tailored recommendations based on your current mental state.
 ---
 ## Screenshots
@@ -22,17 +23,18 @@ The test provides a personalized wellness report and tailored recommendations ba
 
 ## Hosting status - Not Hosted
 
+## Fatures Implemented
 ## Frontend
-## Daily Wellness Visualization
-
-- Lily Pad Indicator: Changes color (Red, Orange, Yellow, Green) based on your SCADS score to reflect your daily mental health status.
-- Score Calendar: Displays lily pads across the year, highlighting mental health trends over time.
 
 ## User Profile Management
 
 - View and update profile details (username, email, password).
-- Track earned badges, total lily pads, and level progress.
-- Review detailed lily pad collection by color.
+- Track earned badges, total lily pads and their colors, and level progress.
+
+## Daily Wellness Visualization
+
+- Lily Pad Indicator: Changes color (Red, Orange, Yellow, Green) based on your SCADS score to reflect your daily mental health status.
+- Score Calendar: Displays lily pads across the year, highlighting mental health trends over time.
 
 ## SCADS Test & Reports
 
@@ -60,6 +62,7 @@ The test provides a personalized wellness report and tailored recommendations ba
 
 - A mini-game simulating weekly progress, where lily pads earned influence Froggy’s crossing across a pond.
 - Visualize weekly trends and motivate positive changes through interactive gameplay.
+- Gain Exp by beating the game everydday with the lilypads you collected.
 ---
 ## Backend
 
@@ -67,6 +70,7 @@ The test provides a personalized wellness report and tailored recommendations ba
 
 - JWT-based authentication with bcryptjs for secure login.
 - Admin panel protected by middleware to manage user accounts, view reports, and perform edits.
+- Data Stored in Mongodb Cloud
 ---
 ## Packages Used
 
@@ -89,7 +93,6 @@ The test provides a personalized wellness report and tailored recommendations ba
   <li>⚙️ Express-async-handler for simplifying error handling in async/await route handlers</li>
   <li>🌍 Express for framework for building web servers and APIs in Node.js.</li>
   <li>🔐 Dotenv for loading environment variables from .env files</li>
-  <li>🔄 Cors for enabling Cross-Origin Resource Sharing for communication between frontend and backend</li>
   <li>🍪 Cookie-parser for parsing Cookie header and populates req.cookies with an object</li>
   <li>🚀 Concurently for running multiple commands/scripts in parallel like frontend and backend</li>
   <li>🔐 Bcryptjs for password hashing</li>
@@ -118,9 +121,9 @@ npm install
 </pre>
 
 # 3️⃣ Configure Environment Variables
+# In the main directory, outside frontend and backend folder, create a .env file with the following:
 <pre>
 
-# In the main directory, outside frontend and backend folder, create a .env file with the following:
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 PORT=5000
@@ -148,10 +151,7 @@ npm run dev
 ---
 
 ## Demo Video
-<video width="600" controls>
-  <source src="frontend/public/videos/demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[🎥 Watch Demo](frontend/public/videos/Demo.mp4)
 
 ---
 ## Grow Your Wellbeing
