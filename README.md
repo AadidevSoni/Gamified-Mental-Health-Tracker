@@ -157,8 +157,8 @@ npm run dev
 ---
 
 ## Team Members
-- Aadidev Soni
-- Ishika Gupta
+- Aadidev Soni: 2024BCS-001
+- Ishika Gupta: 2024BCS-028
 
 ---
 
