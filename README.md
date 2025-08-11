@@ -72,6 +72,14 @@ The test provides a personalized wellness report and tailored recommendations ba
 - Admin panel protected by middleware to manage user accounts, view reports, and perform edits.
 - Data Stored in Mongodb Cloud
 ---
+
+<h1>⚙️ Technical Stack [MERN Stack]</h1>
+<ul>
+  <li>HTML + CSS + React.js (frontend)</li>
+  <li>Node.js + Express.js (backend)</li>
+  <li>MongoDB + Mongoose (database)</li>
+</ul>
+
 ## Packages Used
 
 <h2>Frontend Packages</h2>
